@@ -1,0 +1,273 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+MERGED from [com.android.support:design:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/AndroidManifest.xml:17:1-24:12
+MERGED from [com.sdsmdg.harjot:croller:1.0.7] /home/su/.gradle/caches/transforms-1/files-1.1/croller-1.0.7.aar/a3b85b67f258b27e2bb3a3c70ce6bb67/AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.scijoker:spinner2:1.0.1] /home/su/.gradle/caches/transforms-1/files-1.1/spinner2-1.0.1.aar/71603f53372c413ad4e8f3e7ea9848dd/AndroidManifest.xml:2:1-11:12
+MERGED from [com.amitshekhar.android:jackson-android-networking:1.0.2] /home/su/.gradle/caches/transforms-1/files-1.1/jackson-android-networking-1.0.2.aar/bc9e417828827f59cd000bf799e47697/AndroidManifest.xml:20:1-29:12
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] /home/su/.gradle/caches/transforms-1/files-1.1/android-networking-1.0.2.aar/85587a6a465196563fb3957b24ba2419/AndroidManifest.xml:18:1-27:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/su/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3b1e45cec9900671b29ef6f2eadff090/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/ea081a061bb648824f7bd0f19cd17c07/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d2e0d0ab1509a38ba110db048840c84f/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/6b9759fd5417904153c67979af04e2c2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0-alpha] /home/su/.gradle/caches/transforms-1/files-1.1/MPAndroidChart-v3.1.0-alpha.aar/29aa4685feb4c9119c4ea74c035a05be/AndroidManifest.xml:2:1-20:12
+MERGED from [com.mikhaellopez:circularprogressbar:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/circularprogressbar-1.1.1.aar/81fb33fdb2692a2c157d02670d6225ff/AndroidManifest.xml:2:1-14:12
+MERGED from [com.victor:lib:1.0.4] /home/su/.gradle/caches/transforms-1/files-1.1/lib-1.0.4.aar/d257ff91de0aab047fbe4c14714d31bf/AndroidManifest.xml:2:1-16:12
+MERGED from [com.kaopiz:kprogresshud:1.2.0] /home/su/.gradle/caches/transforms-1/files-1.1/kprogresshud-1.2.0.aar/ab29f364ea8c5740b1eb9370a54c9514/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2e88cbb402a0f6fb6fb1412b0bf35aa6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f52bf89c026f4a9f615904f80e8bfc4a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/3f163cf11b0219d45b28cb91e8a5c911/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/c06a481e46ee2b2c906c1f385ae8d91e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/68f570175cf19064d4b56b917083b521/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/1571fc08a9ca276950aa7490ceb29101/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/acd8fc2a4e7d4eb352ed99b819e57af4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/35b203bffbcb5db9b9c906efdc77a293/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/01a2236dce111ff6b2cbcb4cd4cc8f82/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/063188665f30e75f5b0d15089830a212/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/4a584a6a8b0939764b9682c08ddd5fa9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/8c09b5dc8fc6e562c672e8a00527000b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f9b0373ba52b6863b5ec7bb3ef2b1450/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/519f7664ce4ac5abdcc69259d623d65a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/8d018f2a81053672269dccdd5725ea85/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/bcd2e0321899bd197ca24bbbed676896/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3af3a44dadb02be2867ffa020e5c188f/AndroidManifest.xml:17:1-25:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/cf11d4ede6f6d7bbc29d057cc2a71580/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/fccd06321dbf8b83637c33d8b9a92eaa/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/a08305577b827b764def614012abffdc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/05985c2e9e95774deb4c642b1a4041a0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/2ea71840e40e297602a3e83730b8d557/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/38a5323f0a505ff37f3d87d004f3b83d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/027a22b47cefb9ba097937e13b5f177b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/b073dcec9bf0a3320fcee2bce78a2207/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/ffc929d6902b5f53e09d3bd8b4fc03e5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/aa4d5395f9a0e9be64e8c3840751a2b7/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+	package
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:3:5-58
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:7:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:8:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:9:5-72
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:9:22-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:10:22-64
+application
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:12:5-43:23
+MERGED from [com.android.support:design:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/AndroidManifest.xml:22:5-20
+MERGED from [com.sdsmdg.harjot:croller:1.0.7] /home/su/.gradle/caches/transforms-1/files-1.1/croller-1.0.7.aar/a3b85b67f258b27e2bb3a3c70ce6bb67/AndroidManifest.xml:11:5-15:19
+MERGED from [com.sdsmdg.harjot:croller:1.0.7] /home/su/.gradle/caches/transforms-1/files-1.1/croller-1.0.7.aar/a3b85b67f258b27e2bb3a3c70ce6bb67/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/su/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3b1e45cec9900671b29ef6f2eadff090/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/su/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3b1e45cec9900671b29ef6f2eadff090/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d2e0d0ab1509a38ba110db048840c84f/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d2e0d0ab1509a38ba110db048840c84f/AndroidManifest.xml:9:5-20
+MERGED from [com.mikhaellopez:circularprogressbar:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/circularprogressbar-1.1.1.aar/81fb33fdb2692a2c157d02670d6225ff/AndroidManifest.xml:12:5-20
+MERGED from [com.mikhaellopez:circularprogressbar:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/circularprogressbar-1.1.1.aar/81fb33fdb2692a2c157d02670d6225ff/AndroidManifest.xml:12:5-20
+MERGED from [com.victor:lib:1.0.4] /home/su/.gradle/caches/transforms-1/files-1.1/lib-1.0.4.aar/d257ff91de0aab047fbe4c14714d31bf/AndroidManifest.xml:11:5-14:19
+MERGED from [com.victor:lib:1.0.4] /home/su/.gradle/caches/transforms-1/files-1.1/lib-1.0.4.aar/d257ff91de0aab047fbe4c14714d31bf/AndroidManifest.xml:11:5-14:19
+MERGED from [com.kaopiz:kprogresshud:1.2.0] /home/su/.gradle/caches/transforms-1/files-1.1/kprogresshud-1.2.0.aar/ab29f364ea8c5740b1eb9370a54c9514/AndroidManifest.xml:11:5-13:38
+MERGED from [com.kaopiz:kprogresshud:1.2.0] /home/su/.gradle/caches/transforms-1/files-1.1/kprogresshud-1.2.0.aar/ab29f364ea8c5740b1eb9370a54c9514/AndroidManifest.xml:11:5-13:38
+MERGED from [com.android.support:support-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3af3a44dadb02be2867ffa020e5c188f/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3af3a44dadb02be2867ffa020e5c188f/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:15:9-41
+	android:roundIcon
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:16:9-50
+	android:icon
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:14:9-45
+	android:allowBackup
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:18:9-40
+activity#android.wealthclockadvisors.app.wealthclockadvisors.SplashActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:19:9-28:20
+	android:screenOrientation
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:21:13-49
+	android:theme
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:22:13-47
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:20:13-94
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:26:27-74
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.TutorialActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:29:9-31:52
+	android:screenOrientation
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:31:13-49
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:30:13-102
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.LoginActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:32:9-35:71
+	android:screenOrientation
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:34:13-49
+	android:windowSoftInputMode
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:35:13-68
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:33:13-108
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.NoInternetConnectionActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:36:9-132
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:36:19-129
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.AccountRegistration
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:37:9-123
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:37:19-120
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:38:9-121
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:38:19-118
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.FundDetailsActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:39:9-123
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:39:19-120
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.NewsWebViewActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:40:9-123
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:40:19-120
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PaymentWebViewActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:41:9-135
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:41:19-123
+uses-sdk
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/AndroidManifest.xml:20:5-44
+MERGED from [com.sdsmdg.harjot:croller:1.0.7] /home/su/.gradle/caches/transforms-1/files-1.1/croller-1.0.7.aar/a3b85b67f258b27e2bb3a3c70ce6bb67/AndroidManifest.xml:7:5-9:41
+MERGED from [com.sdsmdg.harjot:croller:1.0.7] /home/su/.gradle/caches/transforms-1/files-1.1/croller-1.0.7.aar/a3b85b67f258b27e2bb3a3c70ce6bb67/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.scijoker:spinner2:1.0.1] /home/su/.gradle/caches/transforms-1/files-1.1/spinner2-1.0.1.aar/71603f53372c413ad4e8f3e7ea9848dd/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.scijoker:spinner2:1.0.1] /home/su/.gradle/caches/transforms-1/files-1.1/spinner2-1.0.1.aar/71603f53372c413ad4e8f3e7ea9848dd/AndroidManifest.xml:7:5-9:41
+MERGED from [com.amitshekhar.android:jackson-android-networking:1.0.2] /home/su/.gradle/caches/transforms-1/files-1.1/jackson-android-networking-1.0.2.aar/bc9e417828827f59cd000bf799e47697/AndroidManifest.xml:25:5-27:41
+MERGED from [com.amitshekhar.android:jackson-android-networking:1.0.2] /home/su/.gradle/caches/transforms-1/files-1.1/jackson-android-networking-1.0.2.aar/bc9e417828827f59cd000bf799e47697/AndroidManifest.xml:25:5-27:41
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] /home/su/.gradle/caches/transforms-1/files-1.1/android-networking-1.0.2.aar/85587a6a465196563fb3957b24ba2419/AndroidManifest.xml:23:5-25:41
+MERGED from [com.amitshekhar.android:android-networking:1.0.2] /home/su/.gradle/caches/transforms-1/files-1.1/android-networking-1.0.2.aar/85587a6a465196563fb3957b24ba2419/AndroidManifest.xml:23:5-25:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/su/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3b1e45cec9900671b29ef6f2eadff090/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/su/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/3b1e45cec9900671b29ef6f2eadff090/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/ea081a061bb648824f7bd0f19cd17c07/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/ea081a061bb648824f7bd0f19cd17c07/AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d2e0d0ab1509a38ba110db048840c84f/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/d2e0d0ab1509a38ba110db048840c84f/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/6b9759fd5417904153c67979af04e2c2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/6b9759fd5417904153c67979af04e2c2/AndroidManifest.xml:20:5-44
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0-alpha] /home/su/.gradle/caches/transforms-1/files-1.1/MPAndroidChart-v3.1.0-alpha.aar/29aa4685feb4c9119c4ea74c035a05be/AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0-alpha] /home/su/.gradle/caches/transforms-1/files-1.1/MPAndroidChart-v3.1.0-alpha.aar/29aa4685feb4c9119c4ea74c035a05be/AndroidManifest.xml:16:5-18:41
+MERGED from [com.mikhaellopez:circularprogressbar:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/circularprogressbar-1.1.1.aar/81fb33fdb2692a2c157d02670d6225ff/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikhaellopez:circularprogressbar:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/circularprogressbar-1.1.1.aar/81fb33fdb2692a2c157d02670d6225ff/AndroidManifest.xml:8:5-10:41
+MERGED from [com.victor:lib:1.0.4] /home/su/.gradle/caches/transforms-1/files-1.1/lib-1.0.4.aar/d257ff91de0aab047fbe4c14714d31bf/AndroidManifest.xml:7:5-9:41
+MERGED from [com.victor:lib:1.0.4] /home/su/.gradle/caches/transforms-1/files-1.1/lib-1.0.4.aar/d257ff91de0aab047fbe4c14714d31bf/AndroidManifest.xml:7:5-9:41
+MERGED from [com.kaopiz:kprogresshud:1.2.0] /home/su/.gradle/caches/transforms-1/files-1.1/kprogresshud-1.2.0.aar/ab29f364ea8c5740b1eb9370a54c9514/AndroidManifest.xml:7:5-9:41
+MERGED from [com.kaopiz:kprogresshud:1.2.0] /home/su/.gradle/caches/transforms-1/files-1.1/kprogresshud-1.2.0.aar/ab29f364ea8c5740b1eb9370a54c9514/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2e88cbb402a0f6fb6fb1412b0bf35aa6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2e88cbb402a0f6fb6fb1412b0bf35aa6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f52bf89c026f4a9f615904f80e8bfc4a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/f52bf89c026f4a9f615904f80e8bfc4a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/3f163cf11b0219d45b28cb91e8a5c911/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/3f163cf11b0219d45b28cb91e8a5c911/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/c06a481e46ee2b2c906c1f385ae8d91e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/c06a481e46ee2b2c906c1f385ae8d91e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/68f570175cf19064d4b56b917083b521/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/68f570175cf19064d4b56b917083b521/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/1571fc08a9ca276950aa7490ceb29101/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/1571fc08a9ca276950aa7490ceb29101/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/acd8fc2a4e7d4eb352ed99b819e57af4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/acd8fc2a4e7d4eb352ed99b819e57af4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/35b203bffbcb5db9b9c906efdc77a293/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/35b203bffbcb5db9b9c906efdc77a293/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/01a2236dce111ff6b2cbcb4cd4cc8f82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/01a2236dce111ff6b2cbcb4cd4cc8f82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/063188665f30e75f5b0d15089830a212/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/063188665f30e75f5b0d15089830a212/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/4a584a6a8b0939764b9682c08ddd5fa9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/4a584a6a8b0939764b9682c08ddd5fa9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/8c09b5dc8fc6e562c672e8a00527000b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/8c09b5dc8fc6e562c672e8a00527000b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f9b0373ba52b6863b5ec7bb3ef2b1450/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/f9b0373ba52b6863b5ec7bb3ef2b1450/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/519f7664ce4ac5abdcc69259d623d65a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/519f7664ce4ac5abdcc69259d623d65a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/8d018f2a81053672269dccdd5725ea85/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/8d018f2a81053672269dccdd5725ea85/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/bcd2e0321899bd197ca24bbbed676896/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/bcd2e0321899bd197ca24bbbed676896/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3af3a44dadb02be2867ffa020e5c188f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/3af3a44dadb02be2867ffa020e5c188f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/cf11d4ede6f6d7bbc29d057cc2a71580/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/cf11d4ede6f6d7bbc29d057cc2a71580/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/fccd06321dbf8b83637c33d8b9a92eaa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/fccd06321dbf8b83637c33d8b9a92eaa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/a08305577b827b764def614012abffdc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/a08305577b827b764def614012abffdc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/05985c2e9e95774deb4c642b1a4041a0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/05985c2e9e95774deb4c642b1a4041a0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/2ea71840e40e297602a3e83730b8d557/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/2ea71840e40e297602a3e83730b8d557/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/38a5323f0a505ff37f3d87d004f3b83d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/38a5323f0a505ff37f3d87d004f3b83d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/027a22b47cefb9ba097937e13b5f177b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/027a22b47cefb9ba097937e13b5f177b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/b073dcec9bf0a3320fcee2bce78a2207/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/b073dcec9bf0a3320fcee2bce78a2207/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/ffc929d6902b5f53e09d3bd8b4fc03e5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/ffc929d6902b5f53e09d3bd8b4fc03e5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/aa4d5395f9a0e9be64e8c3840751a2b7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/aa4d5395f9a0e9be64e8c3840751a2b7/AndroidManifest.xml:20:5-44
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
+		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml

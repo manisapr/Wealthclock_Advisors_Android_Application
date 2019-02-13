@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.activity.DashboardActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_41sdp"
+        android:layout_alignParentTop="true"
+        android:animateLayoutChanges="true"
+        android:background="#36374b">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:animateLayoutChanges="true"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/account_icon"
+                android:tint="#ffffff" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/user_image"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Welcome User"
+                android:textColor="#ffffff" />
+
+
+            <RelativeLayout
+                android:id="@+id/lay_spinner"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_centerInParent="true"
+                android:animateLayoutChanges="true"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:entries="@array/spinner_item"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"></Spinner>
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/spinner"
+                    android:src="@drawable/down_arrow"
+                    android:tint="#ffffff" />
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/notification_icon"
+                android:tint="#048f84"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="#3fffffff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rrr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bar_lay"
+        android:layout_below="@+id/top_lay"
+        android:background="@drawable/risk_analyzer_background">
+
+        <android.wealthclockadvisors.app.wealthclockadvisors.NonSwipeableViewPager
+            android:id="@+id/main_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.wealthclockadvisors.app.wealthclockadvisors.NonSwipeableViewPager>
+
+        <!--<android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:rippleColor="#ffffff"
+            android:src="@drawable/ic_add_black_24dp"
+            android:clickable="true"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            android:theme="@style/FloatingActionTheme"
+            />
+-->
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bar_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_lay"
+        android:background="#37414b">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#3fffffff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/dashboard_bar"
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/investment_bar"
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/explore_bar"
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/goal_track_bar"
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/account_bar"
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_alignParentBottom="true"
+        android:background="#37414b"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp">
+
+
+        <RelativeLayout
+            android:id="@+id/relative_dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/img_dashboard"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/dashboard_icon"
+                    android:tint="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_dashboard"
+                    android:text="Dashbord"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_7sdp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_investment"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/relative_explore"
+            android:layout_toRightOf="@+id/relative_dashboard">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/img_investment"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/invest_icon"
+                    android:tint="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_investment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_investment"
+                    android:layout_centerHorizontal="true"
+                    android:text="Investments"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_7sdp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_explore"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_2sdp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/img_explore_circle"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/explore" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_goal_track"
+            android:layout_width="109dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="-2dp"
+            android:layout_toLeftOf="@+id/relative_account"
+            android:layout_toRightOf="@+id/relative_explore">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/img_goal_track"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/goal_track_icon"
+                    android:tint="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_goal_tracker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_goal_track"
+                    android:layout_centerHorizontal="true"
+                    android:text="Goal tracker"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_7sdp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_account"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/img_account"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/account_icon"
+                    android:tint="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_account"
+                    android:text="Account"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_7sdp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--<FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bar_lay"
+        android:layout_below="@+id/top_lay"></FrameLayout>-->
+
+    <!--<FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>-->
+
+<FrameLayout
+    android:id="@+id/frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</FrameLayout>
+
+</RelativeLayout>

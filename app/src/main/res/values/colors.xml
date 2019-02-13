@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorGreenish">#ffffff</color>
+    <color name="colorWhite">#595c6e</color>
+    <color name="colorGreen">#13a097</color>
+    <color name="red">#ff1111</color>
+
+    <color name="White">#ffffff</color>
+
+    <color name="DarkWhite">#afa9a9</color>
+
+    <color name="backgroundcolor">#363646</color>
+
+    <string-array name="color">
+        <item>#363646</item>
+        <item>#8b7eff</item>
+        <item>#13a097</item>
+        <item>#ff1111</item>
+        <!--<item>#6363d4</item>
+        <item>#fc1505</item>
+        <item>#ff91d4</item>
+        <item>#fc9105</item>
+        <item>#fcd305</item>
+        <item>#d7fc05</item>
+        <item>#5d9104</item>-->
+    </string-array>
+</resources>

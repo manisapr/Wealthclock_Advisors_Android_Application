@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363646"
+    android:clickable="true">
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Redeemption">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:background="#363646">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Select Redeem"
+                android:textSize="15sp"
+                android:textColor="#fffefe"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffefe"
+                    android:textSize="13sp"
+                    android:text="Normal"/>
+
+                <Switch
+                    android:id="@+id/redeemSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12sp"
+                    android:textColor="#fffefe"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffefe"
+                    android:text="Instant"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/select_scheme"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:autofillHints="Select Scheme"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:theme="@style/ThemeSpinner"></Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/folio_no1"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:theme="@style/ThemeSpinner"></Spinner>
+
+            <LinearLayout
+                android:id="@+id/redeemdetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/panel_redeem"
+                    android:orientation="horizontal"
+                    android:divider="?android:dividerVertical"
+                    android:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/units"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2000.00"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/White"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/White"
+                            android:layout_gravity="center"
+                            android:paddingTop="10dp"
+                            android:textSize="13sp"
+                            android:text="Available Units"
+                            android:singleLine="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹ 8515.09"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_gravity="center"
+                            android:textColor="#fffefe"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/White"
+                            android:textSize="13sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingTop="10dp"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            android:text="Available Amount"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:textColor="@color/White"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:text="* Based On NAV Declared On As On 13 Dec, 2018.Value At The Time Of Transaction Processing Would Vary."/>
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="10dp"-->
+                        <!--android:textColor="#fffefe"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text=" Value at the time of transaction processing would vary."/>-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:textColor="@color/White"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:text="# The Exit Load-Free Units Are Estimates.Actual Load-Free Units May Vary Significantly."/>
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="10dp"-->
+                        <!--android:textColor="#fffefe"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text=" Actual load-free units may vary significantly."/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/folio_no"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:autofillHints="Select Redeemption Type"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:theme="@style/ThemeSpinner"></Spinner>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/insert_amount_layout"
+                    android:orientation="vertical">
+
+                    <!--<TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Insert Amount"
+                        android:textColor="#fffefe"/>-->
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Insertamount"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:lines="1"
+                        android:cursorVisible="false"
+                        android:textColorHint="#fff"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_13sdp"
+                        android:hint="Insert Amount"
+                        android:inputType="number"
+                        android:backgroundTint="#818181"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="@dimen/_35sdp"
+                android:id="@+id/submit"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_shape"
+                android:layout_marginTop="15dp"
+                android:text="Redeem"
+                android:textColor="#dcdada"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</FrameLayout>

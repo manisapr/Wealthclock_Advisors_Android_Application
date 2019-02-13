@@ -1,0 +1,346 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363646
+"    android:clickable="true"
+    android:focusable="true"
+    tools:context="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.fragment_fragment_tax_saving_money__save__tax">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+
+            android:orientation="vertical"
+
+            android:gravity="center">
+
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="5dp"
+
+                android:gravity="center"
+
+                android:text="Save Tax With ELSS Mutual Funds"
+
+                android:textSize="@dimen/_13sdp"
+
+                android:textColor="@color/White"/>
+
+
+
+            <ImageView
+
+                android:layout_width="50dp"
+
+                android:layout_height="50dp"
+
+                android:background="@drawable/savetax"/>
+
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="5.00dp"
+
+                android:layout_marginBottom="@dimen/_5sdp"
+
+                android:gravity="center"
+
+                android:textColor="@color/White"
+
+                android:textSize="@dimen/_13sdp"
+
+                android:text="Save Tax For FY 2018-2019"/>
+
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_margin="5.00dp"
+
+                android:gravity="center"
+
+                android:textColor="@color/White"
+
+                android:textSize="@dimen/_13sdp"
+
+                android:text="Under Section 80c, Investment Of Upto Rs.1.5 Lakhs In ELSS Fund Can Be Claim For Tax Exemption.
+
+
+
+Benefits Of Investing In ELSS Funds "/>
+
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="30dp"
+
+                android:gravity="center"
+
+                android:textColor="@color/White"
+
+                android:textSize="@dimen/_13sdp"
+
+                android:text="Benefits Of ELSS Mutual Funds" />
+
+
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:layout_marginRight="20dp"
+
+                android:layout_marginLeft="@dimen/_20sdp"
+
+                android:gravity="center"
+
+                android:padding="@dimen/_10sdp"
+
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="10dp"
+
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+
+                        android:layout_width="13dp"
+
+                        android:layout_height="13dp"
+
+                        android:background="@drawable/tick"/>
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="5dp"
+
+                        android:textColor="@color/White"
+
+                        android:textSize="@dimen/_13sdp"
+
+                        android:text="Earn More Than Any Other\nSec 80c Available Options"/>
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10dp"
+
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+
+                        android:layout_width="13dp"
+
+                        android:layout_height="13dp"
+
+                        android:background="@drawable/tick"/>
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="5dp"
+
+                        android:textColor="@color/White"
+
+                        android:textSize="@dimen/_13sdp"
+
+                        android:text="Save upto Rs.46,350 per year"/>
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10dp"
+
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+
+                        android:layout_width="13dp"
+
+                        android:layout_height="13dp"
+
+                        android:background="@drawable/tick"/>
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/White"
+
+                        android:layout_marginLeft="5dp"
+
+                        android:textSize="@dimen/_13sdp"
+
+                        android:text="Tax free Gains"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+
+                android:layout_width="300dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:gravity="center"
+
+                android:textColor="@color/White"
+
+                android:textSize="@dimen/_13sdp"
+
+                android:text="Do You Know How Much You Should"/>
+
+
+
+            <TextView
+
+                android:layout_width="300dp"
+
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+
+                android:textColor="@color/White"
+
+                android:textSize="@dimen/_13sdp"
+
+                android:text="Invest This Financial Year To Save Tax?"/>
+
+
+
+            <Button
+
+                android:layout_width="200dp"
+
+                android:layout_height="@dimen/_35sdp"
+
+                android:id="@+id/btn_yes"
+
+                android:textColor="@color/White"
+
+                android:layout_margin="10dp"
+
+                android:background="@drawable/button_shape"
+
+                android:text="YES"/>
+
+
+
+            <Button
+
+
+
+                android:layout_width="200dp"
+
+                android:layout_height="@dimen/_35sdp"
+
+                android:id="@+id/btn_no"
+                android:textColor="@color/White"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_background"
+                android:text="no, help me out"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Wealthclock Advisors</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="phno_required">Ph number can not be empty.</string>
+    <string name="password_required">Password can not be empty.</string>
+    <string name="password_required_length">Password must be greater than 1.</string>
+    <string name="INVALID_EMAIL">Invalid email.</string>
+    <string name="name_required">Name can not be empty.</string>
+    <string name="email_required">Email can not be empty.</string>
+    <string name="redeem">Redeem Initiated...</string>
+    <string name="login">Loging In...</string>
+    <string name="purchase">Purchase Initiated...</string>
+    <string name="purchase_init">SIP Initiated...</string>
+    <string name="risk">Risk Analyzer is an assessment of your willingness to take risk. Essentially, we measure about your preferred investment personality. We have therefore complied few questions for you to evaluate about your preferred investment personality. Based on your risk profile, we will recommend an asset allocation structure best suited for you.</string>
+
+    <string-array name="spinner_item">
+        <item>Portfolio View</item>
+        <item>Family View</item>
+
+    </string-array>
+</resources>

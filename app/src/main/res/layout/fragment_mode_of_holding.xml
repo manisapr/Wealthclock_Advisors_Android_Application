@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    tools:context=".Views.fragment.onBoard.ModeOfHolding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ababab"
+        android:animateLayoutChanges="true">
+
+    <TextView
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MODE OF HOLDING"
+        android:textColor="#848383"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="12dp"
+        android:layout_height="11dp"
+        android:layout_above="@id/lay_top"
+        android:layout_marginBottom="227dp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:text="*Select Your Choice"
+        android:textColor="#bf0909"
+        android:visibility="gone" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lay_top"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp">
+        <RadioGroup
+            android:id="@+id/mode_of_holding"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:buttonTint="@color/colorGreen"
+                android:textColor="#ffffff"
+                android:layout_weight=".8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Single"
+                />
+            <RadioButton
+                android:buttonTint="@color/colorGreen"
+                android:textColor="#ffffff"
+                android:layout_weight=".8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Joint"
+                android:enabled="false"
+                />
+            <RadioButton
+                android:buttonTint="@color/colorGreen"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anyone or Survivor"
+                android:enabled="false"
+                />
+
+
+        </RadioGroup>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_below="@id/lay_top"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorGreen"
+        android:layout_width="@dimen/_50sdp"
+        android:id="@+id/next"
+        android:layout_height="@dimen/_20sdp">
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/grayDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B0000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/white_circle" />
+
+        <ProgressBar
+            android:indeterminateTint="@color/colorGreen"
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>

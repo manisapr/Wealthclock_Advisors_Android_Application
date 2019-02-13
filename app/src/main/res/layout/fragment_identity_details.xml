@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    tools:context=".Views.fragment.onBoard.IdentityDetails">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ababab"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#848383"
+                android:text="IDENTITY DETAILS"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10"
+                    android:id="@+id/pan_number"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PAN Number" />
+
+                <EditText
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:inputType="none"
+                    android:id="@+id/first_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name" />
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/middle_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Middle Name" />
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/last_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name" />
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/father_first_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Father/Spouse First Name" />
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/father_middle_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Father/Spouse Middle Name" />
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/father_last_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Father/Spouse Last Name" />
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/mother_first_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mother First Name" />
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/mother_middle_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mother Middle Name" />
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/mother_last_name"
+                    android:textColor="#161616"
+                    android:textCursorDrawable="@null"
+                    android:backgroundTint="#5e5d5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mother Last Name" />
+
+                <EditText
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:clickable="false"
+                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                    android:id="@+id/user_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date Of Birth" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Select Place Of Birth"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#e90b0b"
+                    android:id="@+id/error_place"
+                    android:visibility="gone"
+                    />
+                <Spinner
+                    android:id="@+id/place_of_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*Select gender"
+                        android:textColor="#e90b0b"
+                        android:textSize="@dimen/_10sdp"
+                        android:id="@+id/gender_error"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Gender:-" />
+
+                    <RadioGroup
+                        android:id="@+id/gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:buttonTint="@color/colorGreen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:buttonTint="@color/colorGreen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*Select marital Status"
+                        android:textColor="#e90b0b"
+                        android:textSize="@dimen/_10sdp"
+                        android:id="@+id/marital_error"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Marital Status:-" />
+
+                    <RadioGroup
+                        android:id="@+id/marital_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:buttonTint="@color/colorGreen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:text="Married" />
+
+                        <RadioButton
+                            android:buttonTint="@color/colorGreen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Single" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Select Wealth Source"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#e90b0b"
+                    android:id="@+id/error_wlth_src"
+                    />
+                <Spinner
+                    android:id="@+id/wealth_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/error_tax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Select Tax Status"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#e90b0b"
+                    />
+                <Spinner
+                    android:id="@+id/tax_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/error_occupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Select Occupation Type"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#e90b0b"
+                    />
+                <Spinner
+                    android:id="@+id/occupation_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/error_income_slab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Select Income Slab"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="#e90b0b"
+                    />
+                <Spinner
+                    android:id="@+id/income_slab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+
+                <RelativeLayout
+                    android:id="@+id/next"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_below="@id/lay_top"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorGreen"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_20sdp">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Next"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <RelativeLayout
+        android:id="@+id/grayDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B0000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/white_circle" />
+
+        <ProgressBar
+            android:indeterminateTint="@color/colorGreen"
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

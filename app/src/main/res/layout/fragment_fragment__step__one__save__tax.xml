@@ -1,0 +1,540 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Fragment_Step_One_Save_Tax">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/account_top"
+        android:animateLayoutChanges="true"
+        android:background="#363646">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/lay1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/publicprovidendfund" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_user"
+                    android:text="Public Providend Fund"
+                    android:textColor="#ffffff" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/circle_icon"
+                        android:id="@+id/back1"/>
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:src="@drawable/down_arrow"
+                        android:tint="#ffffff" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:id="@+id/relative1"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:hint="Enter Amount"
+                    android:textColorHint="@color/White"
+                    android:textColor="@color/White"
+                    android:id="@+id/et1"/>
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/lay8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/img_epf"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/employesspf" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_epf"
+                    android:text="Employees Providend Fund"
+                    android:textColor="#ffffff" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/circle_icon"
+                        android:id="@+id/back6"/>
+
+                    <ImageView
+                        android:id="@+id/img8"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:src="@drawable/down_arrow"
+                        android:tint="#ffffff" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:id="@+id/relative7"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:hint="Enter Amount"
+                    android:textColorHint="@color/White"
+                    android:textColor="@color/White"
+                    android:id="@+id/et6"/>
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/lay2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/img_user1"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/homeloannn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_user1"
+                    android:text="Home Loan"
+                    android:textColor="#ffffff"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/circle_icon"
+                        android:id="@+id/back2"/>
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:src="@drawable/down_arrow"
+                        android:tint="#ffffff" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:id="@+id/relative2"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:hint="Enter Amount"
+                    android:textColorHint="@color/White"
+                    android:textColor="@color/White"
+                    android:id="@+id/et2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+
+                <ImageView
+                    android:id="@+id/img_placeholder"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/fivefixeddeposit" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_placeholder"
+                    android:text="5 Years Fixed Deposit"
+                    android:textColor="#ffffff"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/circle_icon"
+                        android:id="@+id/back3"/>
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:src="@drawable/down_arrow"
+                        android:tint="#ffffff" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:id="@+id/relative3"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:hint="Enter Amount"
+                    android:textColorHint="@color/White"
+                    android:textColor="@color/White"
+                    android:id="@+id/et3"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lay4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/img_bank"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/nationalsavingscert" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_bank"
+                    android:text="National Savings Certificate"
+                    android:textColor="#ffffff" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/circle_icon"
+                        android:id="@+id/back4"/>
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:src="@drawable/down_arrow"
+                        android:tint="#ffffff" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:id="@+id/relative4"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:hint="Enter Amount"
+                    android:textColorHint="@color/White"
+                    android:textColor="@color/White"
+                    android:id="@+id/et4"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lay5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/img_file"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/lifeinsurancei"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_file"
+                    android:text="Life Insurance For Myself"
+                    android:textColor="#ffffff" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/circle_icon"
+                        android:id="@+id/back5"/>
+
+                    <ImageView
+                        android:id="@+id/img5"
+                        android:layout_width="@dimen/_7sdp"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:src="@drawable/down_arrow"
+                        android:tint="#ffffff" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:id="@+id/relative5"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/portfolio_background"
+                android:elevation="@dimen/_10sdp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textSize="15dp"
+                    android:hint="Enter Amount"
+                    android:textColorHint="@color/White"
+                    android:textColor="@color/White"
+                    android:id="@+id/et5"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/lay6"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:elevation="@dimen/_10sdp"
+                android:gravity="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:text="NEXT"
+                    android:background="@drawable/button_shape"
+                    android:id="@+id/next"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/lay7"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginLeft="@dimen/_10sdp"-->
+            <!--android:layout_marginRight="@dimen/_10sdp"-->
+            <!--android:layout_marginTop="@dimen/_10sdp"-->
+            <!--android:layout_marginBottom="@dimen/_20sdp"-->
+            <!--android:background="@drawable/portfolio_background"-->
+            <!--android:elevation="@dimen/_10sdp"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/_5sdp">-->
+            <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="None of these"-->
+            <!--android:background="@drawable/portfolio_background"-->
+            <!--android:id="@+id/none"-->
+            <!--android:textColor="#ffffff" />-->
+            <!--</RelativeLayout>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:clickable="true"
+    android:background="#363646"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Plan"
+        android:textColor="#dcdada"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="9.00dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estimated time to goal"
+        android:layout_marginTop="15.00dp"
+        android:textColor="#dcdada"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:layout_marginTop="10dp"
+        android:text="9 Years, 10 Months"
+        android:textColor="#dcdada"
+        android:layout_gravity="center"
+        android:textSize="9.00dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#484646"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight=".5"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="20dp"
+                android:scaleType="center"
+                android:background="@drawable/image3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="GOAL TARGET"
+                android:layout_weight="1"
+                android:textSize="9.00dp"
+                android:textColor="#dcdada"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+
+
+            <TextView
+                android:id="@+id/goalTargetValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/panel1"
+                android:text="₹ 140000"
+                android:textAlignment="center"
+                android:textColor="#dcdada"
+                android:textSize="9.00dp" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#484646"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight=".5"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/image4"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginLeft="5dp"
+                android:text="MONTHLY INVESTMENT"
+                android:textSize="9.00dp"
+                android:textColor="#dcdada"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"/>
+
+
+
+            <TextView
+                android:id="@+id/monthlyInvest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/panel1"
+                android:text="₹ 800"
+                android:textAlignment="center"
+                android:textColor="#dcdada"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="9.00dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="NEXT"
+            android:textColor="#dcdada"
+            android:textSize="15.00dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

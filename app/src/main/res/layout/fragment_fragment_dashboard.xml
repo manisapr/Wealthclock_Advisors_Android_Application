@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fr">
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#353544"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- COMPLETE  -->
+            <RelativeLayout
+                android:id="@+id/portfolio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:elevation="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/img_calculator_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:weightSum="10">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_weight="6"
+                        android:padding="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_current_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="Current Value"
+                                android:textColor="#bdbdc5"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_current_value"
+                                android:layout_centerHorizontal="true">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toLeftOf="@+id/current_value"
+                                    android:src="@drawable/rupee"
+                                    android:tint="#ffffff" />
+
+                                <TextView
+                                    android:id="@+id/current_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="00000000000"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/_30sdp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0sp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="4"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <RelativeLayout
+                                    android:id="@+id/lay_invest"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true">
+
+                                    <ImageView
+                                        android:id="@+id/icon1"
+                                        android:layout_width="@dimen/_9sdp"
+                                        android:layout_height="@dimen/_9sdp"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/rupee"
+                                        android:tint="#ffffff" />
+
+                                    <TextView
+                                        android:id="@+id/total_investment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/icon1"
+                                        android:text="0000000000"
+                                        android:textColor="#ffffff"
+                                        android:textSize="14dp" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/lay_invest"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="TOTAL INVESTMENT"
+                                    android:textColor="#a9a9b1"
+                                    android:textSize="@dimen/_8sdp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <RelativeLayout
+                                    android:id="@+id/lay_gain"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true">
+
+                                    <ImageView
+                                        android:id="@+id/icon2"
+                                        android:layout_width="@dimen/_9sdp"
+                                        android:layout_height="@dimen/_9sdp"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/rupee"
+                                        android:tint="#ffffff" />
+
+                                    <TextView
+                                        android:id="@+id/total_gain_loss"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/icon2"
+                                        android:text="0000.00"
+                                        android:textColor="#ffffff"
+                                        android:textSize="14dp" />
+                                </RelativeLayout>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/lay_gain"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="TOTAL GAIN/LOSS"
+                                    android:textColor="#a9a9b1"
+                                    android:textSize="@dimen/_8sdp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".96">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <TextView
+                                    android:id="@+id/xirr"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="00.0%"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/xirr"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="XIRR VALUE"
+                                    android:textColor="#a9a9b1"
+                                    android:textSize="@dimen/_8sdp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!-- FOR INCOMPLETE -->
+
+            <RelativeLayout
+                android:id="@+id/portfolio_incomplete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:elevation="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_incomplete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="INCOMPLETE INVESTMENT"
+                    android:textColor="#ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_incomplete"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/first_lay"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ring_circle_incomplete">
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/track_investment" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/first_lay"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="TRACK INVESTMENTS"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_6sdp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/second_lay"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ring_circle_incomplete">
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/my_fav" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/second_lay"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="MY FAVOURITES"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_6sdp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/third_lay"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ring_circle_incomplete">
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/multi_pay_mode" />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/third_lay"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="MULTI PAYMENT MODES"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_6sdp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp">
+
+                <RelativeLayout
+                    android:id="@+id/lay_quick_purchase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:elevation="@dimen/_5sdp">
+
+
+                    <ImageView
+                        android:id="@+id/quick_purchase"
+                        android:layout_width="@dimen/_105sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:background="@drawable/icon_background_dashboard" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:id="@+id/img_purchase"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ring_circle">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/quick_purchase_icon"
+                                android:tint="#37c7b6" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_quick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_purchase"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:lines="1"
+                            android:text="QUICK PURCHASE"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_11sdp" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_redeem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="@dimen/_5sdp">
+
+                    <ImageView
+                        android:id="@+id/redeem"
+                        android:layout_width="@dimen/_105sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:background="@drawable/icon_background_dashboard" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:id="@+id/img_redeem"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ring_circle">
+
+                            <ImageView
+
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/redeem_icon"
+                                android:tint="#37c7b6" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_redeem"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:lines="1"
+                            android:text="REDEEM"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_11sdp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_save_tax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:elevation="@dimen/_5sdp">
+
+                    <ImageView
+                        android:id="@+id/calculator"
+                        android:layout_width="@dimen/_105sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:background="@drawable/icon_background_dashboard" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:id="@+id/img_calculator"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:background="@drawable/ring_circle">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/tax"
+                                android:tint="#37c7b6" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_calculator"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:lines="1"
+                            android:text="SAVE TAX"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_11sdp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/start_sip_lay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:elevation="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_105sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:background="@drawable/icon_background_dashboard" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <RelativeLayout
+                                android:id="@+id/start_sip"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/ring_circle">
+
+                                <ImageView
+
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/start_your_sip"
+                                    android:tint="#37c7b6" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/start_sip"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:text="START YOUR SIP"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/planGoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_105sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:background="@drawable/icon_background_dashboard" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <RelativeLayout
+                                android:id="@+id/plan_goal"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/ring_circle">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/plan_your_goal"
+                                    android:tint="#37c7b6" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/plan_goal"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:text="PLAN YOUR GOAL"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_105sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:background="@drawable/icon_background_dashboard" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <RelativeLayout
+                                android:id="@+id/invest_now"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/ring_circle">
+
+                                <ImageView
+
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/invest_now"
+                                    android:tint="#37c7b6" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/invest_now"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:text="PARK WEALTH"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:text="RISK ANALYZER"
+                android:textColor="#ffffff" />
+
+
+            <RelativeLayout
+                android:id="@+id/lay_risk_analyzer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_85sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/risk_analyzer_background"
+                android:padding="@dimen/_8sdp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_toLeftOf="@+id/risk_icon_lay"
+                    android:ellipsize="end"
+                    android:text="@string/risk"
+                    android:textColor="#a9a9b1"
+                    android:textSize="@dimen/_11sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/risk_icon_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/_58sdp"
+                        android:layout_height="@dimen/_58sdp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle1" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/growth"
+                        android:tint="#ffffff" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tv_newsfeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="NEWSFEED"
+                    android:textColor="#ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/bullet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_bullet1"
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="@dimen/_5sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_bullet2"
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_bullet3"
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="@dimen/_5sdp"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_bullet4"
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_bullet5"
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="@dimen/_5sdp"
+                        />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/newsRelative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_85sdp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/risk_analyzer_background">
+
+
+                <!--<android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager_newsfeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp">
+
+                </android.support.v4.view.ViewPager>-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/newsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <RelativeLayout
+                    android:id="@+id/lay_learn_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/tv_learn_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_8sdp"
+                        android:text=""/>
+
+                   <!-- <ImageView
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_learn_more"
+                        android:padding="@dimen/_1sdp"
+                        android:src="@drawable/ic_arrow_forward_black_24dp"
+                        android:tint="#ffffff" />-->
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#363646">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Plan"
+        android:textSize="24dp"
+        android:textColor="@color/White"
+        android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estimated Time  To Goal"
+            android:textSize="24dp"
+            android:textColor="@color/White"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50 Years"
+            android:textSize="24dp"
+            android:textColor="@color/White"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/lay_quick_purchase"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_115sdp"
+                    android:layout_alignParentLeft="true"
+                    android:elevation="@dimen/_5sdp"
+                    android:background="@drawable/icon_background_dashboard">
+
+                    <ImageView
+                        android:id="@+id/quick_purchase"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_70sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:id="@+id/img_purchase"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_height="@dimen/_55sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/goo" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_quick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_purchase"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:lines="1"
+                            android:text="Goal Target Inflation"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:id="@+id/goalTargetValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_quick"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:lines="1"
+                            android:text="12500.00"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+
+                <RelativeLayout
+                    android:id="@+id/lay_quick_purchase1"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_115sdp"
+                    android:layout_alignParentLeft="true"
+                    android:elevation="@dimen/_5sdp"
+                    android:background="@drawable/icon_background_dashboard">
+
+                    <ImageView
+                        android:id="@+id/quick_purchase1"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_70sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:id="@+id/img_purchase1"
+                            android:layout_width="@dimen/_55sdp"
+                            android:layout_height="@dimen/_55sdp"
+                            android:layout_centerHorizontal="true">
+
+                            <ImageView
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_height="@dimen/_55sdp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/innnvestment" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_quick1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_purchase1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:lines="1"
+                            android:text="Monthly Investment"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp" />
+
+
+                        <TextView
+                            android:id="@+id/monthlyInvest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_quick1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:lines="1"
+                            android:text="12500.00"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="20dp" />
+
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:layout_gravity="center"
+            android:text="Next"
+            android:textColor="@color/White"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

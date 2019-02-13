@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:clickable="true"
+    tools:context=".Views.fragment.DashBoard.Fragment_StartSIP">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3b3b4d">
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="71dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/relativelayout1">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sip"
+                        android:id="@+id/img1" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativelayout2"
+                    android:layout_gravity="center"
+                    android:text="SIP"
+                    android:textColor="@color/White"
+                    android:paddingTop="5dp"
+                    android:textSize="15dp"
+                    android:theme="@style/DefaultNumberPickerTheme"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Invest A Fixed Amount Monthly"
+                    android:textColor="@color/White"
+                    android:textSize="13sp" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="How Much Would You Like To Invest?"
+                    android:textColor="@color/White"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/numberview"
+                        android:textColor="#fffefe"
+                        android:textSize="@dimen/_13sdp"
+                        android:theme="@style/NumberPicker" />
+
+
+                    <NumberPicker
+                        android:id="@+id/numberpicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:theme="@style/DefaultNumberPickerTheme"
+                        android:visibility="visible"/>
+
+
+
+                    <TextView
+                        android:id="@+id/customAmountSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="You Have Selected "
+                        android:textAlignment="center"
+                        android:textColor="@color/White"
+                        android:textSize="24dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="Custom Amount"
+                    android:id="@+id/custom_amount"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/button_shape"
+                    android:textColor="@color/White" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="How Long Do You Want To Invest For ?"
+                    android:textColor="@color/White"
+                    android:layout_marginTop="20dp"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radiogroup"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/untilRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Until Stopped"
+                            android:buttonTint="@color/White"
+                            android:textColor="@color/White"
+                            android:textSize="13dp"
+
+                            />
+                        <RadioButton
+                            android:id="@+id/threeYearsRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 Years"
+                            android:textSize="13.00dp"
+                            android:buttonTint="@color/White"
+                            android:textColor="@color/White"
+                            />
+                        <RadioButton
+                            android:id="@+id/fiveYearsRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Years"
+                            android:textSize="13.00dp"
+                            android:textColor="@color/White"
+                            android:buttonTint="@color/White"
+                            android:onClick="onRadioButtonClicked"
+                            tools:ignore="OnClick" />
+                        <RadioButton
+                            android:id="@+id/tenYearsRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 Years"
+                            android:textSize="13.00dp"
+                            android:buttonTint="@color/White"
+                            android:textColor="@color/White"
+
+                             />
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+
+
+                <Button
+
+                    android:id="@+id/nextText"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/button_shape"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Next"
+                    android:textColor="@color/White"/>
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>
