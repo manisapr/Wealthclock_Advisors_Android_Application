@@ -32,7 +32,6 @@ public class FragmentInsertAmountGoalPlanner extends Fragment implements View.On
 
     private Button _addGoalButton,_plusButton,_minusButton;
     private EditText _amountEditText,_yearsEditText;
-
     private String amount = "0.00";
     private String year = " ";
     private String _type = " ";
@@ -45,7 +44,6 @@ public class FragmentInsertAmountGoalPlanner extends Fragment implements View.On
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-
         View  view = inflater.inflate(R.layout.fragment_fragment_insert_amount_goal_planner, container, false);
         _addGoalButton = view.findViewById(R.id.addGoalButton);
         _amountEditText = view.findViewById(R.id.amountEditText);
@@ -96,7 +94,6 @@ public class FragmentInsertAmountGoalPlanner extends Fragment implements View.On
             }
         });
 
-
         _addGoalButton.setEnabled(false);
         _addGoalButton.setAlpha(0.5f);
 
@@ -107,11 +104,9 @@ public class FragmentInsertAmountGoalPlanner extends Fragment implements View.On
             _type = desired_string;
         }
 
-
         _addGoalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                     Bundle bundle = new Bundle();
                     bundle.putString("amount", amount);
                     bundle.putString("year", year);
@@ -157,7 +152,6 @@ public class FragmentInsertAmountGoalPlanner extends Fragment implements View.On
                 break;
         }
     }
-
 
     public boolean validation()
     {

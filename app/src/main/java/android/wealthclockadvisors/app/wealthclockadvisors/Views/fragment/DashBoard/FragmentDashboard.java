@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Insurance.FirstPage_Insurance;
 import android.wealthclockadvisors.app.wealthclockadvisors.adapter.NewsAdapter;
 import android.wealthclockadvisors.app.wealthclockadvisors.constant.APIConstant;
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.ihttpResultHandler;
@@ -53,6 +54,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
 
     private TextView _current_value,_total_investment,_total_gain_loss,_xirr;
     private RecyclerView _newsRecycler;
+    private RelativeLayout insurance_dashboard;
 
     private View progressContainer;
     private RequestQueue _requestQueue;
@@ -88,8 +90,9 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
         _newsRelative = view.findViewById(R.id.newsRelative);
         _planGoal = view.findViewById(R.id.planGoal);
         _lay_save_tax = view.findViewById(R.id.lay_save_tax);
+        insurance_dashboard = view.findViewById(R.id.insurance_dashboard);
         newsModelArrayList = new ArrayList<>();
-
+    insurance_dashboard.setOnClickListener(this);
 
         hud = KProgressHUD.create(getContext())
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
@@ -283,6 +286,14 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
             case R.id.lay_save_tax:
                 fragment_fragment_tax_saving_money__save__tax fragment_fragment_tax_saving_money__save__tax = new fragment_fragment_tax_saving_money__save__tax();
                 fragmentTransaction.replace(R.id.frag, fragment_fragment_tax_saving_money__save__tax, "fragmentGoalTrack");
+                fragmentTransaction.addToBackStack("fragmentGoalTrack");
+                fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                fragmentTransaction.commit();
+                break;
+
+            case R.id.insurance_dashboard:
+                FirstPage_Insurance firstPage_insurance = new FirstPage_Insurance();
+                fragmentTransaction.replace(R.id.frag, firstPage_insurance, "fragmentGoalTrack");
                 fragmentTransaction.addToBackStack("fragmentGoalTrack");
                 fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 fragmentTransaction.commit();

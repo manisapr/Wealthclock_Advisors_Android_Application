@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/panel3">
+    android:background="#363646" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#363646"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offline"
+            android:textSize="12.00dp"
+            android:textColor="@color/White"/>
+
+
+        <Switch
+            android:id="@+id/onOffswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Online"
+            android:textSize="12.00dp"
+            android:textColor="@color/White"/>
+
+    </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout"
@@ -11,6 +49,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="10dp">
+
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -23,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Fund name"
-                        android:textSize="12.00dp"
+                        android:textSize="14dp"
                         android:textColor="@color/White"/>
 
                     <TextView
@@ -32,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Aditya Birla SunLife MNC Fund(G)"
-                        android:textSize="12.00dp"
+                        android:textSize="14dp"
                         android:textColor="@color/White"/>
 
                 </LinearLayout>
@@ -48,6 +87,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="14dp"
                         android:text="Purchase amount"
                         android:textColor="@color/White"/>
 
@@ -57,39 +97,44 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="₹ 1950"
+                        android:textSize="14dp"
                         android:textColor="@color/White"/>
 
                 </LinearLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:gravity="center"
-                    android:visibility="gone">
+                    android:visibility="visible"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:id="@+id/dop"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="Folio number"
-                        android:textSize="12.00dp"
-                        android:textColorHint="@color/White"
-                        android:lines="1"
-                        android:inputType="number"
-                        android:textColor="@color/White"/>
-
-                </LinearLayout>
+                        android:text="Day Of SIP"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/White" />
 
                     <Spinner
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
                         android:id="@+id/dateSpinner"
                         android:visibility="visible">
 
                     </Spinner>
+
+                </RelativeLayout>
         </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1e1c33"
+        android:layout_marginBottom="10dp"/>
 
     <LinearLayout
         android:id="@+id/layout2"
@@ -109,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Fund name"
-                android:textSize="12.00dp"
+                android:textSize="14dp"
                 android:textColor="@color/White"/>
 
             <TextView
@@ -118,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Aditya Birla SunLife MNC Fund(G)"
-                android:textSize="12.00dp"
+                android:textSize="14dp"
                 android:textColor="@color/White"/>
 
         </LinearLayout>
@@ -134,6 +179,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="14dp"
                 android:text="Purchase amount"
                 android:textColor="@color/White"/>
 
@@ -143,39 +189,41 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="₹ 1950"
+                android:textSize="14dp"
                 android:textColor="@color/White"/>
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:gravity="center"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Folio number"
-                android:textSize="12.00dp"
-                android:textColorHint="@color/White"
-                android:lines="1"
-                android:inputType="number"
-                android:textColor="@color/White"/>
-
-        </LinearLayout>
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/dateSpinner2"
             android:visibility="visible">
 
-        </Spinner>
+            <TextView
+                android:id="@+id/dop1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day Of SIP"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/White" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateSpinner2"
+                android:layout_alignParentRight="true">
+            </Spinner>
+        </RelativeLayout>
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1e1c33"
+        android:layout_marginBottom="10dp" />
 
     <LinearLayout
         android:id="@+id/layout3"
@@ -195,7 +243,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Fund name"
-                android:textSize="12.00dp"
+                android:textSize="14dp"
                 android:textColor="@color/White"/>
 
             <TextView
@@ -204,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Aditya Birla SunLife MNC Fund(G)"
-                android:textSize="12.00dp"
+                android:textSize="14dp"
                 android:textColor="@color/White"/>
 
         </LinearLayout>
@@ -220,6 +268,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="14dp"
                 android:text="Purchase amount"
                 android:textColor="@color/White"/>
 
@@ -229,43 +278,56 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="₹ 1950"
+                android:textSize="14dp"
                 android:textColor="@color/White"/>
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:gravity="center"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Folio number"
-                android:textSize="12.00dp"
-                android:textColorHint="@color/White"
-                android:lines="1"
-                android:inputType="number"
-                android:textColor="@color/White"/>
-
-        </LinearLayout>
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/dateSpinner3"
             android:visibility="visible">
 
-        </Spinner>
+            <TextView
+                android:id="@+id/dop2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day Of SIP"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/White" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateSpinner3"
+                android:visibility="visible"
+                android:layout_alignParentRight="true">
+
+            </Spinner>
+
+        </RelativeLayout>
+
+
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1e1c33"
+        android:layout_marginBottom="20dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/buy"/>
+        android:id="@+id/buy"
+        android:background="@color/colorPrimary"
+        android:text="Purchase"
+        android:textColor="@color/White"
+        android:layout_gravity="center"/>
 
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

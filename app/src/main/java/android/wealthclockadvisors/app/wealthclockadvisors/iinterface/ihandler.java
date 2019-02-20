@@ -32,7 +32,7 @@ public interface ihandler {
     void getMandatetId(xsipOrderEntryParamModel xsipOrderEntryParamModel,Context context);
     void getFundListInGoalPlanner(Top3Funds top3Funds, Context context);
     void redeemIMPS(User_DetailsForIMPS user_detailsForIMPS, Context context);
-    void multifundSip(ArrayList<Top3Funds> top3FundsArrayList,ArrayList<Top3Funds> list,String mandateId,String d1,String d2,String d3 ,Context context);
+    void multifundSip(ArrayList<Top3Funds> top3FundsArrayList,ArrayList<Top3Funds> list,String mandateId,String d1,String d2,String d3 ,String type,String paymentmode,Context context);
     void getMultiFundFolioList(Top3Funds arrayList,String n,Context context);
     void  dateformultifund(String schemecd,Context context);
     void  dateformultifund1(String schemecd,Context context);

@@ -1,10 +1,14 @@
 package android.wealthclockadvisors.app.wealthclockadvisors.utils;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Environment;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class Utility {
 
@@ -113,6 +117,46 @@ public class Utility {
         } else {
             return false;
         }
+    }
+
+
+    public static File getImageUri(Context inContext, Bitmap finalBitmap)
+    {
+        File file = null;
+
+        try
+        {
+            String fullPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/wealthclock";
+            System.out.println("fullPath: "+fullPath);
+            File dir = new File(fullPath);
+            System.out.println("directory: "+dir);
+            if (!dir.exists())
+            {
+                dir.mkdirs();
+            }
+            System.out.println("directory112: "+dir);
+            java.io.ByteArrayOutputStream bytes = new java.io.ByteArrayOutputStream();
+            finalBitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+            //Bitmap targetBitmap;
+
+            file = new File(fullPath, File.separator + "Sujoy" + System.currentTimeMillis()+".jpg");
+            if(file.exists()) {
+                file.delete();
+            }
+
+            file.createNewFile();
+            FileOutputStream fo = new FileOutputStream(file);
+            fo.write(bytes.toByteArray());
+            fo.close();
+            fo.flush();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        /*return Uri.fromFile(file);*/
+        return file;
     }
 
 

@@ -188,10 +188,10 @@ public class UserHandler implements ihandler {
     }
 
     @Override
-    public void multifundSip(ArrayList<Top3Funds> top3FundsArrayList, ArrayList<Top3Funds> list, String mandateId,String d1,String d2,String d3 ,Context context) {
+    public void multifundSip(ArrayList<Top3Funds> top3FundsArrayList, ArrayList<Top3Funds> list, String mandateId,String d1,String d2,String d3 ,String type,String paymentmode,Context context) {
         _HttpController = httpController.getInstance();
         _HttpController.set_iHttpResultHandler(_ihttpResultHandler);
-        _HttpController.multifundSip(top3FundsArrayList,list,mandateId,d1,d2,d3,context);
+        _HttpController.multifundSip(top3FundsArrayList,list,mandateId,d1,d2,d3,type,paymentmode,context);
     }
 
 

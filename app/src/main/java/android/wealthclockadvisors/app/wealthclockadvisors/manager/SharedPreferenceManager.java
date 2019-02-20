@@ -23,10 +23,12 @@ public class SharedPreferenceManager {
 
     public static void setUserName(Context context, String userName)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.USER_NAME,userName);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.USER_NAME, userName);
+            editor.apply();
+        }
     }
 
     public static String getUserName(Context context){
@@ -36,10 +38,12 @@ public class SharedPreferenceManager {
 
     public static void setImagePath(Context context, String path)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.IMAGE_PATH,path);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.IMAGE_PATH, path);
+            editor.apply();
+        }
     }
 
     public static String getImagePath(Context context){
@@ -50,10 +54,12 @@ public class SharedPreferenceManager {
 
     public static void setUserEmail(Context context, String email)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.ENAIL,email);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.ENAIL, email);
+            editor.apply();
+        }
     }
 
     public static String getUserEmail(Context context){
@@ -78,10 +84,12 @@ public class SharedPreferenceManager {
 
     public static void setPanNo(Context context, String panno)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.PAN_NO,panno);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.PAN_NO, panno);
+            editor.apply();
+        }
     }
 
     public static String getPanno(Context context){
@@ -91,10 +99,12 @@ public class SharedPreferenceManager {
 
     public static void setBankIfsceCode(Context context, String ifsccode)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.IFSC_CODE,ifsccode);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.IFSC_CODE, ifsccode);
+            editor.apply();
+        }
     }
 
     public static String getBankIfscCode(Context context){
@@ -105,10 +115,12 @@ public class SharedPreferenceManager {
 
     public static void setBankAccountNumber(Context context, String accntnumber)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.ACCOUNT_NUMBER,accntnumber);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.ACCOUNT_NUMBER, accntnumber);
+            editor.apply();
+        }
     }
 
     public static String getBankAccountNumber(Context context){
@@ -118,10 +130,12 @@ public class SharedPreferenceManager {
 
     public static void setBankName(Context context, String bankName)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.BANK_NAME,bankName);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.BANK_NAME, bankName);
+            editor.apply();
+        }
     }
 
     public static String getBankName(Context context){
@@ -132,10 +146,12 @@ public class SharedPreferenceManager {
 
     public static void setIsISIPActive(Context context, String IsISIPActive)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.IsISIPActive,IsISIPActive);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.IsISIPActive, IsISIPActive);
+            editor.apply();
+        }
     }
 
     public static String getIsISIPActive(Context context){
@@ -146,10 +162,12 @@ public class SharedPreferenceManager {
 
     public static void setIsXSIPActive(Context context, String IsXSIPActive)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.IsXSIPActive,IsXSIPActive);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.IsXSIPActive, IsXSIPActive);
+            editor.apply();
+        }
     }
 
     public static String getIsXSIPActive(Context context){
@@ -159,10 +177,12 @@ public class SharedPreferenceManager {
 
     public static void setManadateRegId(Context context, String IsXSIPActive)
     {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(AppConstant.MANDATEREGID,IsXSIPActive);
-        editor.apply();
+        if (context!=null) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(AppConstant.MANDATEREGID, IsXSIPActive);
+            editor.apply();
+        }
     }
 
     public static String getsetManadateRegId(Context context){

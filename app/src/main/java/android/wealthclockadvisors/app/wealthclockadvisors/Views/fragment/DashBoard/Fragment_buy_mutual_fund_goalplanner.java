@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity;
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PaymentWebViewActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.handler.UserHandler;
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.ihttpResultHandler;
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.iisendPurchaseDetails;
@@ -20,14 +21,19 @@ import android.wealthclockadvisors.app.wealthclockadvisors.model.Top3Funds;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kaopiz.kprogresshud.KProgressHUD;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -67,6 +73,8 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
     private ArrayList<Top3Funds> _folioList;
     private int k=0;
     private int m=0;
+    private Switch _onOffswitch;
+    private String paymentmode = "yes";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -92,7 +100,21 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
         _purchaseamount2 = view.findViewById(R.id.purchaseAmount2);
         _purchaseamount3 = view.findViewById(R.id.purchaseAmount3);
         _goalFundList = new ArrayList<>();
+        _onOffswitch = view.findViewById(R.id.onOffswitch);
 
+        _onOffswitch.setChecked(true);
+        _onOffswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (_onOffswitch.isChecked())
+                {
+                    paymentmode="yes";
+                }
+                else {
+                    paymentmode="no";
+                }
+            }
+        });
 
         hud = KProgressHUD.create(getContext())
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
@@ -104,8 +126,6 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
 
         System.out.println("Fragment_buy_mutual_fund_goalplanner | onCreateView:- ");
         //();
-
-
         ServerResultHandler serverResultHandler = new ServerResultHandler();
         serverResultHandler.setContext(getContext());
         UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
@@ -134,7 +154,7 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
                     _buy.setAlpha(0.5f);
                     _buy.setText(R.string.purchase);
                     _buy.setEnabled(false);
-                    UserHandler.getInstance().multifundSip(cv,_folioList,separated[0],dateselectone,dateselecttwo,dateselectthree,getContext());
+                    UserHandler.getInstance().multifundSip(cv,_folioList,separated[0],dateselectone,dateselecttwo,dateselectthree,yea,paymentmode,getContext());
                 }
             }
         });
@@ -213,7 +233,6 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
                     }
 
                 }
-
 
             }
 
@@ -496,24 +515,44 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
             ServerResultHandler serverResultHandler = new ServerResultHandler();
             serverResultHandler.setContext(getContext());
             UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
-            if (operation_flag.equalsIgnoreCase("multifundSip")) {
-                AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
-                dialog.setCancelable(false);
-                dialog.setTitle("SIP Initiated Successfully");
-                dialog.setMessage("Kindly make the payment via One Time Mandate or Cheque");
-                dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        //Action for "Delete".
-                        //getActivity().getSupportFragmentManager().popBackStackImmediate();
-                        Intent intent = new Intent(getContext(), DashboardActivity.class);
+            if (operation_flag.equalsIgnoreCase("multifundSip"))
+            {
+                if (paymentmode.trim().equalsIgnoreCase("no")) {
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                    dialog.setCancelable(false);
+                    dialog.setTitle("SIP Initiated Successfully");
+                    dialog.setMessage("Kindly make the payment via One Time Mandate or Cheque");
+                    dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            //Action for "Delete".
+                            //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                            Intent intent = new Intent(getContext(), DashboardActivity.class);
+                            startActivity(intent);
+                            getActivity().finish();
+                        }
+                    });
+
+                    final AlertDialog alert = dialog.create();
+                    alert.show();
+                }
+                else
+                    {
+                    String responseStream = String.valueOf(message);
+                    final JSONObject jsonResponse;
+                    try {
+                        jsonResponse = new JSONObject(responseStream);
+                        JSONObject jsonInfo = jsonResponse;
+                        String html = jsonInfo.getString("Info");
+                        Intent intent = new Intent(getContext(),PaymentWebViewActivity.class);
+                        intent.putExtra("link",html);
                         startActivity(intent);
                         getActivity().finish();
                     }
-                });
-
-                final AlertDialog alert = dialog.create();
-                alert.show();
+                    catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
 
             if (operation_flag.equalsIgnoreCase("dateformultifund"))
@@ -597,9 +636,6 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
                 _goalFundList.clear();
                 _goalFundList.addAll(m,goalFundList);
                 m++;
-
-
-
 
                 for (int j=0;j<goalFundList.size();j++) {
                     Top3Funds fundsfolio = goalFundList.get(j);

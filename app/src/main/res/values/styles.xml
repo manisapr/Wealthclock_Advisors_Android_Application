@@ -63,4 +63,12 @@
         <item name="colorControlNormal">#008577</item>
     </style>
 
+
+    <style name="ThemeSpinner1">
+        <!-- Color when pressed -->
+        <item name="colorAccent">#1e1c33</item>
+        <!-- Default color for the dropdown arrow and line -->
+        <item name="colorControlNormal">#1e1c33</item>
+    </style>
+
 </resources>

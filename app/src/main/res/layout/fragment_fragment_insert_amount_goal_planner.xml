@@ -6,104 +6,7 @@
     android:orientation="horizontal"
     android:id="@+id/main_layout"
     android:background="#363646"
-    android:clickable="true"
-    >
-
-    <!--<RelativeLayout
-        android:id="@+id/relativelayout1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="175dp"
-        android:background="#34495E">
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="6dp"
-                android:gravity="center"
-                android:text="TIME HORIZON"
-                android:textColor="#a9a9b1"
-                android:textSize="12.00dp"
-                android:textStyle="bold" />
-
-
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="6dp"
-                android:gravity="center"
-                android:text="When do you want this?"
-                android:textColor="#a9a9b1"
-                android:textSize="12.00dp"
-                android:textStyle="bold" />
-
-
-
-            <TextView
-                android:id="@+id/tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="6dp"
-                android:gravity="center"
-                android:text="10 years, 3 months"
-                android:textColor="#ffffff"
-                android:textSize="15.00dp"
-                android:textStyle="bold" />
-
-
-            <Button
-                android:id="@+id/next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Next"
-                android:layout_marginTop="5dp" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-
-
-    <com.sdsmdg.harjot.crollerTest.Croller
-        android:id="@+id/cr"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_alignBottom="@+id/relativelayout1"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:foregroundGravity="center"
-        back_circle_color="#6e6b6b"
-        indicator_color="#ffffff"
-        indicator_width="20"
-        is_continuous="true"
-        label_color="#ffffff"
-        main_circle_color="#FFFFFF"
-        max="1000"
-        progress_primary_color="#0B3C49"
-        progress_secondary_color="#EEEEEE"
-        start_offset="45"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="300dp" />-->
+    android:clickable="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -119,7 +22,7 @@
         <ImageView
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
-            android:background="@drawable/save_treasure_image"
+            android:background="@drawable/ssssys"
             android:layout_margin="@dimen/_20sdp"
             android:layout_gravity="center"/>
 
@@ -128,8 +31,9 @@
             android:layout_height="wrap_content"
             android:text="Plan your goal"
             android:textColor="#fff"
+            android:textSize="20dp"
             android:gravity="center"
-            android:layout_marginBottom="@dimen/_15sdp"/>
+            android:layout_marginBottom="@dimen/_20sdp"/>
 
         </LinearLayout>
 
@@ -155,6 +59,7 @@
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_35sdp"
                 android:text="-"
+                android:visibility="visible"
                 android:textColor="@color/White"
                 android:background="@color/colorPrimary"/>
 
@@ -181,6 +86,7 @@
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_35sdp"
                 android:text="+"
+                android:visibility="visible"
                 android:textColor="@color/White"
                 android:layout_margin="@dimen/_5sdp"
                 android:background="@color/colorPrimary"/>
@@ -229,22 +135,23 @@
                 android:gravity="center"/>
 
         </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginBottom="@dimen/_20sdp"
-            android:background="#666666"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#1E1B36">
         <Button
             android:id="@+id/addGoalButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ADD GOAL"
             android:textColor="@color/White"
-            android:layout_gravity="center"
+           android:gravity="center"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
 
     </LinearLayout>
 </FrameLayout>

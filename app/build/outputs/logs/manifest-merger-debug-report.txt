@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
 MERGED from [com.android.support:design:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/AndroidManifest.xml:17:1-24:12
 MERGED from [com.sdsmdg.harjot:croller:1.0.7] /home/su/.gradle/caches/transforms-1/files-1.1/croller-1.0.7.aar/a3b85b67f258b27e2bb3a3c70ce6bb67/AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.scijoker:spinner2:1.0.1] /home/su/.gradle/caches/transforms-1/files-1.1/spinner2-1.0.1.aar/71603f53372c413ad4e8f3e7ea9848dd/AndroidManifest.xml:2:1-11:12
@@ -46,20 +46,20 @@ MERGED from [com.android.support:cursoradapter:28.0.0] /home/su/.gradle/caches/t
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/b073dcec9bf0a3320fcee2bce78a2207/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/ffc929d6902b5f53e09d3bd8b4fc03e5/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /home/su/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/aa4d5395f9a0e9be64e8c3840751a2b7/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
+INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:3:5-58
 		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
 		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
 		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-45:12
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:1-49:12
 		INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:2:11-69
@@ -83,8 +83,20 @@ uses-permission#android.permission.INTERNET
 ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:10:5-67
 	android:name
 		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:10:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:11:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:12:22-77
+uses-permission#android.permission.CAMERA
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:13:22-62
 application
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:12:5-43:23
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:15:5-47:19
 MERGED from [com.android.support:design:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/AndroidManifest.xml:22:5-20
 MERGED from [com.sdsmdg.harjot:croller:1.0.7] /home/su/.gradle/caches/transforms-1/files-1.1/croller-1.0.7.aar/a3b85b67f258b27e2bb3a3c70ce6bb67/AndroidManifest.xml:11:5-15:19
@@ -106,73 +118,81 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /home/su/.gradle/ca
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:18:9-41
 	android:roundIcon
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:16:9-50
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:19:9-50
 	android:icon
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:14:9-45
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:17:9-45
 	android:allowBackup
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:18:9-40
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:21:9-40
 activity#android.wealthclockadvisors.app.wealthclockadvisors.SplashActivity
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:19:9-28:20
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:22:9-31:20
 	android:screenOrientation
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:21:13-49
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:24:13-49
 	android:theme
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:22:13-47
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:25:13-47
 	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:20:13-94
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:23:13-94
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:23:13-27:29
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:26:27-74
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:29:27-74
 activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.TutorialActivity
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:29:9-31:52
-	android:screenOrientation
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:31:13-49
-	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:30:13-102
-activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.LoginActivity
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:32:9-35:71
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:32:9-34:52
 	android:screenOrientation
 		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:34:13-49
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:33:13-102
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.LoginActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:35:9-38:71
+	android:screenOrientation
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:37:13-49
 	android:windowSoftInputMode
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:35:13-68
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:38:13-68
 	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:33:13-108
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:36:13-108
 activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.NoInternetConnectionActivity
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:36:9-132
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:39:9-132
 	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:36:19-129
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:39:19-129
 activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.AccountRegistration
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:37:9-123
-	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:37:19-120
-activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:38:9-121
-	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:38:19-118
-activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.FundDetailsActivity
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:39:9-123
-	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:39:19-120
-activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.NewsWebViewActivity
 ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:40:9-123
 	android:name
 		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:40:19-120
-activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PaymentWebViewActivity
-ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:41:9-135
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:41:9-121
 	android:name
-		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:41:19-123
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:41:19-118
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.FundDetailsActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:42:9-123
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:42:19-120
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.NewsWebViewActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:43:9-123
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:43:19-120
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PaymentWebViewActivity
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:44:9-126
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:44:19-123
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Insurance.Second_Page_Insurance
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:45:9-145
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:45:19-142
+activity#android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Insurance.YouTubeVideo_Insurance
+ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:46:9-155
+	android:name
+		ADDED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml:46:19-143
 uses-sdk
 INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/AndroidManifest.xml

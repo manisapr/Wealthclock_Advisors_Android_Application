@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#353544"
-    tools:context=".Views.activity.AccountRegistration">
+    android:background="#353544">
 
     <RelativeLayout
         android:id="@+id/top_lay"
@@ -53,12 +52,13 @@
                         android:layout_height="@dimen/_12sdp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/_5sdp">
+
                         <ImageView
                             android:id="@+id/img_step1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/circle1"
-                            />
+                            android:background="@drawable/circle1" />
+
                         <ImageView
                             android:layout_width="@dimen/_9sdp"
                             android:layout_height="@dimen/_9sdp"

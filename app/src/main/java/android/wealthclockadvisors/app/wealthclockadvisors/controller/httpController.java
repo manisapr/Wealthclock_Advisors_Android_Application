@@ -2066,7 +2066,7 @@ public class httpController implements ihttpController {
     }
 
     @Override
-    public void multifundSip(ArrayList<Top3Funds> top3FundsArrayList,ArrayList<Top3Funds> list,String id,String d1,String d2,String d3,Context context) {
+    public void multifundSip(ArrayList<Top3Funds> top3FundsArrayList,ArrayList<Top3Funds> list,String id,String d1,String d2,String d3,String type,String paymentmode,Context context) {
         AndroidNetworking.initialize(context.getApplicationContext());
         if (_requestQueue == null) {
             _requestQueue = Volley.newRequestQueue(context.getApplicationContext());
@@ -2092,7 +2092,9 @@ public class httpController implements ihttpController {
                 double result = Double.parseDouble(top3Funds.getPrice());
                 String cc=String.format("%.0f", result);
                 schemeObj.put("InstallmentAmount",cc);
-                schemeObj.put("NoOfInstallment", "48");
+                double tim= Double.parseDouble(type)*12;
+                String tymm= String.valueOf(tim);
+                schemeObj.put("NoOfInstallment", String.format("%.0f", tim));
                 if (i==0) {
                     schemeObj.put("StartDate", d1);
                 }
@@ -2104,7 +2106,7 @@ public class httpController implements ihttpController {
                 }
 
                 schemeObj.put("ClientCode", SharedPreferenceManager.getClientCode(context));
-                schemeObj.put("PaymentMode", "no");
+                schemeObj.put("PaymentMode", paymentmode);
                 schemeObj.put("XsipRegID","");
                 schemeObj.put("XsipStatus","");
                 schemeObj.put("AmcCode","");

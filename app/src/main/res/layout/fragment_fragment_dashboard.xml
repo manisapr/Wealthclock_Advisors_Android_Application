@@ -648,7 +648,7 @@
                             android:layout_centerInParent="true">
 
                             <RelativeLayout
-                                android:id="@+id/invest_now"
+                                android:id="@+id/insurance_dashboard"
                                 android:layout_width="@dimen/_45sdp"
                                 android:layout_height="@dimen/_45sdp"
                                 android:layout_centerHorizontal="true"
@@ -666,11 +666,11 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/invest_now"
+                                android:layout_below="@+id/insurance_dashboard"
                                 android:layout_marginTop="@dimen/_3sdp"
                                 android:gravity="center"
                                 android:lines="1"
-                                android:text="PARK WEALTH"
+                                android:text="INSURANCE"
                                 android:textColor="#ffffff"
                                 android:textSize="@dimen/_11sdp" />
                         </RelativeLayout>

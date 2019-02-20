@@ -27,6 +27,7 @@
     <string name="purchase">Purchase Initiated...</string>
     <string name="purchase_init">SIP Initiated...</string>
     <string name="risk">Risk Analyzer is an assessment of your willingness to take risk. Essentially, we measure about your preferred investment personality. We have therefore complied few questions for you to evaluate about your preferred investment personality. Based on your risk profile, we will recommend an asset allocation structure best suited for you.</string>
+    <string name="Term">Term</string>
 
     <string-array name="spinner_item">
         <item>Portfolio View</item>

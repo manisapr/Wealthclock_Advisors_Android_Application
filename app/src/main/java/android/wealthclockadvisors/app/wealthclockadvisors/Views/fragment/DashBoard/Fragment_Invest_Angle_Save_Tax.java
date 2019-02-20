@@ -65,7 +65,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
 
     ArrayList<Top3Funds> arrayList1=null;
     ArrayList<FundTypeModel> fundTypeModelArrayList=null;
-    ArrayList<OrderEntryModel> multiplefundpurchase=new ArrayList<>();
+    //ArrayList<OrderEntryModel> multiplefundpurchase=new ArrayList<>();
 
     RecyclerView lv1;
 
@@ -92,7 +92,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
     ArrayList<String> listamccode=new ArrayList<>();
     ArrayList<String> listprice=new ArrayList<>();
     ArrayList<String> listfolio=new ArrayList<>();
-    ArrayList<String> listPayment=new ArrayList<>();
+    //ArrayList<String> listPayment=new ArrayList<>();
 
     String ClientCode="";
     String Amccode;
@@ -151,9 +151,21 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                 investnow.setAlpha(0.5f);
                 investnow.setEnabled(false);
                 investnow.setText(R.string.purchase);
-                getPaymentMode();
-                getFolio1();
-                getFolio();
+                //getPaymentMode();
+                if (listamccode.size()==1)
+                {
+                    getFolio1();
+                    //System.out.println("Abcd");
+                }
+                else if (listamccode.size()>1)
+                {
+                    getFolio2();
+                    getFolio();
+                    //getPurchase();
+                    //System.out.println("efgh");
+                }
+                //getFolio1();
+                //getFolio();
 
 
             }
@@ -163,7 +175,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
 
 
     private void getPaymentMode() {
-        if (orderEntryModel.getPaymentMode().equalsIgnoreCase("yes"))
+        /*if (orderEntryModel.getPaymentMode().equalsIgnoreCase("yes"))
         {
             String infohtml = "<html>\n" +
                     "<head>\n" +
@@ -193,21 +205,21 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                         @Override
                         public void onClick(DialogInterface arg0, int arg1)
                         {
-                            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                           *//* FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             FragmentDashboard taxSavingMoney_save_tax = new FragmentDashboard();
                             fragmentTransaction.replace(R.id.frag, taxSavingMoney_save_tax , "taxSavingMoney_save_tax ");
                             fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                             fragmentTransaction.commit();
                             fragmentManager.popBackStack(fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount()-3).getId(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
-
-                            //getActivity().getSupportFragmentManager().popBackStackImmediate();
+*//*
+                            getActivity().getSupportFragmentManager().popBackStackImmediate();
                         }
                     });
 
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
-        }
+        }*/
     }
 
 
@@ -215,7 +227,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
         String url = "https://www.wealthclockadvisors.com/API/MultipleOrder/NormalOrder";
         JSONArray multipurchase=new JSONArray();
         try {
-            for (int i=0;i<2;i++)
+            for (int i=0;i<listamccode.size();i++)
             {
                 JSONObject purchase = new JSONObject();
                 purchase.put("TransCode", "NEW");
@@ -231,6 +243,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                 //purchase.put("BuySellType", "FRESH");
                 purchase.put("DPTxn", "P");
                 purchase.put("OrderVal", listprice.get(i));
+                //purchase.put("OrderVal", "500");
                 purchase.put("Qty", "");
                 purchase.put("AllRedeem", "Y");
                 if (listfolio.get(i).equalsIgnoreCase("NEW"))
@@ -273,6 +286,8 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
         {
             _requestQueue = Volley.newRequestQueue(getContext());
         }
+
+
         System.out.println("purchase obj: "+multipurchase + "url: "+url);
       /*  JsonArrayRequest jsObjRequest = new JsonArrayRequest(Request.Method.POST, url,multipurchase,
                 new Response.Listener<JSONArray>() {
@@ -336,8 +351,6 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
 
         _requestQueue.add(jsObjRequest);*/
 
-
-
         AndroidNetworking.post("https://www.wealthclockadvisors.com/API/MultipleOrder/NormalOrder")
                 .addJSONArrayBody(multipurchase)
                 .setTag("BSE")
@@ -345,8 +358,44 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
-                    public void onResponse(JSONObject response) {
+                    public void onResponse(JSONObject response)
+                    {
 
+                if (orderEntryModel.getPaymentMode().trim().equalsIgnoreCase("no"))
+                {
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                    dialog.setCancelable(false);
+                    dialog.setTitle("Purchase Initiated Successfully");
+                    dialog.setMessage("Kindly make the payment via One Time Mandate or Cheque");
+                    dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            //Action for "Delete".
+                            getActivity().getSupportFragmentManager().popBackStackImmediate();
+                        }
+                    });
+
+                    final AlertDialog alert = dialog.create();
+                    alert.show();
+                }
+                else {
+                    String responseStream = String.valueOf(response);
+                    final JSONObject jsonResponse;
+                    try {
+                        jsonResponse = new JSONObject(responseStream);
+                        JSONObject jsonInfo = jsonResponse;
+                       String html = jsonInfo.getString("Info");
+                        //System.out.println("Quick | info html:- "+infohtml);
+                        Intent intent = new Intent(getContext(),PaymentWebViewActivity.class);
+                        intent.putExtra("link",html);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }
+                    catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                }
                     }
 
                     @Override
@@ -357,6 +406,128 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
 
     }
     private void getFolio1() {
+
+        String url = APIConstant.BASE_URL +"/GetFundTypeFolio";
+        JSONObject portfolio = null;
+        try {
+            portfolio = new JSONObject();
+            portfolio.put("ClientCode",SharedPreferenceManager.getClientCode(getContext()));
+            portfolio.put("amccode", listamccode.get(0));
+            System.out.println("folioooooooooooo2 "+portfolio);
+
+
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+        }
+        //RequestQueue requestQueue = Volley.newRequestQueue(context);
+        if (_requestQueue == null) {
+            _requestQueue = Volley.newRequestQueue(getContext());
+        }
+
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST, url, portfolio,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        String successCode ="";
+                        String fundtype[] = {""};
+                        fundTypeModelArrayList = new ArrayList<>();
+
+                        try {
+                            String responseStream= String.valueOf(response);
+                            final JSONObject jsonResponse = new JSONObject(responseStream);
+                            JSONObject jsonInfo=jsonResponse;
+                            System.out.println("Folio2-"+jsonInfo);
+                            JSONArray foliodetails = jsonInfo.getJSONArray("FolioNo");
+                            if (foliodetails.length()>0)
+                            {
+
+
+                                FundTypeModel fundTypeModel = new FundTypeModel();
+                                JSONObject folioobj = foliodetails.getJSONObject(0);
+                                fundTypeModel.setFolioNo(folioobj.getString("FolioNo"));
+
+                                if(fundTypeModel.getFolioNo().isEmpty()|| fundTypeModel.getFolioNo().equalsIgnoreCase("null"))
+                                {
+
+                                }
+                                else
+                                {
+                                    listfolio.add(0,fundTypeModel.getFolioNo());
+                                }
+
+                                //getPurchase();
+
+                            }
+                            else {
+                                listfolio.add(0,"NEW");
+                            }
+                           getPurchase();
+
+
+
+                            /*String responseStream= String.valueOf(response);
+                            final JSONObject jsonResponse = new JSONObject(responseStream);
+                            JSONObject jsonInfo=jsonResponse;
+
+                            JSONArray foliodetails = jsonInfo.getJSONArray("FolioNo");
+                            System.out.println("Folio List:-"+foliodetails);
+                            for(int i=0;i<listschemecode.size();i++) {
+                                FundTypeModel fundTypeModel = new FundTypeModel();
+                                JSONObject folioobj = foliodetails.getJSONObject(i);
+                                fundTypeModel.setFolioNo(folioobj.getString("FolioNo"));
+
+                                String FolioNo = folioobj.getString("FolioNo");
+                                foliono = FolioNo;
+                                listfolio.add(0,foliono);
+
+                                System.out.println("My Folio Listt:-" + listfolio.get(i)); */
+
+
+                            // getPurchase();
+
+                            System.out.println("bolllllllll:- "+listfolio.get(0));
+
+
+
+                        }
+                        catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        if (_iHttpResultHandler != null)
+                            _iHttpResultHandler.onSuccess("", "","","","","","getPortfolioData");
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                if (_iHttpResultHandler != null)
+                    _iHttpResultHandler.onError(error.getMessage());
+                System.out.println("sendLoginData onErrorResponse:| sendLoginData " + error.getMessage() + error);
+
+            }
+        })
+        {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json");
+                return headers;
+            }
+
+        };
+        //30 seconds timeout
+        int socketTimeout = 30000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        jsObjRequest.setRetryPolicy(policy);
+
+        _requestQueue.add(jsObjRequest);
+        String f=foliono;
+
+
+    }
+    private void getFolio2() {
 
         String url = APIConstant.BASE_URL +"/GetFundTypeFolio";
         JSONObject portfolio = null;
