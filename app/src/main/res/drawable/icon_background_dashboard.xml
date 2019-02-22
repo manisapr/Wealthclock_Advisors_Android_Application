@@ -11,5 +11,6 @@
         android:startColor="#32323e"
         android:type="linear"
         android:useLevel="false" />
+    <corners android:radius="@dimen/_5sdp"/>
 
 </shape>

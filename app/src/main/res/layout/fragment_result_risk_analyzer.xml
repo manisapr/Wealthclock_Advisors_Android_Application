@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#363646"
+    tools:context="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.RiskAnalyzer.Result_risk_analyzer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/riskanalyzer"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Profile Is"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textColor="@color/White"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agressive"
+                android:id="@+id/tv1"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorGreen"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Risk Profile is Aggressive. You are an investor who is comfortable with a high volatility and high level of risk in order to achieve relatively higher returns over long term. Your objective is to accumulate assets over long term by primarily investing in growth assets. As an aggressive investor, you might expect your portfolio to be allocated 100% in growth assets."
+            android:textColor="@color/White"
+
+            android:id="@+id/tv2"
+
+            android:layout_marginTop="@dimen/_20sdp"
+
+            android:layout_marginBottom="@dimen/_20sdp"
+
+            android:textSize="@dimen/_13sdp"/>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:gravity="center">
+
+            <Button
+
+                android:layout_width="200dp"
+
+                android:layout_height="35dp"
+
+                android:text="Retake Questionnaire"
+
+                android:layout_margin="10dp"
+
+                android:layout_gravity="center"
+
+                android:id="@+id/previous"
+
+                android:background="@drawable/button_shape"
+
+                android:textColor="#dcdada"/>
+
+            <Button
+
+                android:layout_width="90dp"
+
+                android:layout_height="35dp"
+
+                android:text="Continue"
+
+                android:layout_margin="10dp"
+
+                android:layout_gravity="center"
+
+                android:id="@+id/next"
+
+                android:background="@drawable/button_shape"
+
+                android:textColor="#dcdada"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

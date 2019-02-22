@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363646"
+    android:clickable="true"
+    tools:context="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.RiskAnalyzer.Risk_Analyzer_First">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Experience Personality Based Investment"
+          android:textColor="@color/White"
+          android:textSize="18dp"
+          android:textAlignment="center"
+          android:layout_marginTop="20dp"/>
+
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Experience Personality Based Investment"
+          android:textColor="@color/White"
+          android:textSize="14dp"
+          android:textAlignment="center"
+          android:layout_marginTop="10dp"/>
+
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Risk Based Assesmet"
+          android:textColor="@color/White"
+          android:textSize="18dp"
+          android:textAlignment="center"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"/>
+
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="320dp"
+          android:src="@drawable/wealthclock_app_risk_analyser" />
+      <Button
+          android:id="@+id/startassesment"
+          android:layout_width="@dimen/_150sdp"
+          android:layout_height="@dimen/_35sdp"
+          android:text="Start Assessment"
+          android:textColor="@color/White"
+          android:layout_gravity="center"
+          android:layout_marginTop="5dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginBottom="30dp"
+          android:paddingLeft="5dp"
+          android:paddingRight="5dp"
+          android:background="@drawable/button_shape"/>
+
+  </LinearLayout>
+</ScrollView>
+</FrameLayout>

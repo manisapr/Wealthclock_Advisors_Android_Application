@@ -30,7 +30,6 @@ public class SplashActivity extends AppCompatActivity {
                 Utility.setEmailaddress(SharedPreferenceManager.getUserEmail(SplashActivity.this));
                 UserHandler.getInstance().sendLoginData(SharedPreferenceManager.getUserEmail(SplashActivity.this),SharedPreferenceManager.getUserPassword(SplashActivity.this),SplashActivity.this);
 
-
             }
         },SPLASH_TIMEOUT);
     }
@@ -55,7 +54,8 @@ public class SplashActivity extends AppCompatActivity {
         public void onSuccess(Object message, Object messsage1, Object message2, Object message3, Object message4, Object message5, String operation_flag) {
             System.out.println("splash success");
             if (message.toString().equalsIgnoreCase("200")) {
-                Intent intent = new Intent(SplashActivity.this,DashboardActivity.class);
+                //Intent intent = new Intent(SplashActivity.this,DashboardActivity.class);
+                Intent intent = new Intent(SplashActivity.this,Drawer.class);
                 startActivity(intent);
                 finish();
             }
@@ -75,5 +75,4 @@ public class SplashActivity extends AppCompatActivity {
             //System.out.println("splash error: "+message.toString());
         }
     }
-
 }

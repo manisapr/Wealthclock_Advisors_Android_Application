@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import android.wealthclockadvisors.app.wealthclockadvisors.Drawer;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.SignupFragment;
 import android.wealthclockadvisors.app.wealthclockadvisors.handler.UserHandler;
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.ihttpResultHandler;
@@ -143,7 +144,7 @@ public class LoginActivity extends AppCompatActivity {
                 SharedPreferenceManager.setUserPassword(LoginActivity.this,_pwd.getText().toString().trim());
 
                 Toast.makeText(LoginActivity.this, "Welcome to Wealthclock Advisors", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+                startActivity(new Intent(LoginActivity.this, Drawer.class));
                 hud.dismiss();
                 _loginButton.setAlpha(1.0f);
                 _loginButton.setEnabled(true);

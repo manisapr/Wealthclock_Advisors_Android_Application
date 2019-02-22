@@ -82,14 +82,36 @@ public class FragmentInsertAmountGoalPlanner extends Fragment implements View.On
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (s != null && !s.toString().isEmpty()) {
+
+                if (s != null && !s.toString().isEmpty())
+                {
                     year = String.valueOf(s);
-                    _addGoalButton.setEnabled(true);
-                    _addGoalButton.setAlpha(1.0f);
+                    double amm = Double.parseDouble(amount);
+                    if (amm>=500000) {
+                        _addGoalButton.setEnabled(true);
+                        _addGoalButton.setAlpha(1.0f);
+                       // _amountEditText.setError("");
+                    }
+                    else {
+                        _addGoalButton.setEnabled(false);
+                        _addGoalButton.setAlpha(0.5f);
+                        _amountEditText.setError("Amount greater than 500000");
+                    }
                 }
                 else {
-                    _addGoalButton.setEnabled(false);
-                    _addGoalButton.setAlpha(0.5f);
+                    //_addGoalButton.setEnabled(false);
+                    //_addGoalButton.setAlpha(0.5f);
+                    double amm = Double.parseDouble(amount);
+                    if (amm>=500000) {
+                        _addGoalButton.setEnabled(true);
+                        _addGoalButton.setAlpha(1.0f);
+                        // _amountEditText.setError("");
+                    }
+                    else {
+                        _addGoalButton.setEnabled(false);
+                        _addGoalButton.setAlpha(0.5f);
+                        _amountEditText.setError("Amount greater than 500000");
+                    }
                 }
             }
         });

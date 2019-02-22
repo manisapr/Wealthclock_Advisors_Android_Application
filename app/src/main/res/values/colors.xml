@@ -13,7 +13,7 @@
     <color name="DarkWhite">#afa9a9</color>
 
     <color name="backgroundcolor">#363646</color>
-
+    <color name="back">#32323e</color>
     <string-array name="color">
         <item>#363646</item>
         <item>#8b7eff</item>

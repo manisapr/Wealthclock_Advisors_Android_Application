@@ -164,11 +164,13 @@ public class httpController implements ihttpController {
                             JSONObject bankObj = bankDetailsArray.getJSONObject(0);
                             JSONObject loginObject = loginDetailsArray.getJSONObject(0);
                              successCode = loginObject.getString("Code");
+
                              String clientCode = loginObject.getString("CLIENT_CODE");
                              String name = loginObject.getString("User_Name");
                              String path = loginObject.getString("Image");
                              String isXSIPActive = loginObject.getString("IsXSIPActive");
-
+                             SharedPreferenceManager.setLinkForWhatsapp(context,loginObject.getString("Link"));
+                            SharedPreferenceManager.setUserId(context,loginObject.getString("User_ID"));
                             SharedPreferenceManager.setClientCode(context,clientCode);
                             SharedPreferenceManager.setUserName(context,name);
                             SharedPreferenceManager.setImagePath(context,path);
@@ -882,7 +884,7 @@ public class httpController implements ihttpController {
     }
 
     @Override
-    public void getMinimumAmountData(String schemename, String schemetype, String plan, Context context) {
+    public void getMinimumAmountData(String schemename, String schemetype, String plan, String clientcode,Context context) {
         String url = APIConstant.BASE_URL + APIConstant.GET_MINIMUM_FUND_AMOUNT;
         if (_requestQueue == null) {
             _requestQueue = Volley.newRequestQueue(context.getApplicationContext());
@@ -894,6 +896,7 @@ public class httpController implements ihttpController {
             minimumamount.put("SchemeName",schemename);
             minimumamount.put("schemetype",schemetype);
             minimumamount.put("Plan",plan);
+            minimumamount.put("ClientCode",SharedPreferenceManager.getClientCode(context));
 
 
         } catch (JSONException e) {
@@ -908,6 +911,7 @@ public class httpController implements ihttpController {
 
                        String minimumAmount = "";
                        String additionalAmount="";
+                       String eligibleValue = " ";
 
                         try {
                             String responseStream= String.valueOf(response);
@@ -916,8 +920,13 @@ public class httpController implements ihttpController {
                             JSONObject jsonInfo=jsonResponse;
                             JSONArray amcList = jsonInfo.getJSONArray("MinAmount");
                             JSONObject amcObj = amcList.getJSONObject(0);
+
+                           /* JSONArray exist = jsonInfo.getJSONArray("IsExist");
+                            JSONObject value = exist.getJSONObject(0);*/
+
                             minimumAmount = amcObj.getString("MinimumPurchaseAmount");
                             additionalAmount = amcObj.getString("AdditionalPurchaseAmountMultiple");
+                            eligibleValue = amcObj.getString("IsExist");
 
 
                         }
@@ -927,7 +936,7 @@ public class httpController implements ihttpController {
 
                         System.out.println("getMinimumAmountData response | getMinimumAmountData: " + response);
                         if (_iHttpResultHandler != null)
-                            _iHttpResultHandler.onSuccess(minimumAmount,additionalAmount,"", " ","","","getMinimumAmountData");
+                            _iHttpResultHandler.onSuccess(minimumAmount,additionalAmount,eligibleValue, " ","","","getMinimumAmountData");
                     }
                 }, new Response.ErrorListener() {
             @Override

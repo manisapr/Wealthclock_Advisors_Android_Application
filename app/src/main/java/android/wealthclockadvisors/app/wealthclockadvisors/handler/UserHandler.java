@@ -97,10 +97,10 @@ public class UserHandler implements ihandler {
     }
 
     @Override
-    public void getMinimumAmountData(String schemename, String schemetype, String plan, Context context) {
+    public void getMinimumAmountData(String schemename, String schemetype, String plan,String clientcode, Context context) {
         _HttpController = httpController.getInstance();
         _HttpController.set_iHttpResultHandler(_ihttpResultHandler);
-        _HttpController.getMinimumAmountData(schemename,schemetype,plan,context);
+        _HttpController.getMinimumAmountData(schemename,schemetype,plan,clientcode,context);
     }
 
     @Override

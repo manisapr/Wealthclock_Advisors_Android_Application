@@ -24,15 +24,10 @@ import wealthclockadvisors.app.wealthclockadvisors.R;
  */
 public class TermInsurance extends Fragment implements View.OnClickListener {
     EditText age,email,mobile;
-
     Button purchase;
-
     String Age,Email,Mobile;
-
     RadioGroup sex;
-
     RadioButton male,female;
-
     public TermInsurance() {
         // Required empty public constructor
     }
@@ -45,19 +40,12 @@ public class TermInsurance extends Fragment implements View.OnClickListener {
         View  view = inflater.inflate(R.layout.fragment_term_insurance, container, false);
 
         age=view.findViewById(R.id.age);
-
         email=view.findViewById(R.id.email);
-
         mobile=view.findViewById(R.id.mobile);
-
         purchase=view.findViewById(R.id.purchase);
-
         sex=view.findViewById(R.id.sex);
-
         male=view.findViewById(R.id.male);
-
         female=view.findViewById(R.id.female);
-
         email.setText(SharedPreferenceManager.getUserEmail(getContext()));
 
 
@@ -71,14 +59,9 @@ public class TermInsurance extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
 
             case R.id.purchase:
-
                 Age=age.getText().toString();
-
                 Email=email.getText().toString();
-
                 Mobile=mobile.getText().toString();
-
-
 
                 if(male.isChecked())
 
@@ -92,8 +75,6 @@ public class TermInsurance extends Fragment implements View.OnClickListener {
 
                 {
 
-
-
                 }
 
                 else
@@ -105,17 +86,13 @@ public class TermInsurance extends Fragment implements View.OnClickListener {
                 }
 
                 if (TextUtils.isEmpty(Age)) {
-
                     age.setError("Please Enter Your Age");
-
                     return;
 
                 }
 
                 if (TextUtils.isEmpty(Mobile)) {
-
                     mobile.setError("Please Enter Your Mobile Number");
-
                     return;
 
                 }
@@ -123,17 +100,10 @@ public class TermInsurance extends Fragment implements View.OnClickListener {
                 else {
 
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
-
                     alertDialogBuilder.setCancelable(false);
-
                     alertDialogBuilder.setTitle(Html.fromHtml("<font color='#13a097'>Hello</font>"));
-
-                    //alertDialogBuilder.setTitle("Hello,");
-
-                    alertDialogBuilder.setIcon(R.drawable.logo_circle);
-
+                    //alertDialogBuilder.setTitle("Hello,");alertDialogBuilder.setIcon(R.drawable.logo_circle);
                     alertDialogBuilder.setMessage("Thank you for choosing Wealthclock Advisors, We will contact you soon!!!");
-
                     alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
                         @Override
@@ -145,10 +115,7 @@ public class TermInsurance extends Fragment implements View.OnClickListener {
                     });
 
                     AlertDialog alertDialog = alertDialogBuilder.create();
-
                     alertDialog.show();
-
-
 
                 }
 

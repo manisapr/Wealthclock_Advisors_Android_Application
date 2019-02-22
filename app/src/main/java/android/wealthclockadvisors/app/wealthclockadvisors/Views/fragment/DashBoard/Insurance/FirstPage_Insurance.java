@@ -19,7 +19,6 @@ import wealthclockadvisors.app.wealthclockadvisors.R;
 public class FirstPage_Insurance extends Fragment implements View.OnClickListener {
 
     RelativeLayout terminsurance,lifeinsurance,motorinsurance,healthinsurance,generalinsurance;
-
     ViewPager imageslider;
     public FirstPage_Insurance() {
         // Required empty public constructor
@@ -34,34 +33,20 @@ public class FirstPage_Insurance extends Fragment implements View.OnClickListene
 
         terminsurance=view.findViewById(R.id.terminsurance);
         lifeinsurance=view.findViewById(R.id.lifeinsurance);
-
         motorinsurance=view.findViewById(R.id.motorinsurance);
-
         healthinsurance=view.findViewById(R.id.healthinsurance);
-
         generalinsurance=view.findViewById(R.id.generalinsurance);
-
         imageslider=view.findViewById(R.id.imageslider);
-
-
-
         terminsurance.setOnClickListener(this);
-
         lifeinsurance.setOnClickListener(this);
-
         motorinsurance.setOnClickListener(this);
-
         healthinsurance.setOnClickListener(this);
-
         generalinsurance.setOnClickListener(this);
-
         ImageAdapter adapterView=new ImageAdapter(getActivity());
-
         imageslider.setAdapter(adapterView);
-
         imageslider.setPadding(10,10,10,10);
-
         imageslider.setPageMargin(50);
+
         return view;
     }
 
@@ -77,7 +62,6 @@ public class FirstPage_Insurance extends Fragment implements View.OnClickListene
             case R.id.lifeinsurance:
                 Intent intent2 = new Intent(getActivity(), Second_Page_Insurance.class);
                 startActivity(intent2);
-
                 break;
 
             case R.id.motorinsurance:
@@ -97,7 +81,6 @@ public class FirstPage_Insurance extends Fragment implements View.OnClickListene
                 break;
 
         }
-
 
     }
 }

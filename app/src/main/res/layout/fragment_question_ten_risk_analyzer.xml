@@ -1,0 +1,339 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363646"
+    android:clickable="true"
+    tools:context="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.RiskAnalyzer.Question_ten_risk_analyzer">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="10dp"
+
+        android:layout_margin="@dimen/_10sdp"
+
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="40dp"
+
+                android:layout_height="40dp"
+
+                android:layout_gravity="center"
+
+                android:layout_margin="10dp"
+
+                android:background="@drawable/iconten"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+
+                android:lines="2"
+
+                android:textSize="@dimen/_14sdp"
+
+                android:text="Which of the following best describes\nyour house hold?"
+
+                android:textColor="@color/White"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/_40sdp"
+
+                android:orientation="vertical"
+
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="@dimen/_20sdp"
+
+                android:layout_marginRight="@dimen/_20sdp"
+
+                android:layout_marginTop="@dimen/_20sdp"
+
+                android:layout_marginBottom="@dimen/_12sdp"
+
+                android:elevation="@dimen/_5sdp"
+
+                android:background="@drawable/background_risk_analyzer"
+
+                android:id="@+id/linear1">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="@dimen/_10sdp"
+
+                    android:elevation="@dimen/_5sdp"
+
+                    android:text="Dual income- No Dependent"
+
+                    android:textSize="@dimen/_12sdp"
+
+                    android:paddingLeft="@dimen/_20sdp"
+
+                    android:id="@+id/option1"
+
+                    android:textColor="@color/White"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/_40sdp"
+
+                android:orientation="vertical"
+
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="@dimen/_20sdp"
+
+                android:layout_marginRight="@dimen/_20sdp"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:layout_marginBottom="@dimen/_12sdp"
+
+                android:elevation="@dimen/_5sdp"
+
+                android:background="@drawable/background_risk_analyzer"
+
+                android:id="@+id/linear2">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="@dimen/_10sdp"
+
+                    android:elevation="@dimen/_5sdp"
+
+                    android:text="Single income- No Dependent"
+
+                    android:textSize="@dimen/_12sdp"
+
+                    android:paddingLeft="@dimen/_20sdp"
+
+                    android:id="@+id/option2"
+
+                    android:textColor="@color/White"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/_40sdp"
+
+                android:orientation="vertical"
+
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="@dimen/_20sdp"
+
+                android:layout_marginRight="@dimen/_20sdp"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:layout_marginBottom="@dimen/_12sdp"
+
+                android:elevation="@dimen/_5sdp"
+
+                android:background="@drawable/background_risk_analyzer"
+
+                android:id="@+id/linear3">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="@dimen/_10sdp"
+
+                    android:elevation="@dimen/_5sdp"
+
+                    android:text="Single income more than 1 dependent"
+
+                    android:textSize="@dimen/_12sdp"
+
+                    android:paddingLeft="@dimen/_20sdp"
+
+                    android:id="@+id/option3"
+
+                    android:textColor="@color/White"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/_40sdp"
+
+                android:orientation="vertical"
+
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="@dimen/_20sdp"
+
+                android:layout_marginRight="@dimen/_20sdp"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:layout_marginBottom="@dimen/_12sdp"
+
+                android:elevation="@dimen/_5sdp"
+
+                android:background="@drawable/background_risk_analyzer"
+
+                android:id="@+id/linear4">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="@dimen/_10sdp"
+
+                    android:elevation="@dimen/_5sdp"
+
+                    android:text="Retired"
+
+                    android:textSize="@dimen/_12sdp"
+
+                    android:paddingLeft="@dimen/_20sdp"
+
+                    android:id="@+id/option4"
+
+                    android:textColor="@color/White"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:gravity="center">
+
+            <Button
+
+                android:layout_width="75dp"
+
+                android:layout_height="35dp"
+
+                android:text="PREVIOUS"
+
+                android:layout_margin="10dp"
+
+                android:layout_gravity="center"
+
+                android:id="@+id/previous"
+
+                android:background="@drawable/button_shape"
+
+                android:textColor="#dcdada"/>
+
+            <Button
+
+                android:layout_width="75dp"
+
+                android:layout_height="35dp"
+
+                android:text="Submit"
+
+                android:id="@+id/next"
+
+                android:layout_margin="10dp"
+
+                android:layout_gravity="center"
+
+                android:background="@drawable/button_shape"
+
+                android:textColor="#dcdada"/>
+
+        </LinearLayout>
+
+        <!--<RelativeLayout-->
+
+        <!--android:layout_width="match_parent"-->
+
+        <!--android:layout_height="match_parent"-->
+
+        <!--android:gravity="center">-->
+
+
+
+        <!--<ImageView-->
+
+        <!--android:id="@+id/next"-->
+
+        <!--android:layout_width="40dp"-->
+
+        <!--android:layout_height="40dp"-->
+
+        <!--android:layout_alignParentRight="true"-->
+
+        <!--android:layout_marginLeft="10dp"-->
+
+        <!--android:background="@drawable/icon_next" />-->
+
+
+
+        <!--<ImageView-->
+
+        <!--android:layout_width="40dp"-->
+
+        <!--android:layout_height="40dp"-->
+
+        <!--android:layout_toLeftOf="@+id/next"-->
+
+        <!--android:background="@drawable/icon_prev" />-->
+
+        <!--</RelativeLayout>-->
+
+    </LinearLayout>
+
+    <!--</ScrollView>-->
+
+</FrameLayout>

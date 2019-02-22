@@ -15,6 +15,7 @@
         <item name="android:windowBackground">@drawable/splash1</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
@@ -28,12 +29,11 @@
     </style>
 
 
-    <style name="NumberPicker" parent="Theme.AppCompat.Light.NoActionBar" >
+    <style name="NumberPicker" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="android:textColorPrimary">@android:color/white</item>
 
     </style>
-
 
 
     <style name="DefaultNumberPickerTheme" parent="AppTheme">
@@ -45,7 +45,6 @@
     </style>
 
 
-
     <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>
@@ -53,7 +52,6 @@
     <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">@color/colorGreen</item>
     </style>
-
 
 
     <style name="ThemeSpinner">
@@ -70,5 +68,14 @@
         <!-- Default color for the dropdown arrow and line -->
         <item name="colorControlNormal">#1e1c33</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

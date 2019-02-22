@@ -50,11 +50,11 @@ import wealthclockadvisors.app.wealthclockadvisors.R;
 public class QuickPurchaseFragment extends Fragment {
     private Spinner spinnerAmc,_fund_type,_fund_name,_plan,_dividend_option,_folio_no;
     String amcList[] = {"Select AMC","policy 1","policy 1"};
-    String fundtype[]={"Select Fund Type","fund 1","fund 2"};
-    String fundname2[]={"Select Fund Name","fundname 1","fundname 2"};
+    String fundtype[]={"Select Fund Type"," "," "};
+    String fundname2[]={"Select Fund Name"," "," "};
     String plan1[]={"Select Plan","Growth","Dividend"};
     String dividenddivision1[]={"Select Dividend Division","dividend division 1","dividend division 1"};
-    String folio1[] = {"Folio no.","New folio"};
+    String folio1[] = {"Select Folio no","New folio"};
     private LinearLayout _dividendLayout;
     private ArrayList<AMCListModel> amcListModels;
     private ArrayList<FundTypeModel>  fundDataList;
@@ -73,6 +73,9 @@ public class QuickPurchaseFragment extends Fragment {
 
     private Switch _onOffSwitch;
     private KProgressHUD hud;
+    private String amountcriteriaCheck=" ";
+    private double minimumamount = 0.0;
+    private double maximumamount = 0.0;
 
     public QuickPurchaseFragment() {
         // Required empty public constructor
@@ -188,12 +191,8 @@ public class QuickPurchaseFragment extends Fragment {
             }
         });
         spinnerAmc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-
-
                 if (parent.getPositionForView(view) == 0) {
 
                 }
@@ -279,7 +278,7 @@ public class QuickPurchaseFragment extends Fragment {
                     serverResultHandler.setContext(getContext());
                     UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
                     hud.show();
-                    UserHandler.getInstance().getMinimumAmountData(fundNameData,schemeCodeText,"Growth",getContext());
+                    UserHandler.getInstance().getMinimumAmountData(fundNameData,schemeCodeText,"Growth",SharedPreferenceManager.getClientCode(getContext()),getContext());
                 }
             }
 
@@ -355,11 +354,51 @@ public class QuickPurchaseFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (s != null && !s.toString().isEmpty()) {
-                    String a = String.valueOf(s);
-                    orderEntryModel.setOrderVal(a);
-                    _purchase.setEnabled(true);
-                    _purchase.setAlpha(1.0f);
+                if (s != null && !s.toString().isEmpty())
+                {
+                    if (amountcriteriaCheck.equalsIgnoreCase("true"))
+                    {
+                        System.out.println("minimum amount"+minimumamount);
+                        //double selectvalue = s;
+                        String a = String.valueOf(s);
+                        double selectvalue = 0.0;
+                        selectvalue = Double.parseDouble(a);
+
+                        if (selectvalue>=maximumamount)
+                        {
+                            orderEntryModel.setOrderVal(a);
+                            _purchase.setEnabled(true);
+                            _purchase.setAlpha(1.0f);
+                            _minimumAmountText.setVisibility(View.GONE);
+                        }
+                        else {
+                            _purchase.setEnabled(false);
+                            _purchase.setAlpha(0.5f);
+                            _minimumAmountText.setVisibility(View.VISIBLE);
+                            _minimumAmountText.setText("Please enter amount greater than "+maximumamount);
+                        }
+                    }
+                    else {
+                        System.out.println("additional amount"+maximumamount);
+                        String a = String.valueOf(s);
+                        double selectvalue = 0.0;
+                        selectvalue = Double.parseDouble(a);
+
+                        if (selectvalue>=minimumamount)
+                        {
+                            orderEntryModel.setOrderVal(a);
+                            _purchase.setEnabled(true);
+                            _purchase.setAlpha(1.0f);
+                            _minimumAmountText.setVisibility(View.GONE);
+                        }
+                        else {
+                            _purchase.setEnabled(false);
+                            _purchase.setAlpha(0.5f);
+                            _minimumAmountText.setVisibility(View.VISIBLE);
+                            _minimumAmountText.setText("Please enter amount greater than "+minimumamount);
+                        }
+                    }
+
                     //System.out.println("text changed ");
                 }
                 /*int p = Integer.parseInt(_postion);
@@ -450,7 +489,6 @@ public class QuickPurchaseFragment extends Fragment {
             }
         });
 
-
         _folioEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -471,7 +509,6 @@ public class QuickPurchaseFragment extends Fragment {
                 }
             }
         });
-
         return view;
     }
 
@@ -557,8 +594,7 @@ public class QuickPurchaseFragment extends Fragment {
 
             if (operation_flag.equalsIgnoreCase("getFundType"))
             {
-                _folio_no.setEnabled(true);
-                _fund_type.setEnabled(true);
+
                 hud.dismiss();
                 ArrayList<FundTypeModel> schemList = (ArrayList<FundTypeModel>) message;
                 ArrayList<FundTypeModel>  folioList = (ArrayList<FundTypeModel>) messsage1;
@@ -617,9 +653,9 @@ public class QuickPurchaseFragment extends Fragment {
                     folio1[1] = "Add folio";
                     folio1[2] = "New folio";*/
 
-                    folio1[2] = "Add folio";
-                    folio1[1] = "New folio";
-                    folio1[0] = "Select Folio";
+                    folio1[1] = "Add folio";
+                    folio1[0] = "New folio";
+                    //folio1[0] = "Select Folio";
 
                     orderEntryModel.setFolioNo(_folioEditText.getText().toString().trim());
                     System.out.println("folio list size:- "+folioList.size());
@@ -631,6 +667,19 @@ public class QuickPurchaseFragment extends Fragment {
                 else {
                     hud.dismiss();
                 }
+
+                _folio_no.setEnabled(true);
+                _fund_type.setEnabled(true);
+                _fund_name.setEnabled(false);
+                //amcListModels.clear();
+
+                CustomAdapter fundname = new CustomAdapter(getContext(),fundname2);
+                _fund_name.setPopupBackgroundResource(R.color.backgroundcolor);
+                _fund_name.setAdapter(fundname);
+
+                CustomAdapter plan = new CustomAdapter(getContext(),plan1);
+                _plan.setPopupBackgroundResource(R.color.backgroundcolor);
+                _plan.setAdapter(plan);
 
             }
 
@@ -668,6 +717,13 @@ public class QuickPurchaseFragment extends Fragment {
                 //_folioEditText.setVisibility(View.GONE);
                 String amount = (String) message;
                 String addtionalAmount = (String) messsage1;
+                String checkamount = (String) message2;
+                 amountcriteriaCheck = checkamount ;
+
+                 minimumamount = Double.parseDouble(amount);
+                 maximumamount = Double.parseDouble(addtionalAmount);
+
+                System.out.println("amountcriteriaCheck | boolean:- "+checkamount);
                 _minimumPurchaseAmount.setVisibility(View.VISIBLE);
                 _MaximumPurchaseAmount.setVisibility(View.VISIBLE);
                 _minimumPurchaseAmount.setText("Minimum Fresh - ₹"+amount);
@@ -678,7 +734,48 @@ public class QuickPurchaseFragment extends Fragment {
                 orderEntryModel.setOrderVal(_amount.getText().toString().trim());
                 mutualFundDetailsforModel.setAmount(_amount.getText().toString().trim());
                 //_purchase.setEnabled(true);
+                if (amountcriteriaCheck.equalsIgnoreCase("true"))
+                {
+                    System.out.println("minimum amount"+minimumamount);
+                    //double selectvalue = s;
+                    String a = _amount.getText().toString().trim();
+                    double selectvalue = 0.0;
+                    selectvalue = Double.parseDouble(a);
 
+                    if (selectvalue>=maximumamount)
+                    {
+                        orderEntryModel.setOrderVal(a);
+                        _purchase.setEnabled(true);
+                        _purchase.setAlpha(1.0f);
+                        _minimumAmountText.setVisibility(View.GONE);
+                    }
+                    else {
+                        _purchase.setEnabled(false);
+                        _purchase.setAlpha(0.5f);
+                        _minimumAmountText.setVisibility(View.VISIBLE);
+                        _minimumAmountText.setText("Please enter amount greater than "+maximumamount);
+                    }
+                }
+                else {
+                    System.out.println("additional amount"+maximumamount);
+                    String a = _amount.getText().toString().trim();
+                    double selectvalue = 0.0;
+                    selectvalue = Double.parseDouble(a);
+
+                    if (selectvalue>=minimumamount)
+                    {
+                        orderEntryModel.setOrderVal(a);
+                        _purchase.setEnabled(true);
+                        _purchase.setAlpha(1.0f);
+                        _minimumAmountText.setVisibility(View.GONE);
+                    }
+                    else {
+                        _purchase.setEnabled(false);
+                        _purchase.setAlpha(0.5f);
+                        _minimumAmountText.setVisibility(View.VISIBLE);
+                        _minimumAmountText.setText("Please enter amount greater than "+minimumamount);
+                    }
+                }
                 if (amount.isEmpty())
                 {
                     _minimumPurchaseAmount.setVisibility(View.GONE);
@@ -738,6 +835,20 @@ public class QuickPurchaseFragment extends Fragment {
                 }
                 else {
                     String desc = (String) messsage1;
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                    dialog.setCancelable(false);
+                    dialog.setTitle("Error!!!");
+                    dialog.setMessage(desc);
+                    dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            //Action for "Delete".
+                            getActivity().getSupportFragmentManager().popBackStackImmediate();
+                        }
+                    });
+
+                    final AlertDialog alert = dialog.create();
+                    alert.show();
                     Toast.makeText(context, desc, Toast.LENGTH_LONG).show();
                 }
             }

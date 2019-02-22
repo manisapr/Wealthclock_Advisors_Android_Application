@@ -19,7 +19,15 @@ public class Utility {
     private static String _totalinvest;
     private static String _totalgain;
     private static String xirr;
+    private static double result=0.0;
 
+    public static double getResult() {
+        return result;
+    }
+
+    public static void setResult(double result) {
+        Utility.result = result;
+    }
 
     public static boolean isInternetOn(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

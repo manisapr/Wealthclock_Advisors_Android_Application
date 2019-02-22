@@ -19,7 +19,7 @@ public interface ihandler {
     void getFundNameList(Context context);
     void getFundType(String clientCode,String amcCode,Context context);
     void getfundNameAllList(String amccode,String schemetype,Context  context);
-    void getMinimumAmountData(String schemename,String schemetype,String plan,Context context);
+    void getMinimumAmountData(String schemename,String schemetype,String plan,String clientcode,Context context);
     void purchase(OrderEntryModel orderEntryModel, Context context);
     void getSchemeCode(MutualFundDetailsforModel mutualFundDetailsforModel, Context context);
     void getRedeemtionSchemeList(String clientcode,String type,Context context);

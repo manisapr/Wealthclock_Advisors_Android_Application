@@ -62,13 +62,10 @@ import wealthclockadvisors.app.wealthclockadvisors.R;
 public class Fragment_Invest_Angle_Save_Tax extends Fragment {
 
     String investment=" ";
-
     ArrayList<Top3Funds> arrayList1=null;
     ArrayList<FundTypeModel> fundTypeModelArrayList=null;
     //ArrayList<OrderEntryModel> multiplefundpurchase=new ArrayList<>();
-
     RecyclerView lv1;
-
     private SaveTaxAdapter mAdapter;
 
     TextView tv1;
@@ -85,7 +82,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
     private static httpController _Instance;
     private RequestQueue _requestQueue;
     private ihttpResultHandler _iHttpResultHandler;
-    private ArrayList<Top3Funds> _goalFundList;
+    //private ArrayList<Top3Funds> _goalFundList;
     private  SaveTaxAdapter _saveTaxAdapter;
     ArrayList<String> listfundname=new ArrayList<>();
     ArrayList<String> listschemecode=new ArrayList<>();
@@ -100,8 +97,6 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
     private String _amount = " ";
     String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode;
     private String info="";
-
-
     public Fragment_Invest_Angle_Save_Tax() {
         // Required empty public constructor
     }
@@ -123,7 +118,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
         onOffSwitch=view.findViewById(R.id.onOffSwitch);
         listfolio.add(0,"NEW");
         listfolio.add(1,"NEW");
-        _goalFundList=new ArrayList<>();
+       // _goalFundList=new ArrayList<>();
 
         getData();
         //getFolio();
@@ -172,56 +167,6 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
         });
         return view;
     }
-
-
-    private void getPaymentMode() {
-        /*if (orderEntryModel.getPaymentMode().equalsIgnoreCase("yes"))
-        {
-            String infohtml = "<html>\n" +
-                    "<head>\n" +
-                    "<title>\n" +
-                    "A Simple HTML Document\n" +
-                    "</title>\n" +
-                    "</head>\n" +
-                    "<body>\n" +
-                    "<p>This is a very simple HTML document</p>\n" +
-                    "<p>It only has two paragraphs</p>\n" +
-                    "</body>\n" +
-                    "</html>";
-            System.out.println("Quick | info html:- "+infohtml);
-            Intent intent = new Intent(getContext(),PaymentWebViewActivity.class);
-            intent.putExtra("link",infohtml);
-            startActivity(intent);
-            getActivity().finish();
-        }
-        else if (orderEntryModel.getPaymentMode().equalsIgnoreCase("no"))
-        {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
-            alertDialogBuilder.setCancelable(false);
-            alertDialogBuilder.setTitle("Purchase Initiated Successfully");
-            alertDialogBuilder.setMessage("Kindly make the payment via One Time Mandate or Cheque");
-            alertDialogBuilder.setPositiveButton("Ok",
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface arg0, int arg1)
-                        {
-                           *//* FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                            FragmentDashboard taxSavingMoney_save_tax = new FragmentDashboard();
-                            fragmentTransaction.replace(R.id.frag, taxSavingMoney_save_tax , "taxSavingMoney_save_tax ");
-                            fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                            fragmentTransaction.commit();
-                            fragmentManager.popBackStack(fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount()-3).getId(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
-*//*
-                            getActivity().getSupportFragmentManager().popBackStackImmediate();
-                        }
-                    });
-
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
-        }*/
-    }
-
 
     private void getPurchase() {
         String url = "https://www.wealthclockadvisors.com/API/MultipleOrder/NormalOrder";

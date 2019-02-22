@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.FragmentAccount;
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.FragmentContactWhatsapp;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.FragmentDashboard;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.FragmentExplore;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.FragmentGoalTrack;
@@ -22,7 +23,7 @@ public class DashBoardPagerAdapter  extends FragmentStatePagerAdapter {
             case 1: return  new FragmentInvestment();
             case 2: return new FragmentExplore();
             case 3: return  new FragmentGoalTrack();
-            case 4: return new FragmentAccount();
+            case 4: return new FragmentContactWhatsapp();
             default: return new FragmentDashboard();
         }
     }

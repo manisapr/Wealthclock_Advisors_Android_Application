@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Views.activity.DashboardActivity">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/top_lay"
@@ -344,7 +343,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/img_account"
-                    android:text="Account"
+                    android:text="Contact"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/_7sdp" />
             </RelativeLayout>

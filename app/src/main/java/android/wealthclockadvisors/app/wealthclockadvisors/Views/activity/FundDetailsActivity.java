@@ -149,8 +149,6 @@ public class FundDetailsActivity extends AppCompatActivity {
 
                 String navDetails = fundDetailsModel.getNavDetails();
 
-
-
             try {
                 SimpleDateFormat source = new SimpleDateFormat("yyyy-mm-dd");  // British format
                 SimpleDateFormat target = new SimpleDateFormat("dd-mm-yyyy");

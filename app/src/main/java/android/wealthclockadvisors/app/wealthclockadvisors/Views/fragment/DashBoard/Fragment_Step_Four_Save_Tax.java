@@ -161,7 +161,11 @@ public class Fragment_Step_Four_Save_Tax extends Fragment {
                     str = str.substring(0, str.length() - 1);
                     et1.setText(str);
                 } else if (str.length() <= 1) {
-                    et1.setText("0");
+                    et1.setText("");
+                }
+                else if (str.length()==0)
+                {
+                    et1.setText("");
                 }
             }
 

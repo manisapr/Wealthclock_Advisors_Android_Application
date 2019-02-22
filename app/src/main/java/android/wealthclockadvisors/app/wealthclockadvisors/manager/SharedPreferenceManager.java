@@ -190,4 +190,31 @@ public class SharedPreferenceManager {
         return sharedPreferences.getString(AppConstant.MANDATEREGID,"");
     }
 
+
+    public static void setUserId(Context context, String clientcode)
+    {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(AppConstant.USER_ID,clientcode);
+        editor.apply();
+    }
+
+    public static String getUserId(Context context){
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return sharedPreferences.getString(AppConstant.USER_ID,"");
+    }
+
+    public static void setLinkForWhatsapp(Context context, String clientcode)
+    {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(AppConstant.LINK,clientcode);
+        editor.apply();
+    }
+
+    public static String getLinkForWhtsapp(Context context){
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return sharedPreferences.getString(AppConstant.LINK,"");
+    }
+
 }

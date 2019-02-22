@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Insurance.FirstPage_Insurance;
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.RiskAnalyzer.Risk_Analyzer_First;
 import android.wealthclockadvisors.app.wealthclockadvisors.adapter.NewsAdapter;
 import android.wealthclockadvisors.app.wealthclockadvisors.constant.APIConstant;
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.ihttpResultHandler;
@@ -58,7 +59,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
 
     private View progressContainer;
     private RequestQueue _requestQueue;
-    private RelativeLayout _lay_quick_purchase,_lay_redeem,_lay_start_sip,_newsRelative,_planGoal,_lay_save_tax;
+    private RelativeLayout _lay_quick_purchase,_lay_redeem,_lay_start_sip,_newsRelative,_planGoal,_lay_save_tax,_lay_risk_analyzer;
     private NewsAdapter mAdapter;
     private ArrayList<NewsModel> newsModelArrayList;
     private KProgressHUD hud;
@@ -91,6 +92,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
         _planGoal = view.findViewById(R.id.planGoal);
         _lay_save_tax = view.findViewById(R.id.lay_save_tax);
         insurance_dashboard = view.findViewById(R.id.insurance_dashboard);
+        _lay_risk_analyzer = view.findViewById(R.id.lay_risk_analyzer);
         newsModelArrayList = new ArrayList<>();
     insurance_dashboard.setOnClickListener(this);
 
@@ -112,6 +114,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
         _lay_start_sip.setOnClickListener(this);
         _planGoal.setOnClickListener(this);
         _lay_save_tax.setOnClickListener(this);
+        _lay_risk_analyzer.setOnClickListener(this);
 
         getData();
 
@@ -237,9 +240,6 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
 
     }
 
-
-
-
     @Override
     public void onClick(View v) {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
@@ -295,6 +295,14 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
                 FirstPage_Insurance firstPage_insurance = new FirstPage_Insurance();
                 fragmentTransaction.replace(R.id.frag, firstPage_insurance, "fragmentGoalTrack");
                 fragmentTransaction.addToBackStack("fragmentGoalTrack");
+                fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                fragmentTransaction.commit();
+                break;
+
+            case R.id.lay_risk_analyzer:
+                Risk_Analyzer_First risk_analyzer_first  = new Risk_Analyzer_First();
+                fragmentTransaction.replace(R.id.frag, risk_analyzer_first, "risk_analyzer_first");
+                fragmentTransaction.addToBackStack("risk_analyzer_first");
                 fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 fragmentTransaction.commit();
                 break;

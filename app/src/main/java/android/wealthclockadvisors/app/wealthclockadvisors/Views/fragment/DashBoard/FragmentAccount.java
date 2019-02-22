@@ -117,6 +117,7 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
         capture_image = view.findViewById(R.id.capture_image);
 
         tv_logout = view.findViewById(R.id.tv_logout);
+        tv_logout.setVisibility(View.GONE);
 
         _clientid.setText("Wealthclock Id: "+SharedPreferenceManager.getClientCode(getContext()));
 
@@ -231,6 +232,7 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
         lay5.setOnClickListener(this);
         lay6.setOnClickListener(this);
 
+        tv_logout.setEnabled(false);
 
         if (ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED &&
@@ -254,7 +256,6 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                 animator.start();
                 angel +=180;
                 angel= angel%360;
-
 
                 if (lay1_details.getVisibility()==View.VISIBLE){
                     lay1_details.setVisibility(View.GONE);
@@ -327,7 +328,6 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                 Utility.deleteCache(getContext());
                 startActivity(intent);
                 getActivity().finish();
-
                 break;
 
 
@@ -476,6 +476,9 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                         Bitmap finalBitmap = (Bitmap) extras.get("data");
                         file_last = Utility.getImageUri(getContext(), finalBitmap);
                         String path = file_last.getPath();
+
+                        SharedPreferenceManager.setImagePath(getContext(),path);
+
                         System.out.println("hsdhuh: -"+path + finalBitmap);
                         Uri uri = Uri.fromFile(file_last);
 
@@ -491,7 +494,7 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                         System.out.println("file check in api:- "+file);
                         AndroidNetworking.upload("https://www.wealthclockadvisors.com/API/API/FileUpload")
                                 .addMultipartFile("file",file_last)
-                                .addMultipartParameter("email",SharedPreferenceManager.getUserEmail(getContext()))
+                                .addMultipartParameter("UserId",SharedPreferenceManager.getUserId(getContext()))
                                 .setTag("uploadTest")
                                 .setPriority(Priority.HIGH)
                                 .build()
@@ -656,6 +659,7 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
             file_last = Utility.getImageUri(getContext(), bitmapResult);
             file_last = Utility.getImageUri(getContext(), bitmapResult);
             String path = file_last.getPath();
+            SharedPreferenceManager.setImagePath(getContext(),path);
             Glide.with(getActivity()).load(path).asBitmap().centerCrop().into(new BitmapImageViewTarget(profile_image) {
                 @Override
                 protected void setResource(Bitmap resource) {
@@ -666,10 +670,10 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                 }
             });
 
-            System.out.println("file check in api in multimedia:- "+file_last);
+            System.out.println("file check in api in multimedia:- "+SharedPreferenceManager.getUserId(getContext()));
             AndroidNetworking.upload("https://www.wealthclockadvisors.com/API/API/FileUpload")
                     .addMultipartFile("file",file_last)
-                    .addMultipartParameter("email",SharedPreferenceManager.getUserEmail(getContext()))
+                    .addMultipartParameter("userid",SharedPreferenceManager.getUserId(getContext()))
                     .setTag("uploadTest")
                     .setPriority(Priority.HIGH)
                     .build()

@@ -298,7 +298,6 @@ public class Fragment_StartSIP extends Fragment {
                 }
             });
 
-
         }
 
         @Override

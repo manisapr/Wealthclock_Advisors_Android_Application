@@ -53,6 +53,16 @@
         <activity android:name="android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PaymentWebViewActivity" />
         <activity android:name="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Insurance.Second_Page_Insurance" />
         <activity android:name="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Insurance.YouTubeVideo_Insurance" />
+        <activity
+            android:name="android.wealthclockadvisors.app.wealthclockadvisors.Drawer"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

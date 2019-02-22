@@ -17,6 +17,7 @@ import wealthclockadvisors.app.wealthclockadvisors.R;
 public class PaymentWebViewActivity extends Activity {
     private WebView webView;
     private boolean exit = false;
+    String call = " ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class PaymentWebViewActivity extends Activity {
 
         Intent intent = getIntent();
         String id = intent.getStringExtra("link");
+
 
         webView = findViewById(R.id.webview);
         webView.getSettings().setLoadsImagesAutomatically(true);

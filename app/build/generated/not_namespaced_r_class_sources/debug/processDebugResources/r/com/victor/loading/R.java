@@ -21,36 +21,36 @@ public final class R {
     public static final class color {
         private color() {}
 
-        public static final int book_loading_background = 0x7f060021;
-        public static final int book_loading_book = 0x7f060022;
-        public static final int book_loading_page = 0x7f060023;
+        public static final int book_loading_background = 0x7f060022;
+        public static final int book_loading_book = 0x7f060023;
+        public static final int book_loading_page = 0x7f060024;
     }
     public static final class dimen {
         private dimen() {}
 
         public static final int book_border = 0x7f070079;
         public static final int book_padding = 0x7f07007a;
-        public static final int page_border = 0x7f070101;
+        public static final int page_border = 0x7f070104;
     }
     public static final class id {
         private id() {}
 
-        public static final int ball_five = 0x7f09003b;
-        public static final int ball_four = 0x7f09003c;
-        public static final int ball_one = 0x7f09003d;
-        public static final int ball_three = 0x7f09003e;
-        public static final int ball_two = 0x7f09003f;
+        public static final int ball_five = 0x7f09003d;
+        public static final int ball_four = 0x7f09003e;
+        public static final int ball_one = 0x7f09003f;
+        public static final int ball_three = 0x7f090040;
+        public static final int ball_two = 0x7f090041;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int book_loading = 0x7f0c0026;
-        public static final int newton_cradle_loading = 0x7f0c0064;
+        public static final int book_loading = 0x7f0c0028;
+        public static final int newton_cradle_loading = 0x7f0c0076;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f0e002b;
+        public static final int app_name = 0x7f0f002c;
     }
     public static final class styleable {
         private styleable() {}

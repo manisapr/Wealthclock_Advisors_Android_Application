@@ -9,13 +9,15 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_14sdp"
                 android:layout_marginLeft="@dimen/_5sdp"
@@ -23,44 +25,9 @@
                 android:background="@drawable/icon_background_dashboard"
                 android:elevation="@dimen/_5sdp"
                 android:orientation="vertical">
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:id="@+id/sex"
-                    android:gravity="center">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:buttonTint="@color/White"
-                        android:textColor="@color/White"
-                        android:id="@+id/male"
-                        android:scaleX=".75"
-                        android:scaleY=".75"
-                        android:textSize="13dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Male"
-                        android:textColor="@color/White"
-                        android:textSize="@dimen/_13sdp"/>
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:buttonTint="@color/White"
-                        android:textColor="@color/White"
-                        android:id="@+id/female"
-                        android:scaleX=".75"
-                        android:scaleY=".75"
-                        android:textSize="13dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Female"
-                        android:textColor="@color/White"
-                        android:textSize="@dimen/_13sdp"/>
-                </RadioGroup>
+
+
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,6 +40,7 @@
                     android:singleLine="true"
                     android:id="@+id/age"
                     android:inputType="text"/>
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -85,7 +53,134 @@
                     android:id="@+id/email"
                     android:singleLine="true"
                     android:inputType="textEmailAddress"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                   android:text="Type Of Insurance" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/White"
+                                android:scaleX="0.75"
+                                android:scaleY="0.75"
+                                android:id="@+id/travel"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Travel"
+                                android:textColor="@color/White"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:textSize="@dimen/_13sdp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/White"
+                                android:scaleX="0.75"
+                                android:scaleY="0.75"
+                                android:id="@+id/overseas"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Overseas Mediclaim"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/_13sdp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/White"
+                                android:scaleX="0.75"
+                                android:scaleY="0.75"
+                                android:id="@+id/fire"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fire"
+                                android:textColor="@color/White"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:textSize="@dimen/_13sdp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/White"
+                                android:scaleX="0.75"
+                                android:scaleY="0.75"
+                                android:id="@+id/accident"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Personal Accident"
+                                android:textColor="@color/White"
+                                android:textSize="@dimen/_13sdp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
                 <EditText
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="+91  Mobile No."
@@ -97,12 +192,15 @@
                     android:singleLine="true"
                     android:layout_margin="@dimen/_5sdp"
                     android:inputType="number"/>
+
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="@dimen/_10sdp">
+
                     <Button
                         android:layout_width="150dp"
                         android:layout_height="35dp"
@@ -110,262 +208,15 @@
                         android:text="Proceed"
                         android:background="@drawable/button_shape"
                         android:textColor="#dcdada"/>
-                </LinearLayout>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#3fffffff"
-                android:layout_margin="@dimen/_5sdp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Key Benefits"
-                    android:textColor="@color/White"
-                    android:textSize="@dimen/_13sdp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_60sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/icon_background_dashboard"
-                    android:elevation="@dimen/_5sdp"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/taxbenefit"
-                            android:layout_margin="5dp"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_marginLeft="@dimen/_20sdp">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Tax Benefit"
-                                android:textColor="@color/White"
-                                android:textSize="@dimen/_13sdp" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Under section 80D Tax Benefit"
-                                android:textColor="@color/White"
-                                android:textSize="@dimen/_11sdp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/icon_background_dashboard"
-                    android:elevation="@dimen/_5sdp"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/familyfloater"
-                            android:layout_margin="5dp"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_marginLeft="@dimen/_20sdp">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Option of Individual and Family Floater"
-                                android:textColor="@color/White"
-                                android:textSize="@dimen/_13sdp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/icon_background_dashboard"
-                    android:elevation="@dimen/_5sdp"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/continuitybenefits"
-                            android:layout_margin="5dp"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_marginLeft="@dimen/_20sdp">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Continuity benefits"
-                                android:textColor="@color/White"
-                                android:textSize="@dimen/_13sdp" />
-                        </LinearLayout>
-                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#3fffffff"
-                android:backgroundTint="@color/White"
-                android:layout_margin="@dimen/_5sdp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Addiotional benefits"
-                    android:textColor="@color/White"
-                    android:textSize="@dimen/_13sdp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_60sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/icon_background_dashboard"
-                    android:elevation="@dimen/_5sdp"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/cashlesshospitalization"
-                            android:layout_margin="5dp"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_marginLeft="@dimen/_20sdp">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Cashless Hospitalization"
-                                android:textColor="@color/White"
-                                android:textSize="@dimen/_13sdp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/icon_background_dashboard"
-                    android:elevation="@dimen/_5sdp"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/criticalillnesscoverage"
-                            android:layout_margin="5dp"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_marginLeft="@dimen/_20sdp">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Critical illness coverage for expensive"
-                                android:textColor="@color/White"
-                                android:textSize="@dimen/_13sdp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/icon_background_dashboard"
-                    android:elevation="@dimen/_5sdp"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/emergencyambulance"
-                            android:layout_margin="5dp"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_marginLeft="@dimen/_20sdp">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Emergency Ambulance"
-                                android:textColor="@color/White"
-                                android:textSize="@dimen/_13sdp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
 
-            </LinearLayout>
+
+
         </LinearLayout>
+
     </ScrollView>
 
 </FrameLayout>

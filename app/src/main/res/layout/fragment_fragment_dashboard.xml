@@ -6,7 +6,6 @@
     android:id="@+id/fr">
 
 
-
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,10 +23,10 @@
                 android:id="@+id/portfolio"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_150sdp"
-                android:layout_marginBottom="@dimen/_8sdp"
                 android:layout_marginLeft="@dimen/_8sdp"
-                android:layout_marginRight="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:elevation="@dimen/_10sdp">
 
                 <ImageView
@@ -95,8 +94,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0sp"
-                        android:layout_marginBottom="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
                         android:layout_weight="4"
                         android:orientation="horizontal"
                         android:weightSum="3">
@@ -241,10 +240,10 @@
                 android:id="@+id/portfolio_incomplete"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_130sdp"
-                android:layout_marginBottom="@dimen/_8sdp"
                 android:layout_marginLeft="@dimen/_8sdp"
-                android:layout_marginRight="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:elevation="@dimen/_10sdp"
                 android:visibility="gone">
 
@@ -253,8 +252,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:text="INCOMPLETE INVESTMENT"
                     android:textColor="#ffffff" />
 
@@ -685,32 +684,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_8sdp"
-                android:text="RISK ANALYZER"
-                android:textColor="#ffffff" />
+                android:text="MORE WAYS TO INVEST"
+                android:textColor="#37c7b6" />
 
 
             <RelativeLayout
                 android:id="@+id/lay_risk_analyzer"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_85sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_height="80dp"
                 android:layout_marginLeft="@dimen/_8sdp"
-                android:layout_marginRight="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/risk_analyzer_background"
-                android:padding="@dimen/_8sdp">
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/capsuleshape"
+                android:padding="2dp">
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_1sdp"
+                    android:id="@+id/text1"
+                    android:text="@string/personality_based_investment"
+                    android:textColor="#ecc298"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="12dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="12dp"
                     android:layout_toLeftOf="@+id/risk_icon_lay"
                     android:ellipsize="end"
+                    android:layout_below="@+id/text1"
                     android:text="@string/risk"
-                    android:textColor="#a9a9b1"
-                    android:textSize="@dimen/_11sdp" />
-
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:padding="2dp"/>
                 <RelativeLayout
                     android:id="@+id/risk_icon_lay"
                     android:layout_width="wrap_content"
@@ -729,8 +741,8 @@
                         android:layout_width="@dimen/_25sdp"
                         android:layout_height="@dimen/_25sdp"
                         android:layout_centerInParent="true"
-                        android:src="@drawable/growth"
-                        android:tint="#ffffff" />
+                        android:src="@drawable/personality_based_investment"
+                        />
                 </RelativeLayout>
             </RelativeLayout>
 
@@ -746,7 +758,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="@dimen/_8sdp"
                     android:text="NEWSFEED"
-                    android:textColor="#ffffff" />
+                    android:textColor="@color/colorPrimary" />
 
                 <LinearLayout
                     android:id="@+id/bullet"
@@ -791,8 +803,7 @@
                     <ImageView
                         android:id="@+id/img_bullet5"
                         android:layout_width="@dimen/_5sdp"
-                        android:layout_height="@dimen/_5sdp"
-                        />
+                        android:layout_height="@dimen/_5sdp" />
 
                 </LinearLayout>
 
@@ -827,18 +838,18 @@
                     android:id="@+id/lay_learn_more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true">
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true">
 
                     <TextView
                         android:id="@+id/tv_learn_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text=""
                         android:textColor="#ffffff"
-                        android:textSize="@dimen/_8sdp"
-                        android:text=""/>
+                        android:textSize="@dimen/_8sdp" />
 
-                   <!-- <ImageView
+                    <!-- <ImageView
                         android:layout_width="@dimen/_13sdp"
                         android:layout_height="@dimen/_13sdp"
                         android:layout_centerHorizontal="true"

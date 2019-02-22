@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -29,7 +31,9 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -37,7 +41,11 @@ import android.widget.Toast;
 
 import com.kaopiz.kprogresshud.KProgressHUD;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import wealthclockadvisors.app.wealthclockadvisors.R;
 
@@ -54,7 +62,7 @@ public class FragmentRedemption extends Fragment {
     private ArrayList<FundTypeModel> scheme;
     private ArrayList<FundTypeModel> folioarrayList;
     private ArrayList<RedeemDetailsModel> _redeemDetails;
-    private TextView _units,_amount;
+    private TextView _units,_amount,_navtext;
     private EditText _Insertamount;
     private LinearLayout _redeemdetailsLayout;
     String smcode= "";
@@ -63,6 +71,8 @@ public class FragmentRedemption extends Fragment {
     private OrderEntryModel orderEntryModel;
     private Switch _redeemSwitch;
     private User_DetailsForIMPS user_detailsForIMPS;
+    private ImageView _nofundimage1,_nofundimage2;
+    private ScrollView _redeempage;
     public FragmentRedemption() {
         // Required empty public constructor
     }
@@ -83,6 +93,11 @@ public class FragmentRedemption extends Fragment {
         _redeemdetailsLayout = view.findViewById(R.id.redeemdetailsLayout);
         _redeemSwitch = view.findViewById(R.id.redeemSwitch);
         _submit = view.findViewById(R.id.submit);
+        _navtext = view.findViewById(R.id.navtext);
+        _nofundimage1 = view.findViewById(R.id.nofundimage1);
+        _nofundimage2 = view.findViewById(R.id.nofundimage2);
+        _redeempage = view.findViewById(R.id.redeempage);
+
         _redeemdetailsLayout.setVisibility(View.GONE);
         _Insertamount.setVisibility(View.GONE);
         user_detailsForIMPS = new User_DetailsForIMPS();
@@ -248,6 +263,19 @@ public class FragmentRedemption extends Fragment {
                 }
             }
         });
+
+        _nofundimage2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                QuickPurchaseFragment quickPurchaseFragment = new QuickPurchaseFragment();
+                fragmentTransaction.replace(R.id.frag, quickPurchaseFragment, "quickPurchaseFragment");
+                fragmentTransaction.addToBackStack("quickPurchaseFragment");
+                fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                fragmentTransaction.commit();
+            }
+        });
         return view;
     }
 
@@ -326,6 +354,13 @@ public class FragmentRedemption extends Fragment {
 
             hud.dismiss();
 
+            if (fundTypeModelArrayList.size()==0)
+            {
+                _redeempage.setVisibility(View.GONE);
+                _nofundimage1.setVisibility(View.VISIBLE);
+                _nofundimage2.setVisibility(View.VISIBLE);
+            }
+
         }
         if (operation_flag.equalsIgnoreCase("getRedeemFolioList"))
         {
@@ -361,6 +396,21 @@ public class FragmentRedemption extends Fragment {
                 _redeemdetailsLayout.setVisibility(View.VISIBLE);
                 _amount.setText(_redeemDetails.get(0).getAmount().trim());
                 _units.setText(_redeemDetails.get(0).getUnits().trim());
+
+                final Calendar c = Calendar.getInstance();
+                int myear = c.get(Calendar.YEAR);
+                final int mMonth = c.get(Calendar.MONTH);
+                int mDay = c.get(Calendar.DAY_OF_MONTH);
+                String date = mDay+"-"+(mMonth+1)+"-"+myear;
+                try {
+                    //newDate = target.format(source.parse(date));
+                    _navtext.setText("* Based On NAV Declared On As On "+date+".Value At The Time Of Transaction Processing Would Vary.");
+                    System.out.println("date test: "+date +" df:- "+date);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
             }
             hud.dismiss();
         }

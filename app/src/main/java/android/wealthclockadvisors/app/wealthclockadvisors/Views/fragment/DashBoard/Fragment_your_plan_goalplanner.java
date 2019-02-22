@@ -33,7 +33,6 @@ public class Fragment_your_plan_goalplanner extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,7 +60,7 @@ public class Fragment_your_plan_goalplanner extends Fragment {
             double b = Float.parseFloat(_year);
             double cdd = a*(Math.pow(1.08,b));
             System.out.println("cddd value:- "+cdd);
-            _goalTargetValue.setText(String.format("%.2f", cdd));
+            _goalTargetValue.setText(String.format("%.0f", cdd));
             float y = Calendar.getInstance().get(Calendar.YEAR);
             double c =  b-y;
 
@@ -74,8 +73,8 @@ public class Fragment_your_plan_goalplanner extends Fragment {
             String Result = String.valueOf((cd / ((g / g1) * (1 + (((12.00 / 100) / 12.00))))));
             String res = String.valueOf(Result);
             double result = Double.parseDouble(Result);
-            _amount=String.format("%.2f", result);
-            _monthlyInvest.setText(String.format("%.2f", result));
+            _amount=String.format("%.0f", result);
+            _monthlyInvest.setText(String.format("%.0f", result));
             //System.out.println("resulttttttttttttttttttttt: "+Result + "totalll:- "+total1 +"ggggg:- " + g +"valuess:- "+(Math.pow((1 + ((12 / 100) / 12)), (3 * 12))));
         }
 

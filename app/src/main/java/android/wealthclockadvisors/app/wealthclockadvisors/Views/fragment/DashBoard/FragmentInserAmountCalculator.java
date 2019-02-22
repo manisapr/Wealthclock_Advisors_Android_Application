@@ -39,6 +39,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.kaopiz.kprogresshud.KProgressHUD;
 import com.onebit.spinner2.Spinner2;
 
 import java.util.ArrayList;
@@ -75,17 +76,21 @@ public class FragmentInserAmountCalculator extends Fragment {
     private int day = 0;
     private TextView _minimumAmountText;
     private Switch _onOffSwitch;
-
+    private double validAmount=0.0;
+    private double selectvalue = 0.0;
 
 
     private ArrayList<AMCListModel> amcListModels;
     private ArrayList<FundTypeModel>  fundDataList;
     private ArrayList<FundTypeModel> _folioList;
+    private TextView _validationText;
 
     private LinearLayout _dividendLayout;
     private OrderEntryModel orderEntryModel;
     private MutualFundDetailsforModel mutualFundDetailsforModel;
     private xsipOrderEntryParamModel paramModel;
+
+    private KProgressHUD hud;
 
 
     public FragmentInserAmountCalculator() {
@@ -113,7 +118,7 @@ public class FragmentInserAmountCalculator extends Fragment {
         _minimumAmountText = view.findViewById(R.id.minimumAmountText);
         _addfolioEditText = view.findViewById(R.id.addFolioEditText);
         _onOffSwitch = view.findViewById(R.id.onOffSwitch);
-
+        _validationText = view.findViewById(R.id.warningtext);
         //_SpinnerAmc = view.findViewById(R.id.amc);
 
         amcListModels = new ArrayList<>();
@@ -161,6 +166,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 }
                 else
                 {
+                    hud.show();
                     String countryid = amcListModels.get(position-1).getAmcSchemeCode();
                     amcCodeText = countryid;
                     orderEntryModel.setAmcCode(countryid);
@@ -187,6 +193,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 }
                 else {
                     _dividendLayout.setVisibility(View.GONE);
+                    hud.show();
                     ServerResultHandler serverResultHandler = new ServerResultHandler();
                     serverResultHandler.setContext(getContext());
                     UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
@@ -209,6 +216,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 }
                 else
                     {
+                        hud.show();
                     mutualFundDetailsforModel.setSchemeType(fundtype[position]);
                     orderEntryModel.setSchemeCd(fundtype[position]);
                     ServerResultHandler serverResultHandler = new ServerResultHandler();
@@ -285,8 +293,8 @@ public class FragmentInserAmountCalculator extends Fragment {
                     System.out.println("current date:- "+day+"month:- "+month);
 
                     int selectDate = Integer.parseInt(date[position+1]);
-                    _purchase.setEnabled(true);
-                    _purchase.setAlpha(1f);
+                   // _purchase.setEnabled(true);
+                    //_purchase.setAlpha(1f);
                     System.out.println("_sipDate:- " + selectDate + "month:- "+month + "day:- "+day);
 
                     if (day<selectDate)
@@ -354,8 +362,8 @@ public class FragmentInserAmountCalculator extends Fragment {
                         }
                     }
 
-
-
+                    //_purchase.setEnabled(true);
+                    //_purchase.setAlpha(1f);
                 }
             }
 
@@ -410,8 +418,22 @@ public class FragmentInserAmountCalculator extends Fragment {
                 if (s != null && !s.toString().isEmpty()) {
                     String a = String.valueOf(s);
                     String c= a.trim().substring(1);
+                    System.out.println("on text changed in sip :- "+a + " , "+c);
                     mutualFundDetailsforModel.setAmount(a);
                     paramModel.setInstallmentAmount(c.trim());
+                     selectvalue= Double.parseDouble(c);
+                    if (selectvalue>=validAmount)
+                    {
+                        _purchase.setEnabled(true);
+                        _purchase.setAlpha(1f);
+                        _validationText.setText(" ");
+                    }
+                    else {
+                        _purchase.setEnabled(false);
+                        _purchase.setAlpha(0.5f);
+                       // _amount.setError("Please Enter the amount greater than " +validAmount);
+                        _validationText.setText("Please enter the amount greater than "+validAmount);
+                    }
                 }
 
             }
@@ -445,6 +467,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
                 _purchase.setEnabled(false);
                 _purchase.setAlpha(0.5f);
+                hud.show();
                 _purchase.setText(R.string.purchase_init);
                 UserHandler.getInstance().getSchemeCode(mutualFundDetailsforModel,getContext());
             }
@@ -462,6 +485,15 @@ public class FragmentInserAmountCalculator extends Fragment {
                 }
             }
         });
+
+
+        hud = KProgressHUD.create(getContext())
+                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+                .setDimAmount(0.5f)
+                .setLabel("Please Wait")
+                .setCancellable(false);
+        hud.show();
+
         return view;
     }
 
@@ -548,7 +580,8 @@ public class FragmentInserAmountCalculator extends Fragment {
 
         @Override
         public void onSuccess(Object message, Object messsage1, Object message2, Object message3, Object message4, Object message5, String operation_flag) {
-            if (operation_flag.equalsIgnoreCase("getFundNameList")) {
+            if (operation_flag.equalsIgnoreCase("getFundNameList"))
+            {
                 ArrayList<AMCListModel> amcArrayList = (ArrayList<AMCListModel>) message;
                 amcListModels.clear();
                 amcListModels.addAll(amcArrayList);
@@ -563,11 +596,19 @@ public class FragmentInserAmountCalculator extends Fragment {
                 _amc.setPopupBackgroundResource(R.color.backgroundcolor);
                 _amc.setEnabled(true);
                 _amc.setAdapter(customAdapter);
+
+                hud.dismiss();
             }
 
 
             if (operation_flag.equalsIgnoreCase("getFundType"))
             {
+
+                CustomAdapter fundname = new CustomAdapter(getContext(),fundname2);
+                _fund_name.setPopupBackgroundResource(R.color.backgroundcolor);
+                _fund_name.setAdapter(fundname);
+
+
 
                 ArrayList<FundTypeModel> schemList = (ArrayList<FundTypeModel>) message;
                 ArrayList<FundTypeModel>  folioList = (ArrayList<FundTypeModel>) messsage1;
@@ -620,6 +661,11 @@ public class FragmentInserAmountCalculator extends Fragment {
                     _folio_no.setAdapter(folio);
                 }
 
+
+
+                hud.dismiss();
+
+
             }
 
             if (operation_flag.equalsIgnoreCase("getfundNameAllList"))
@@ -638,6 +684,8 @@ public class FragmentInserAmountCalculator extends Fragment {
                     _fund_name.setEnabled(true);
                     _fund_name.setAdapter(fundname);
                 }
+
+                hud.dismiss();
             }
 
             if (operation_flag.equalsIgnoreCase("sipDateApi"))
@@ -645,9 +693,24 @@ public class FragmentInserAmountCalculator extends Fragment {
                 if (message != null  ) {
                     String amount = (String) messsage1;
                     String dates = (String) message;
+                    validAmount= Double.parseDouble(amount);
                     _minimumAmountText.setText("Minimum Amount:- "+amount.trim());
+                    double aaamou= Double.parseDouble(amount);
+                    String c= _amount.getText().toString().trim().substring(1);
+                    double cam = Double.parseDouble(c);
+                    if (cam>=aaamou)
+                    {
+                        _validationText.setText("");
+                        _purchase.setEnabled(true);
+                        _purchase.setAlpha(1f);
+                    }
+                    else {
+                        _purchase.setEnabled(false);
+                        _purchase.setAlpha(0.5f);
+                        _validationText.setText("Please enter the amount greater than "+validAmount);
+                    }
 
-                        String[] separated = dates.split(",");
+                    String[] separated = dates.split(",");
                     date = new String[separated.length+1];
                     date[0] = "Day of Sip";
                     //date = separated;
@@ -663,6 +726,8 @@ public class FragmentInserAmountCalculator extends Fragment {
                     _sipDate.setEnabled(true);
                     _sipDate.setAdapter(sip);
                 }
+
+                hud.dismiss();
             }
 
             if (operation_flag.equalsIgnoreCase("getSchemeCode"))
@@ -680,6 +745,8 @@ public class FragmentInserAmountCalculator extends Fragment {
                     UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
                     UserHandler.getInstance().getMandatetId(paramModel, context);
                 }
+
+                hud.dismiss();
             }
 
             if (operation_flag.equalsIgnoreCase("getMandatetId"))
@@ -691,7 +758,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
 
                 UserHandler.getInstance().sip(paramModel, getContext());
-
+            hud.dismiss();
             }
             if (operation_flag.equalsIgnoreCase("sip"))
             {
@@ -731,9 +798,25 @@ public class FragmentInserAmountCalculator extends Fragment {
                 }
                 else {
                     String desc = (String) messsage1;
-                    Toast.makeText(context, desc, Toast.LENGTH_LONG).show();
-                }
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                    dialog.setCancelable(false);
+                    dialog.setTitle("Error!");
+                    dialog.setMessage(desc);
+                    dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            //Action for "Delete".
+                            getActivity().getSupportFragmentManager().popBackStackImmediate();
+                        }
+                    });
 
+                    final AlertDialog alert = dialog.create();
+                    alert.show();
+                    Toast.makeText(context, desc, Toast.LENGTH_LONG).show();
+                    _purchase.setEnabled(true);
+                    _purchase.setAlpha(1f);
+                }
+                hud.dismiss();
             }
         }
 
@@ -741,6 +824,7 @@ public class FragmentInserAmountCalculator extends Fragment {
         public void onError(Object message) {
             _purchase.setEnabled(true);
             _purchase.setAlpha(1f);
+            hud.dismiss();
         }
     }
 

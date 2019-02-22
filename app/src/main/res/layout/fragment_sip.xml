@@ -12,14 +12,20 @@
         android:orientation="vertical"
         android:padding="5dp">
 
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mode Of Payment"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/_15sdp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -236,7 +242,12 @@
                  android:overlapAnchor="true"
                  android:spinnerMode="dialog"/>-->
         </RelativeLayout>
-
+        <TextView
+            android:id="@+id/warningtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/red" />
         <TextView
             android:id="@+id/minimumAmountText"
             android:layout_width="match_parent"

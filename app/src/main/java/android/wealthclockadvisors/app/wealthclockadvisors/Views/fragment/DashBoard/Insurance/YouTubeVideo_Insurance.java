@@ -18,54 +18,22 @@ public class YouTubeVideo_Insurance extends Activity {
         setContentView(R.layout.activity_you_tube_video__insurance);
 
         webview=(WebView)findViewById(R.id.webview);
-
         Intent intent = getIntent();
-
         String id = "https://www.youtube.com/watch?v=-2C52p-S9lQ&t=9s";
 
-
-
-
-
-
-
         WebSettings webSettings = webview.getSettings();
-
-
-
         webview.getSettings().setLoadsImagesAutomatically(true);
-
-
-
         webview.getSettings().setJavaScriptEnabled(true);
-
-
-
         webview.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-
-
-
         webview.setWebViewClient(new MyBrowser());
-
-
-
         webview.loadUrl(id);
-
 
     }
 
     private class MyBrowser extends WebViewClient {
-
-
         @Override
-
-
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-
-
             view.loadUrl(url);
-
-
             return true;
 
 

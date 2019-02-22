@@ -14,4 +14,6 @@ public class AppConstant {
     public static final String IsISIPActive = "IsISIPActive";
     public static final String IsXSIPActive = "IsXSIPActive";
     public static final String MANDATEREGID = "manadateregid";
+    public static final String USER_ID = "userid" ;
+    public static final String LINK = "link";
 }

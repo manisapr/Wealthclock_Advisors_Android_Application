@@ -327,6 +327,14 @@
             <!--android:gravity="center"/>-->
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mode Of Payment"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/_15sdp"/>
 
             <LinearLayout
 

@@ -24,12 +24,24 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/bar_selected.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ic_menu_gallery.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/ic_menu_gallery.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_design_menu_item_action_area.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/res/layout/design_menu_item_action_area.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_side_nav_bar.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/side_nav_bar.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_content_drawer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/content_drawer.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -64,24 +76,24 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
-        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
-        "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
+        "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_tax.png.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/tax.png"
     },
     {
-        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_purchase.png.flat",
-        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/purchase.png"
-    },
-    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_purchase.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/purchase.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_user.png.flat",
@@ -234,6 +246,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_riskanalyzer.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/riskanalyzer.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_light.xml.flat",
@@ -396,6 +412,10 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_fragment_contact_whatsapp.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_fragment_contact_whatsapp.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-v21_avd_hide_password.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/res/drawable-v21/avd_hide_password.xml"
     },
@@ -442,6 +462,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ic_camera_alt_black_24dp.xml.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/ic_camera_alt_black_24dp.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_iconten.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/iconten.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_activity_second__page__insurance.xml.flat",
@@ -612,12 +636,24 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/color/abc_tint_spinner.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_background_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/background_risk_analyzer.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_iconsix.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/iconsix.png"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question__four_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question__four_risk_analyzer.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_payout.png.flat",
@@ -744,6 +780,10 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ic_menu_camera.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/ic_menu_camera.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -808,6 +848,10 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/panel33.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_buy__fund__risk__analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_buy__fund__risk__analyzer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -842,6 +886,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/menu_activity_drawer_drawer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/menu/activity_drawer_drawer.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_proof_of_identity.xml.flat",
@@ -964,6 +1012,10 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/1571fc08a9ca276950aa7490ceb29101/res/layout/notification_template_media.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question_ten_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question_ten_risk_analyzer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -978,6 +1030,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_panel.xml.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/panel.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_risk__analyzer__first.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_risk__analyzer__first.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_waiverofpremium.png.flat",
@@ -1054,6 +1110,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_title_material.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_iconnine.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/iconnine.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_start_your_sip.png.flat",
@@ -1136,6 +1196,10 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_fragment_fragment_tax_saving_money__save__tax.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question_eight_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question_eight_risk_analyzer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_protectiontoyourfamily.png.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/protectiontoyourfamily.png"
     },
@@ -1172,6 +1236,10 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_icontwo.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/icontwo.png"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
@@ -1206,6 +1274,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_mtrl_tabs_colored_ripple_color.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/res/color/mtrl_tabs_colored_ripple_color.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question__one_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question__one_risk_analyzer.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_goal_track_icon.png.flat",
@@ -1246,6 +1318,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question__five_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question__five_risk_analyzer.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_taxbenefit.png.flat",
@@ -1340,6 +1416,10 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/risk_analyzer_background.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ic_menu_manage.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/ic_menu_manage.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_abc_btn_radio_material.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable/abc_btn_radio_material.xml"
     },
@@ -1368,6 +1448,10 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_result_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_result_risk_analyzer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_light.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
@@ -1378,6 +1462,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_healthinsurancesmall.png.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/healthinsurancesmall.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_no_fund_liquid.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/no_fund_liquid.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -1394,6 +1482,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_radio.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_icofour.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/icofour.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/anim_abc_tooltip_exit.xml.flat",
@@ -1434,6 +1526,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/638ac86ebfd88202c0bea1da9c2e87b7/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_iconeight.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/iconeight.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/animator_mtrl_btn_state_list_anim.xml.flat",
@@ -1490,6 +1586,14 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_personal.png.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/personal.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_app_bar_drawer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/app_bar_drawer.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_iconfive.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/iconfive.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_abc_tint_seek_thumb.xml.flat",
@@ -1684,6 +1788,10 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/protectionagainstdisability.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_wealthclock_app_risk_analyser.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/wealthclock_app_risk_analyser.png"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_calamities.png.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/calamities.png"
     },
@@ -1716,6 +1824,10 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_iconthree.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/iconthree.png"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
@@ -1724,12 +1836,12 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/circle_folio.xml"
     },
     {
-        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_abc_tint_switch_track.xml.flat",
-        "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/color/abc_tint_switch_track.xml"
-    },
-    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_abc_search_url_text.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_abc_tint_switch_track.xml.flat",
+        "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/color/abc_tint_switch_track.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1742,6 +1854,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_mtrl_tabs_legacy_text_color_selector.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/res/color/mtrl_tabs_legacy_text_color_selector.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question_seven_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question_seven_risk_analyzer.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/anim_abc_popup_exit.xml.flat",
@@ -1908,6 +2024,10 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question__three_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question__three_risk_analyzer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_abc_tint_default.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/color/abc_tint_default.xml"
     },
@@ -1940,12 +2060,20 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_bargraph1.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/bargraph1.png"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_familyplaceholder.png.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/familyplaceholder.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_iconone.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/iconone.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_design_ic_visibility_off.png.flat",
@@ -1960,8 +2088,16 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/res/animator/design_fab_show_motion_spec.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_activity_drawer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/activity_drawer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ic_menu_slideshow.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/ic_menu_slideshow.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/animator_mtrl_btn_unelevated_state_list_anim.xml.flat",
@@ -1982,6 +2118,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_design_ic_visibility_off.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/res/drawable-mdpi-v4/design_ic_visibility_off.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ic_menu_share.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/ic_menu_share.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_mtrl_chip_text_color.xml.flat",
@@ -2046,6 +2186,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ic_menu_send.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/ic_menu_send.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ssssys.png.flat",
@@ -2208,6 +2352,10 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/goodpotentialreturns.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question__two_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question__two_risk_analyzer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_savetax.png.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/savetax.png"
     },
@@ -2236,8 +2384,16 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_iconseven.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/iconseven.png"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_personality_based_investment.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/personality_based_investment.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_buy_home.png.flat",
@@ -2344,6 +2500,10 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_general.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_start_inves.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/start_inves.png"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_abc_btn_colored_text_material.xml.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/color/abc_btn_colored_text_material.xml"
     },
@@ -2380,6 +2540,10 @@
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/build_wealth.png"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_nav_header_drawer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/nav_header_drawer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
@@ -2394,6 +2558,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question__nine_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question__nine_risk_analyzer.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -2486,6 +2654,10 @@
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_ic_phone_black_24dp.xml.flat",
         "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/ic_phone_black_24dp.xml"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable_whatspp_icon.png.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/drawable/whatspp_icon.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/color_mtrl_tabs_ripple_color.xml.flat",
@@ -2668,6 +2840,10 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/layout/abc_select_dialog_material.xml"
     },
     {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_fragment_question__six_risk_analyzer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/layout/fragment_question__six_risk_analyzer.xml"
+    },
+    {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
@@ -2744,12 +2920,16 @@
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
-        "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png"
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/menu_drawer.xml.flat",
+        "source": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/src/main/res/menu/drawer.xml"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_design_ic_visibility.png.flat",
         "source": "/home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/res/drawable-hdpi-v4/design_ic_visibility.png"
+    },
+    {
+        "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/res/merged/debug/layout_item_list.xml.flat",
