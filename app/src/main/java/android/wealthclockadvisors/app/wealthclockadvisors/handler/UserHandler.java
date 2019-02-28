@@ -10,6 +10,7 @@ import android.wealthclockadvisors.app.wealthclockadvisors.model.Top3Funds;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.User_DetailsForIMPS;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.xsipOrderEntryParamModel;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class UserHandler implements ihandler {
@@ -221,5 +222,12 @@ public class UserHandler implements ihandler {
         _HttpController = httpController.getInstance();
         _HttpController.set_iHttpResultHandler(_ihttpResultHandler);
         _HttpController.dateformultifund2(schemecd,context);
+    }
+
+    @Override
+    public void tickeregistration(String userId, File file, Context context) {
+        _HttpController = httpController.getInstance();
+        _HttpController.set_iHttpResultHandler(_ihttpResultHandler);
+        _HttpController.tickeregistration(userId,file,context);
     }
 }

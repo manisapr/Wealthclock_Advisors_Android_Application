@@ -7,6 +7,7 @@ import android.wealthclockadvisors.app.wealthclockadvisors.model.Top3Funds;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.User_DetailsForIMPS;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.xsipOrderEntryParamModel;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public interface ihttpController {
@@ -37,5 +38,6 @@ public interface ihttpController {
     void  dateformultifund(String schemecd,Context context);
     void  dateformultifund1(String schemecd,Context context);
     void  dateformultifund2(String schemecd,Context context);
+    void  tickeregistration(String userId, File file, Context context);
 
 }

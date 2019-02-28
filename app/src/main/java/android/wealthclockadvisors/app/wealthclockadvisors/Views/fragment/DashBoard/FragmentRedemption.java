@@ -73,6 +73,8 @@ public class FragmentRedemption extends Fragment {
     private User_DetailsForIMPS user_detailsForIMPS;
     private ImageView _nofundimage1,_nofundimage2;
     private ScrollView _redeempage;
+    ViewGroup viewGroup;
+    private int mSelectedIndex = 0;
     public FragmentRedemption() {
         // Required empty public constructor
     }
@@ -97,6 +99,7 @@ public class FragmentRedemption extends Fragment {
         _nofundimage1 = view.findViewById(R.id.nofundimage1);
         _nofundimage2 = view.findViewById(R.id.nofundimage2);
         _redeempage = view.findViewById(R.id.redeempage);
+        viewGroup = view.findViewById(android.R.id.content);
 
         _redeemdetailsLayout.setVisibility(View.GONE);
         _Insertamount.setVisibility(View.GONE);
@@ -144,6 +147,7 @@ public class FragmentRedemption extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ServerResultHandler serverResultHandler = new ServerResultHandler();
+                mSelectedIndex = position;
                 serverResultHandler.setContext(getContext());
                 UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
                 //System.out.println("scheme.get(position-1).getSchemeCode()+- "+schmCode[position]);
@@ -167,6 +171,7 @@ public class FragmentRedemption extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ServerResultHandler serverResultHandler = new ServerResultHandler();
+                mSelectedIndex = position;
                 serverResultHandler.setContext(getContext());
                 UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
 
@@ -186,6 +191,7 @@ public class FragmentRedemption extends Fragment {
         _redeemptiontype.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mSelectedIndex = position;
                 if (position ==2) {
                     _Insertamount.setVisibility(View.VISIBLE);
 
@@ -312,6 +318,28 @@ public class FragmentRedemption extends Fragment {
             textView.setText(countryNames[i]);
             return view;
         }
+
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            convertView = inflter.inflate(R.layout.spinner_item, null);
+            TextView tv = (TextView)convertView.findViewById(R.id.spText);
+            ImageView  imageView = convertView.findViewById(R.id.imagev);
+            //tv.setTextColor(Color.parseColor("#dedede"));
+           /*tv.setPadding(10,10,10,10);
+           tv.setTextSize(20);*/
+            System.out.println("position:- "+position +mSelectedIndex);
+            if(position == mSelectedIndex){
+                // Set spinner selected popup item's text color
+                tv.setTextColor(Color.parseColor("#008577"));
+
+            }
+            else {
+                tv.setTextColor(Color.parseColor("#dedede"));
+
+            }
+            tv.setText(countryNames[position]);
+            return convertView;
+        }
     }
 
     private class ServerResultHandler implements ihttpResultHandler {
@@ -419,7 +447,7 @@ public class FragmentRedemption extends Fragment {
             _submit.setText("Submit");
             _submit.setEnabled(true);
             _submit.setAlpha(1.0f);
-            AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+           /* AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
             dialog.setCancelable(false);
             dialog.setTitle("Redemption Initiated Successfully");
             dialog.setMessage("Kindly complete the redemption authentication by replying via SMS or Email" );
@@ -432,7 +460,8 @@ public class FragmentRedemption extends Fragment {
             });
 
             final AlertDialog alert = dialog.create();
-            alert.show();
+            alert.show();*/
+           showCustomDialog();
             hud.dismiss();
         }
         if (operation_flag.equalsIgnoreCase("redeemIMPS"))
@@ -444,7 +473,7 @@ public class FragmentRedemption extends Fragment {
             hud.dismiss();
             String sucessmsg = (String) message;
             if (sucessmsg.equalsIgnoreCase("true")) {
-                AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+               /* AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
                 dialog.setCancelable(false);
                 dialog.setTitle("Redemption  Successfull");
                 dialog.setMessage("Success|Instant Redemption Successful.Kindly check your bank account for the credit. Happy Investing !!");
@@ -457,10 +486,12 @@ public class FragmentRedemption extends Fragment {
                 });
 
                 final AlertDialog alert = dialog.create();
-                alert.show();
+                alert.show();*/
+               showCustomDialogforinstant();
 
             }
             else {
+                showErrorDialog("Failed!");
                 Toast.makeText(context, "Error: Some error has occured.Please try again.", Toast.LENGTH_LONG).show();
             }
         }
@@ -472,6 +503,113 @@ public class FragmentRedemption extends Fragment {
         public void onError(Object message) {
         hud.dismiss();
         }
+    }
+
+
+    private void showCustomDialog() {
+
+        //before inflating the custom alert dialog layout, we will get the current activity viewgroup
+
+        //ViewGroup viewGroup = View.findViewById(android.R.id.content);
+
+
+
+        //then we will inflate the custom alert dialog xml that we created
+
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1=dialogView.findViewById(R.id.tv1);
+        TextView tv2  = dialogView.findViewById(R.id.tv2);
+        tv2.setText("Kindly complete the redemption authentication by replying via SMS or Email");
+        tv1.setText("Redemption  Successfull");
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+            }
+
+        });
+
+    }
+    private void showCustomDialogforinstant() {
+
+        //before inflating the custom alert dialog layout, we will get the current activity viewgroup
+
+        //ViewGroup viewGroup = View.findViewById(android.R.id.content);
+
+
+
+        //then we will inflate the custom alert dialog xml that we created
+
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1=dialogView.findViewById(R.id.tv1);
+        TextView tv2  = dialogView.findViewById(R.id.tv2);
+        tv2.setText("Success|Instant Redemption Successful.Kindly check your bank account for the credit. Happy Investing !!");
+        tv1.setText("Redemption  Successfull");
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+            }
+
+        });
+
+    }
+    private void showErrorDialog(String text)
+    {
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog_error, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1=dialogView.findViewById(R.id.tv1);
+        tv1.setText("Failed!!!");
+        TextView tv2 =  dialogView.findViewById(R.id.tv2);
+        tv2.setText("Failed! Please try again later");
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+            }
+
+        });
     }
 
 }

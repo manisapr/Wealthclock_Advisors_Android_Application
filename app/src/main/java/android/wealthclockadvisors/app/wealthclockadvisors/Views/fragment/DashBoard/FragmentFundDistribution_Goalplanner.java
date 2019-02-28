@@ -164,7 +164,6 @@ public class FragmentFundDistribution_Goalplanner extends Fragment {
             {
                 ArrayList<Top3Funds> foliolist = (ArrayList<Top3Funds>) message;
                 //System.out.println("successssss in frag:- "+foliolist.size()+k);
-
                     _folioList.addAll(k,foliolist);
                     k++;
                    /* if (!foliolist.get(0).getSipID().equalsIgnoreCase("null") && foliolist.get(0).getSipID() != null) {

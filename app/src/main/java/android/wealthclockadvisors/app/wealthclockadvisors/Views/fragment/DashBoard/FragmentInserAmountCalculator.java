@@ -91,6 +91,8 @@ public class FragmentInserAmountCalculator extends Fragment {
     private xsipOrderEntryParamModel paramModel;
 
     private KProgressHUD hud;
+    ViewGroup viewGroup;
+    private int mSelectedIndex = 0;
 
 
     public FragmentInserAmountCalculator() {
@@ -119,6 +121,7 @@ public class FragmentInserAmountCalculator extends Fragment {
         _addfolioEditText = view.findViewById(R.id.addFolioEditText);
         _onOffSwitch = view.findViewById(R.id.onOffSwitch);
         _validationText = view.findViewById(R.id.warningtext);
+        viewGroup = view.findViewById(android.R.id.content);
         //_SpinnerAmc = view.findViewById(R.id.amc);
 
         amcListModels = new ArrayList<>();
@@ -166,6 +169,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 }
                 else
                 {
+                    mSelectedIndex = position;
                     hud.show();
                     String countryid = amcListModels.get(position-1).getAmcSchemeCode();
                     amcCodeText = countryid;
@@ -187,6 +191,8 @@ public class FragmentInserAmountCalculator extends Fragment {
         _plan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                mSelectedIndex = position;
                 if (position == 2 )
                 {
                     _dividendLayout.setVisibility(View.VISIBLE);
@@ -217,6 +223,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 else
                     {
                         hud.show();
+                        mSelectedIndex = position;
                     mutualFundDetailsforModel.setSchemeType(fundtype[position]);
                     orderEntryModel.setSchemeCd(fundtype[position]);
                     ServerResultHandler serverResultHandler = new ServerResultHandler();
@@ -235,6 +242,7 @@ public class FragmentInserAmountCalculator extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (folio1.length>0) {
+                    mSelectedIndex = position;
                     _postion = String.valueOf(position);
                     System.out.println("folio in insertamount:- "+_postion +"Position:- "+folio1[position]);
                     if ((folio1[position]).equalsIgnoreCase("Add folio"))
@@ -269,6 +277,7 @@ public class FragmentInserAmountCalculator extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 fundNameData = fundname2[position];
+                mSelectedIndex = position;
                 orderEntryModel.setSchemeName(fundNameData);
                 _plan.setEnabled(true);
                 mutualFundDetailsforModel.setSchemeName(fundNameData);
@@ -284,7 +293,7 @@ public class FragmentInserAmountCalculator extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ++check;
                 if(check > 1) {
-
+                    mSelectedIndex = position;
                     Calendar c = Calendar.getInstance();
                     year = c.get(Calendar.YEAR);
                     month = c.get(Calendar.MONTH);
@@ -530,6 +539,28 @@ public class FragmentInserAmountCalculator extends Fragment {
             textView.setText(countryNames[i]);
             return view;
         }
+
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            convertView = inflter.inflate(R.layout.spinner_item, null);
+            TextView tv = (TextView)convertView.findViewById(R.id.spText);
+            ImageView  imageView = convertView.findViewById(R.id.imagev);
+            //tv.setTextColor(Color.parseColor("#dedede"));
+           /*tv.setPadding(10,10,10,10);
+           tv.setTextSize(20);*/
+            System.out.println("position:- "+position +mSelectedIndex);
+            if(position == mSelectedIndex){
+                // Set spinner selected popup item's text color
+                tv.setTextColor(Color.parseColor("#008577"));
+
+            }
+            else {
+                tv.setTextColor(Color.parseColor("#dedede"));
+
+            }
+            tv.setText(countryNames[position]);
+            return convertView;
+        }
     }
 
     public class CustomAdapterForDate extends BaseAdapter {
@@ -564,6 +595,28 @@ public class FragmentInserAmountCalculator extends Fragment {
             TextView textView  = view.findViewById(R.id.spText);
             textView.setText(countryNames[i]);
             return view;
+        }
+
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            convertView = inflter.inflate(R.layout.spinner_items_date, null);
+            TextView tv = (TextView)convertView.findViewById(R.id.spText);
+
+            //tv.setTextColor(Color.parseColor("#dedede"));
+           /*tv.setPadding(10,10,10,10);
+           tv.setTextSize(20);*/
+            System.out.println("position:- "+position +mSelectedIndex);
+            if(position == mSelectedIndex){
+                // Set spinner selected popup item's text color
+                tv.setTextColor(Color.parseColor("#008577"));
+
+            }
+            else {
+                tv.setTextColor(Color.parseColor("#dedede"));
+
+            }
+            tv.setText(countryNames[position]);
+            return convertView;
         }
     }
 
@@ -771,7 +824,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 {
                     //System.out.println("SIP successful3"+sucessmsg);
                     if (paramModel.getPaymentMode().equalsIgnoreCase("no")) {
-                        AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                       /* AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
                         dialog.setCancelable(false);
                         dialog.setTitle("SIP Initiated Successfully");
                         dialog.setMessage("Kindly make the payment via One Time Mandate or Cheque");
@@ -785,7 +838,8 @@ public class FragmentInserAmountCalculator extends Fragment {
 
                         final AlertDialog alert = dialog.create();
                         alert.show();
-                        System.out.println("SIP successful2" + sucessmsg);
+                        System.out.println("SIP successful2" + sucessmsg);*/
+                       showCustomDialog();
                     }
                     else {
                         String infohtml = (String) message2;
@@ -798,7 +852,7 @@ public class FragmentInserAmountCalculator extends Fragment {
                 }
                 else {
                     String desc = (String) messsage1;
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                   /* AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
                     dialog.setCancelable(false);
                     dialog.setTitle("Error!");
                     dialog.setMessage(desc);
@@ -812,7 +866,8 @@ public class FragmentInserAmountCalculator extends Fragment {
 
                     final AlertDialog alert = dialog.create();
                     alert.show();
-                    Toast.makeText(context, desc, Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, desc, Toast.LENGTH_LONG).show();*/
+                   showErrorDialog(desc);
                     _purchase.setEnabled(true);
                     _purchase.setAlpha(1f);
                 }
@@ -825,6 +880,7 @@ public class FragmentInserAmountCalculator extends Fragment {
             _purchase.setEnabled(true);
             _purchase.setAlpha(1f);
             hud.dismiss();
+            Toast.makeText(context, "Error! Please try again later", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -904,5 +960,73 @@ public class FragmentInserAmountCalculator extends Fragment {
             dismiss();
         }
     }*/
+
+
+    private void showCustomDialog() {
+
+        //before inflating the custom alert dialog layout, we will get the current activity viewgroup
+
+        //ViewGroup viewGroup = View.findViewById(android.R.id.content);
+
+
+
+        //then we will inflate the custom alert dialog xml that we created
+
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1 = dialogView.findViewById(R.id.tv1);
+        tv1.setText("SIP Initiated Successfully");
+        TextView tv2  = dialogView.findViewById(R.id.tv2);
+        tv2.setText("Kindly make the payment via One Time Mandate or Cheque");
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+            }
+
+        });
+
+    }
+
+    private void showErrorDialog(String text)
+    {
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog_error, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv2 =  dialogView.findViewById(R.id.tv2);
+        tv2.setText(text);
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+            }
+
+        });
+    }
 
 }

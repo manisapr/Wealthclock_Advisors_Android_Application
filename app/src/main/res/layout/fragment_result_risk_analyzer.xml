@@ -6,61 +6,62 @@
     android:background="#363646"
     tools:context="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.RiskAnalyzer.Result_risk_analyzer">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/_10sdp"
         android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:background="@drawable/riskanalyzer"
-            android:layout_gravity="center"/>
-
-        <LinearLayout
+            android:id="@+id/img1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:gravity="center">
+            android:layout_height="400dp"
+            android:layout_above="@+id/ln1"
+            android:scaleType="fitXY"
+            />
 
-            <TextView
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginTop="@dimen/_20sdp"-->
+        <!--android:gravity="center">-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Your Profile Is"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:textColor="@color/White"/>
+        <!--<TextView-->
 
-            <TextView
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Your Profile Is"-->
+        <!--android:textSize="@dimen/_15sdp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_marginRight="@dimen/_5sdp"-->
+        <!--android:textColor="@color/White"/>-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Agressive"
-                android:id="@+id/tv1"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/colorGreen"/>
+        <!--<TextView-->
 
-        </LinearLayout>
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Agressive"-->
+        <!--android:id="@+id/tv1"-->
+        <!--android:textSize="20dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/colorGreen"/>-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Your Risk Profile is Aggressive. You are an investor who is comfortable with a high volatility and high level of risk in order to achieve relatively higher returns over long term. Your objective is to accumulate assets over long term by primarily investing in growth assets. As an aggressive investor, you might expect your portfolio to be allocated 100% in growth assets."
-            android:textColor="@color/White"
+        <!--</LinearLayout>-->
 
-            android:id="@+id/tv2"
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Your Risk Profile is Aggressive. You are an investor who is comfortable with a high volatility and high level of risk in order to achieve relatively higher returns over long term. Your objective is to accumulate assets over long term by primarily investing in growth assets. As an aggressive investor, you might expect your portfolio to be allocated 100% in growth assets."-->
+        <!--android:textColor="@color/White"-->
 
-            android:layout_marginTop="@dimen/_20sdp"
+        <!--android:id="@+id/tv2"-->
 
-            android:layout_marginBottom="@dimen/_20sdp"
+        <!--android:layout_marginTop="@dimen/_20sdp"-->
 
-            android:textSize="@dimen/_13sdp"/>
+        <!--android:layout_marginBottom="@dimen/_20sdp"-->
+
+        <!--android:textSize="@dimen/_13sdp"/>-->
 
         <LinearLayout
 
@@ -69,7 +70,8 @@
             android:layout_height="wrap_content"
 
             android:orientation="vertical"
-
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ln1"
             android:gravity="center">
 
             <Button
@@ -79,8 +81,9 @@
                 android:layout_height="35dp"
 
                 android:text="Retake Questionnaire"
-
-                android:layout_margin="10dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
 
                 android:layout_gravity="center"
 
@@ -110,6 +113,6 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </FrameLayout>

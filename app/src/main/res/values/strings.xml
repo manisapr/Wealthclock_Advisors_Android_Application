@@ -42,4 +42,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="personality_based_investment"><u>Personality Based Investment</u></string>
+    <string name="feedbacktext">For issues relating to orders,portfolio etc.Please send me a mail to:</string>
+    <string name="supportmail"><u>support@wealthclockadvisors.com</u></string>
+    <string name="supporttext">A support ticket will be immediately raised and we will work on resolving these issues as soon as possible.</string>
 </resources>

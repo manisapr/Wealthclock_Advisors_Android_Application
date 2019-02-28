@@ -743,6 +743,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color tt
 dimen _100sdp
 dimen _105sdp
 dimen _10sdp
@@ -1109,17 +1110,19 @@ drawable background
 drawable background_risk_analyzer
 drawable bank
 drawable bar_selected
-drawable bargraph1
 drawable baseline_border_color_white_24
 drawable build_wealth
 drawable bullet
 drawable bullet_selected
 drawable button_background
+drawable button_background1
+drawable button_background2
 drawable button_shape
 drawable buy_car
 drawable buy_home
 drawable calamities
 drawable camera_icon_background
+drawable cancel
 drawable capsuleshape
 drawable cashlesshospitalization
 drawable circle1
@@ -1139,6 +1142,7 @@ drawable design_snackbar_background
 drawable do_it_yourself
 drawable down_arrow
 drawable edit_text_shape
+drawable edittextshapeforticket
 drawable education
 drawable emergencyambulance
 drawable employesspf
@@ -1153,9 +1157,11 @@ drawable fund
 drawable goal_track_icon
 drawable goo
 drawable goodpotentialreturns
+drawable graph1
 drawable growth
 drawable healthinsurance12
 drawable healthinsurancesmall
+drawable high1
 drawable homeloannn
 drawable ic_add_black_24dp
 drawable ic_arrow_forward_black_24dp
@@ -1176,6 +1182,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_phone_black_24dp
+drawable ic_success
 drawable ic_vpn_key_black_24dp
 drawable icofour
 drawable icon
@@ -1204,10 +1211,17 @@ drawable kprogresshud_spinner
 drawable let_us_do_it_for_u
 drawable lifeinsurance12
 drawable lifeinsurance2
+drawable lifeinsurance_small
 drawable lifeinsurancei
 drawable logo
 drawable logo_circle
+drawable logoo
+drawable low1
+drawable moderately
+drawable moderately_high1
+drawable moderately_low
 drawable motorinsurance122
+drawable motorinsurance_small
 drawable motorinsurancee
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1239,6 +1253,7 @@ drawable panel1
 drawable panel3
 drawable panel33
 drawable panel_redeem
+drawable panel_risk_analyzer
 drawable park_wealth
 drawable payforlimitedperiod
 drawable payout
@@ -1267,6 +1282,7 @@ drawable risk_analyzer_background
 drawable riskanalyzer
 drawable round
 drawable round1
+drawable round_save_tax
 drawable roundcorner
 drawable rupee
 drawable save_tax_explore
@@ -1277,10 +1293,12 @@ drawable shapeimage
 drawable shapepanel
 drawable side_nav_bar
 drawable sip
+drawable spinner_select
 drawable splash
 drawable splash1
 drawable ssssys
 drawable star
+drawable starrr
 drawable start_inves
 drawable start_your_sip
 drawable stp
@@ -1295,6 +1313,7 @@ drawable terminsurance12
 drawable theft
 drawable thirdpartylosses
 drawable tick
+drawable ticket
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable track_investment
@@ -1310,6 +1329,8 @@ drawable wealthclock_app_risk_analyser
 drawable wedding
 drawable whatspp_icon
 drawable white_circle
+drawable whtsap_logo
+drawable writeletter
 id ALT
 id CTRL
 id FUNCTION
@@ -1399,6 +1420,7 @@ id btn_9
 id btn_no
 id btn_yes
 id bullet
+id buttonOk
 id buttonPanel
 id buy
 id calculator
@@ -1444,6 +1466,7 @@ id dateSpinner2
 id dateSpinner3
 id decor_content_parent
 id default_activity_button
+id descEditText
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1493,6 +1516,8 @@ id familyMemberRecycler
 id father_first_name
 id father_last_name
 id father_middle_name
+id feedback
+id feedbacklayout
 id female
 id fill
 id fill_horizontal
@@ -1519,6 +1544,7 @@ id fundName
 id fundRecyler
 id fund_name
 id fund_type
+id funddetailslayout
 id fundname1
 id fundxirr
 id gain_loss
@@ -1544,7 +1570,9 @@ id icon_group
 id ifRoom
 id ifscCode
 id image
+id image2
 id imageslider
+id imagev
 id img
 id img1
 id img2
@@ -1690,6 +1718,7 @@ id linear9
 id linearLayoutNetworkCheck
 id listMode
 id list_item
+id ln1
 id login_background
 id login_btn
 id logo
@@ -1799,6 +1828,7 @@ id plan_goal
 id plusButton
 id portfolio
 id portfolio_incomplete
+id previewImage
 id previous
 id price1
 id proceed
@@ -1816,6 +1846,8 @@ id quick_purchase
 id quick_purchase1
 id radio
 id radiogroup
+id raiseticket
+id rating
 id recycle_scheme_name
 id redeem
 id redeemSwitch
@@ -1836,9 +1868,11 @@ id relative_investment
 id relative_login
 id relativelayout1
 id relativelayout2
+id return_value
 id right
 id right_icon
 id right_side
+id risk
 id risk_icon_lay
 id rrr
 id rupeeSymbol
@@ -1915,8 +1949,10 @@ id status6
 id status7
 id status_bar_latest_event_content
 id stretch
+id subEditText
 id submenuarrow
 id submit
+id submitButton
 id submit_area
 id tabMode
 id tablayout
@@ -1934,12 +1970,14 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView1
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
 id third_lay
 id threeYearsRadio
+id ticketreg
 id time
 id title
 id titleDividerNoCustom
@@ -1985,6 +2023,7 @@ id units
 id unlabeled
 id untilRadio
 id up
+id uploadButton
 id useLogo
 id userName
 id user_dob
@@ -1998,6 +2037,7 @@ id voter_id
 id warningtext
 id wealth_source
 id webview
+id whats
 id withText
 id wrap
 id wrap_content
@@ -2069,6 +2109,8 @@ layout content_drawer
 layout content_main
 layout croller_view
 layout custom_dialog
+layout custom_dialog_success
+layout custom_textview_to_spinner
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -2097,6 +2139,7 @@ layout fragment_fragment_contact_whatsapp
 layout fragment_fragment_dashboard
 layout fragment_fragment_explore
 layout fragment_fragment_family_view
+layout fragment_fragment_feed_back
 layout fragment_fragment_fragment_tax_saving_money__save__tax
 layout fragment_fragment_fund_distribution__goalplanner
 layout fragment_fragment_goal_track
@@ -2105,6 +2148,7 @@ layout fragment_fragment_insert_amount_goal_planner
 layout fragment_fragment_insert_year_goal_planner
 layout fragment_fragment_investment
 layout fragment_fragment_redemption
+layout fragment_fragment_ticket_registration
 layout fragment_fragment_your_plan_goalplanner
 layout fragment_general
 layout fragment_goal_planner
@@ -2141,6 +2185,9 @@ layout item_list
 layout kprogresshud_hud
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
+layout my_dialog
+layout my_dialog_error
+layout my_dialog_for_insurance
 layout nav_header_drawer
 layout newton_cradle_loading
 layout notification_action
@@ -2230,6 +2277,7 @@ string error_invalid_email
 string error_invalid_password
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string feedbacktext
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string login
@@ -2258,6 +2306,8 @@ string redeem
 string risk
 string search_menu_title
 string status_bar_notification_info_overflow
+string supportmail
+string supporttext
 string title_activity_drawer
 string title_activity_login
 style AlertDialog_AppCompat

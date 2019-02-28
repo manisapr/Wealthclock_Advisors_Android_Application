@@ -1,6 +1,7 @@
 package android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard;
 
 
+import android.Manifest;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -20,6 +21,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.view.LayoutInflater;
@@ -80,10 +82,10 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
     File file_last;
 
     private static SharedPreferences sharedPreferences = null ;
+
     public FragmentAccount() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -157,7 +159,7 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
         ServerResultHandler serverResultHandler = new ServerResultHandler();
         serverResultHandler.setContext(getContext());
         UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
-        UserHandler.getInstance().getAccountDetails(Utility.getEmailaddress(),getContext());
+        UserHandler.getInstance().getAccountDetails(SharedPreferenceManager.getUserEmail(getContext()),getContext());
 
         capture_image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -171,21 +173,28 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         //Action for "Delete".
-
-                        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-                        photoPickerIntent.setType("image/*");
-                        photoPickerIntent.setAction(Intent.ACTION_GET_CONTENT);
-                        startActivityForResult(Intent.createChooser(photoPickerIntent, "Select Picture"), GALLERY_PHOTO);
-
-
+                        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
+                                == PackageManager.PERMISSION_GRANTED) {
+                            Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+                            photoPickerIntent.setType("image/*");
+                            photoPickerIntent.setAction(Intent.ACTION_GET_CONTENT);
+                            startActivityForResult(Intent.createChooser(photoPickerIntent, "Select Picture"), GALLERY_PHOTO);
+                        }
+                       else {
+                            ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE}, 46);
+                        }
                     }
                 }).setNegativeButton("Camera", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
-                        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                        startActivityForResult(cameraIntent, CAPTURE_PHOTO);
-
+                        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA)
+                                == PackageManager.PERMISSION_GRANTED) {
+                            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                            startActivityForResult(cameraIntent, CAPTURE_PHOTO);
+                        }
+                        else {
+                            ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE}, 45);
+                        }
                     }
 
                 });
@@ -197,7 +206,6 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
         return view;
 
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -473,14 +481,17 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                 if (resultCode == Activity.RESULT_OK) {
                     try {
                         Bundle extras = data.getExtras();
+
+                        //Uri uri1 = data.getData();
                         Bitmap finalBitmap = (Bitmap) extras.get("data");
                         file_last = Utility.getImageUri(getContext(), finalBitmap);
+                       /* String p1 = Utility.getPath(getContext(),uri1);*/
                         String path = file_last.getPath();
+                        System.out.println("path via camera: -"+ file_last + "path:- "+path);
+                        //SharedPreferenceManager.setImagePath(getContext(),path);
 
-                        SharedPreferenceManager.setImagePath(getContext(),path);
 
-                        System.out.println("hsdhuh: -"+path + finalBitmap);
-                        Uri uri = Uri.fromFile(file_last);
+                        //Uri uri = Uri.fromFile(file_last);
 
                         Glide.with(getActivity()).load(path).asBitmap().centerCrop().into(new BitmapImageViewTarget(profile_image) {
                             @Override
@@ -491,10 +502,10 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                                 profile_image.setImageDrawable(circularBitmapDrawable);
                             }
                         });
-                        System.out.println("file check in api:- "+file);
+                        System.out.println("file check in api:- "+file_last);
                         AndroidNetworking.upload("https://www.wealthclockadvisors.com/API/API/FileUpload")
                                 .addMultipartFile("file",file_last)
-                                .addMultipartParameter("UserId",SharedPreferenceManager.getUserId(getContext()))
+                                .addMultipartParameter("userid",SharedPreferenceManager.getUserId(getContext()))
                                 .setTag("uploadTest")
                                 .setPriority(Priority.HIGH)
                                 .build()
@@ -508,7 +519,6 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                                     @Override
                                     public void onResponse(JSONObject response) {
                                         // do anything with response
-
                                         Toast.makeText(getContext(), "Image Successfully Updated", Toast.LENGTH_LONG).show();
                                     }
                                     @Override
@@ -518,7 +528,6 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                                         //System.out.println("faliuer in api"+error.getErrorDetail());
                                     }
                                 });
-
                         System.out.println("onActivityResult | CookingProcessInitialFragment: " + finalBitmap + file + "ggdhf:- "+path+file);
                         //image.setImageBitmap(MeMeUtility.getRoundedShape(finalBitmap));
                     } catch (Exception e)
@@ -582,16 +591,17 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
     @Override
     public void onStart() {
         super.onStart();
-        /*if (ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED &&
+        if (ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
         {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(new String[]{android.Manifest.permission.CAMERA}, 45);
-                requestPermissions(new String[]{android.Manifest.permission.CAMERA}, 46);
+                requestPermissions(new String[]{android.Manifest.permission.CAMERA}, 41);
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 42);
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 43);
             }
             return;
-        }*/
+        }
     }
 
     @Override
@@ -603,7 +613,6 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
             startActivityForResult(cameraIntent, CAPTURE_PHOTO);
 
         }
-
         if (requestCode == 46 && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             System.out.println("onRequestPermissionsResultgalley:  " + grantResults);
             Intent cameraIntent = new Intent(Intent.ACTION_PICK);
@@ -670,8 +679,10 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                 }
             });
 
-            System.out.println("file check in api in multimedia:- "+SharedPreferenceManager.getUserId(getContext()));
-            AndroidNetworking.upload("https://www.wealthclockadvisors.com/API/API/FileUpload")
+            //String  uploadimagearray[] ={SharedPreferenceManager.getUserId(getContext()),"support","ttt","ggg","sujoy","fhtf"};
+
+            System.out.println("file check in api in multimedia:- "+SharedPreferenceManager.getUserId(getContext()) +file_last);
+            AndroidNetworking.upload("https://www.wealthclockadvisors.com/API/api/FileUpload")
                     .addMultipartFile("file",file_last)
                     .addMultipartParameter("userid",SharedPreferenceManager.getUserId(getContext()))
                     .setTag("uploadTest")
@@ -694,7 +705,7 @@ public class FragmentAccount extends Fragment implements View.OnClickListener {
                         public void onError(ANError error) {
                             // handle error
                             Toast.makeText(getContext(), "Some error has occurred.Please try again.", Toast.LENGTH_LONG).show();
-                            //System.out.println("faliuer in api from multimedia"+error.getErrorDetail());
+                            System.out.println("faliuer in api from multimedia"+error.getErrorDetail()+error);
                         }
                     });
 

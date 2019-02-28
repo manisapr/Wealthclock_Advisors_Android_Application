@@ -116,7 +116,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });*/
 
-
         final View touchView = findViewById(R.id.main_view_pager);
         touchView.setOnTouchListener(new View.OnTouchListener()
         {
@@ -126,7 +125,6 @@ public class DashboardActivity extends AppCompatActivity {
                 return true;
             }
         });
-
 
         main_view_pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -146,10 +144,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
         notification_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,7 +151,6 @@ public class DashboardActivity extends AppCompatActivity {
 
             }
         });
-
 
 
         relative_dashboard.setOnClickListener(new View.OnClickListener() {

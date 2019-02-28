@@ -74,6 +74,7 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
     private int k=0;
     private int m=0;
     private Switch _onOffswitch;
+    ViewGroup viewGroup;
     private String paymentmode = "yes";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -94,6 +95,7 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
         _lay1.setVisibility(View.VISIBLE);
         _lay2.setVisibility(View.GONE);
         _lay3.setVisibility(View.GONE);
+        viewGroup = view.findViewById(android.R.id.content);
         _folioList = new ArrayList<>();
 
         _purchaseamount1 = view.findViewById(R.id.purchaseAmount);
@@ -138,7 +140,6 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
             @Override
             public void onClick(View v) {
                 //UserHandler.getInstance().multifundSip(cv,getContext());
-
                 if (SharedPreferenceManager.getIsXSIPActive(getContext()).equalsIgnoreCase("false") && SharedPreferenceManager.getIsISIPActive(getContext()).equalsIgnoreCase("false")) {
 
                     Toast.makeText(getContext(), "Failed|One Time Mandate not approved for SIP Purchase. Contact us at +91 9702233617 for resolving this issue.", Toast.LENGTH_LONG).show();
@@ -518,7 +519,7 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
             if (operation_flag.equalsIgnoreCase("multifundSip"))
             {
                 if (paymentmode.trim().equalsIgnoreCase("no")) {
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                   /* AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
                     dialog.setCancelable(false);
                     dialog.setTitle("SIP Initiated Successfully");
                     dialog.setMessage("Kindly make the payment via One Time Mandate or Cheque");
@@ -534,7 +535,9 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
                     });
 
                     final AlertDialog alert = dialog.create();
-                    alert.show();
+                    alert.show();*/
+                   showCustomDialog();
+
                 }
                 else
                     {
@@ -774,5 +777,75 @@ public class Fragment_buy_mutual_fund_goalplanner extends Fragment implements ii
             return view;
         }
     }
+
+    private void showCustomDialog() {
+
+        //before inflating the custom alert dialog layout, we will get the current activity viewgroup
+
+        //ViewGroup viewGroup = View.findViewById(android.R.id.content);
+
+
+
+        //then we will inflate the custom alert dialog xml that we created
+
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1  = dialogView.findViewById(R.id.tv1);
+        tv1.setText("SIP Initiated Successfully");
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                Intent intent = new Intent(getContext(), DashboardActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+
+
+            }
+
+        });
+
+    }
+
+    private void showErrorDialog(String text)
+    {
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog_error, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1=dialogView.findViewById(R.id.tv1);
+        tv1.setText("Failed!!!");
+        TextView tv2 =  dialogView.findViewById(R.id.tv2);
+        tv2.setText(text);
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+            }
+
+        });
+    }
+
 
 }

@@ -758,7 +758,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="@dimen/_8sdp"
                     android:text="NEWSFEED"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="#37c7b6" />
 
                 <LinearLayout
                     android:id="@+id/bullet"

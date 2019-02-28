@@ -14,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PaymentWebViewActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.adapter.SaveTaxAdapter;
 import android.wealthclockadvisors.app.wealthclockadvisors.constant.APIConstant;
@@ -76,6 +77,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
     Button investnow;
     Switch onOffSwitch;
     Context context;
+    ViewGroup viewGroup;
 
     private MutualFundDetailsforModel mutualFundDetailsforModel;
 
@@ -95,7 +97,8 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
     String Amccode;
     String foliono = " ";
     private String _amount = " ";
-    String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode;
+    //String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode;
+    String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode,Risk,AmcImage,FundType,Rating;
     private String info="";
     public Fragment_Invest_Angle_Save_Tax() {
         // Required empty public constructor
@@ -116,6 +119,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
         tv1=view.findViewById(R.id.tv1);
         investnow=view.findViewById(R.id.investnow);
         onOffSwitch=view.findViewById(R.id.onOffSwitch);
+        viewGroup = view.findViewById(android.R.id.content);
         listfolio.add(0,"NEW");
         listfolio.add(1,"NEW");
        // _goalFundList=new ArrayList<>();
@@ -191,7 +195,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                 //purchase.put("OrderVal", "500");
                 purchase.put("Qty", "");
                 purchase.put("AllRedeem", "Y");
-                if (listfolio.get(i).equalsIgnoreCase("NEW"))
+                if (listfolio.get(i).equalsIgnoreCase(""))
                 {
                     purchase.put("BuySellType","FRESH");
                 }
@@ -305,10 +309,32 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                     @Override
                     public void onResponse(JSONObject response)
                     {
-
+                        System.out.println("Response987:"+response);
                 if (orderEntryModel.getPaymentMode().trim().equalsIgnoreCase("no"))
                 {
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                    String responseStream = String.valueOf(response);
+                    final JSONObject jsonResponse;
+                    try {
+                        jsonResponse = new JSONObject(responseStream);
+                        JSONObject jsonInfo = jsonResponse;
+                        String value = jsonInfo.getString("IsSuccess");
+
+                        if (value.trim().equalsIgnoreCase("true"))
+                        {
+                            showCustomDialog();
+                        }
+                        else {
+                            String des = jsonInfo.getString("Description");
+                            showErrorDialog(des);
+
+                        }
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
+
+                    /*AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
                     dialog.setCancelable(false);
                     dialog.setTitle("Purchase Initiated Successfully");
                     dialog.setMessage("Kindly make the payment via One Time Mandate or Cheque");
@@ -321,7 +347,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                     });
 
                     final AlertDialog alert = dialog.create();
-                    alert.show();
+                    alert.show(); */
                 }
                 else {
                     String responseStream = String.valueOf(response);
@@ -345,7 +371,10 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
 
                     @Override
                     public void onError(ANError anError) {
-
+                        investnow.setEnabled(true);
+                        investnow.setAlpha(1.0f);
+                        investnow.setText("Invest Now");
+                        Toast.makeText(context, "Error has occured.Please try again.", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -388,7 +417,6 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                             if (foliodetails.length()>0)
                             {
 
-
                                 FundTypeModel fundTypeModel = new FundTypeModel();
                                 JSONObject folioobj = foliodetails.getJSONObject(0);
                                 fundTypeModel.setFolioNo(folioobj.getString("FolioNo"));
@@ -403,7 +431,6 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                                 }
 
                                 //getPurchase();
-
                             }
                             else {
                                 listfolio.add(0,"NEW");
@@ -767,12 +794,21 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                         SchemeCode=jobj.getString("SchemeCode");
                         SchemeCode=SchemeCode;
                         listschemecode.add(SchemeCode);
+                        Risk=jobj.getString("Risk");
+                        FundType=jobj.getString("FundType");
+                        AmcImage=jobj.getString("AmcImage");
+                        Rating=jobj.getString("Rating");
                         System.out.println("Scheeeme:"+SchemeCode);
 
 
                         Top3Funds top3Funds=new Top3Funds();
                         top3Funds.setFundname(fundname);
                         top3Funds.setPrice("₹ "+Price);
+                        top3Funds.setFundType(FundType);
+                        top3Funds.setAmcImage(AmcImage);
+                        top3Funds.setReturnvalue(Returnvalue+" %");
+                        top3Funds.setRating(Rating);
+                        top3Funds.setRisk(Risk);
                         arrayList1.add(top3Funds);
 
 
@@ -812,6 +848,102 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
         jsonObjectRequest.setRetryPolicy(policy);
         Volley.newRequestQueue(getContext()).add(jsonObjectRequest);
     }
+    private void showCustomDialog() {
+
+        //before inflating the custom alert dialog layout, we will get the current activity viewgroup
+
+        //ViewGroup viewGroup = View.findViewById(android.R.id.content);
+
+
+
+        //then we will inflate the custom alert dialog xml that we created
+
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog, viewGroup, false);
+
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+
+
+
+
+        //Now we need an AlertDialog.Builder object
+
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+
+
+
+        //setting the view of the builder to our custom view that we already inflated
+
+        builder.setView(dialogView);
+
+
+
+        //finally creating the alert dialog and displaying it
+
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+
+        alertDialog.setCancelable(false);
+
+        alertDialog.show();
+
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                Intent intent = new Intent(getContext(), DashboardActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+                alertDialog.dismiss();
+
+                /*FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+
+
+                FragmentDashboard fragmentDashboard = new FragmentDashboard();
+
+                fragmentTransaction.replace(R.id.frag, fragmentDashboard, "fragmentDashboard");
+
+                fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+
+                fragmentTransaction.commit();
+
+                alertDialog.dismiss();*/
+                }
+            });
+        }
+    private void showErrorDialog(String text)
+    {
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog_error, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1=dialogView.findViewById(R.id.tv1);
+        tv1.setText("Failed!!!");
+        TextView tv2 =  dialogView.findViewById(R.id.tv2);
+        tv2.setText(text);
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+                alertDialog.dismiss();
+                }
+
+        });
+    }
+
+
+
 
     private class ServerResultHandler implements ihttpResultHandler
     {
@@ -835,7 +967,5 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
 
         }
     }
-
-
 
 }

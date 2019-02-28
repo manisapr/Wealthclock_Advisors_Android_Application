@@ -61,12 +61,12 @@
                 android:layout_width="match_parent"
 
                 android:layout_height="200dp"
-
-                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
 
                 android:orientation="vertical"
 
-                android:background="@drawable/bargraph1">
+                android:background="@drawable/graph1">
 
             </LinearLayout>
 
@@ -118,7 +118,7 @@
 
                             android:elevation="@dimen/_5sdp"
 
-                            android:text="₹ 105000"
+                            android:text="Portfolio A"
 
                             android:textSize="@dimen/_12sdp"
 
@@ -164,7 +164,7 @@
 
                             android:elevation="@dimen/_5sdp"
 
-                            android:text="₹ 95000-112000"
+                            android:text="Portfolio B"
 
                             android:textSize="@dimen/_12sdp"
 
@@ -210,7 +210,7 @@
 
                             android:elevation="@dimen/_5sdp"
 
-                            android:text="₹ 90000-120000"
+                            android:text="Portfolio C"
 
                             android:textSize="@dimen/_12sdp"
 
@@ -258,7 +258,7 @@
 
                             android:elevation="@dimen/_5sdp"
 
-                            android:text="Above ₹140000"
+                            android:text="Portfolio D"
 
                             android:textSize="@dimen/_12sdp"
 
@@ -332,5 +332,4 @@
 
 
     </LinearLayout>
-
 </FrameLayout>

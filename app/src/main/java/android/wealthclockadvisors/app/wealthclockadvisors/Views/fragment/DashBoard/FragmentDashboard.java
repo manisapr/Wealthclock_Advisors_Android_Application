@@ -174,7 +174,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
                         demoSetGet.setTitle(title);
                         demoSetGet.setLink(link);
                         demoSetGet.setImagePath(imagepath);
-                        System.out.println("news feed success");
+                        //System.out.println("news feed success");
                         newsModelArrayList.add(demoSetGet);
 
                     }
@@ -200,26 +200,17 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
                             if(count < newsModelArrayList.size()){
                                 _newsRecycler.scrollToPosition(++count);
                                 handler.postDelayed(this,speedScroll);
-
                             }
-
                         }
 
                     };
 
-
-
                     handler.postDelayed(runnable,speedScroll);
-
-
                 }
 
                 catch (Exception e)
-
                 {
-
                     e.printStackTrace();
-
                 }
 
             }

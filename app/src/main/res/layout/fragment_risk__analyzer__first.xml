@@ -27,7 +27,7 @@
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Experience Personality Based Investment"
+          android:text="Invest According To Your Risk Appetite"
           android:textColor="@color/White"
           android:textSize="14dp"
           android:textAlignment="center"

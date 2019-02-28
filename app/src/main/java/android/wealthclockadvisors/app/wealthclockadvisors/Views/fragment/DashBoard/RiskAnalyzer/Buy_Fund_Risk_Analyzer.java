@@ -9,9 +9,13 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PaymentWebViewActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.adapter.SaveTaxAdapter;
 import android.wealthclockadvisors.app.wealthclockadvisors.constant.APIConstant;
@@ -28,6 +32,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -84,10 +89,11 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
     String Amccode;
     String foliono = " ";
     private String info="";
+    ViewGroup viewGroup;
 
     private SaveTaxAdapter mAdapter;
-    String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode;
-
+    //String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode;
+    String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode,Risk,AmcImage,FundType,Rating;
     TextView tv1;
     Switch onOffSwitch;
     Context context;
@@ -110,6 +116,7 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
         investnow=view.findViewById(R.id.investnow);
         generate_funds=view.findViewById(R.id.generate_funds);
         onOffSwitch=view.findViewById(R.id.onOffSwitch);
+        ViewGroup viewGroup = view.findViewById(android.R.id.content);
         listfolio.add(0,"NEW");
         listfolio.add(1,"NEW");
         _goalFundList=new ArrayList<>();
@@ -117,6 +124,7 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
         investnow.setOnClickListener(this);
         generate_funds.setOnClickListener(this);
         investnow.setVisibility(View.GONE);
+        generate_funds.setEnabled(false);
 
         onOffSwitch.setChecked(true);
         orderEntryModel= new OrderEntryModel();
@@ -136,6 +144,26 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
         });
         Bundle arguments = getArguments();
         type = arguments.getString("custom");
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().equals("")) {
+                    generate_funds.setEnabled(false);
+                } else {
+                    generate_funds.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         return view;
     }
 
@@ -189,11 +217,20 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
                         SchemeCode=jobj.getString("SchemeCode");
                         SchemeCode=SchemeCode;
                         listschemecode.add(SchemeCode);
+                        Risk=jobj.getString("Risk");
+                        FundType=jobj.getString("FundType");
+                        AmcImage=jobj.getString("AmcImage");
+                        Rating=jobj.getString("Rating");
                         System.out.println("Scheeeme:"+SchemeCode);
 
                         Top3Funds top3Funds=new Top3Funds();
                         top3Funds.setFundname(fundname);
                         top3Funds.setPrice("₹ "+Price);
+                        top3Funds.setFundType(FundType);
+                        top3Funds.setAmcImage(AmcImage);
+                        top3Funds.setReturnvalue(Returnvalue+" %");
+                        top3Funds.setRating(Rating);
+                        top3Funds.setRisk(Risk);
                         arrayList1.add(top3Funds);
 
 
@@ -307,10 +344,32 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
                     @Override
                     public void onResponse(JSONObject response)
                     {
-                        System.out.println("Response"+response);
+                        System.out.println("Responselkj"+response);
                         if (orderEntryModel.getPaymentMode().trim().equalsIgnoreCase("no"))
                         {
-                            AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                            //showCustomDialog();
+                            String responseStream = String.valueOf(response);
+                            final JSONObject jsonResponse;
+                            try {
+                                jsonResponse = new JSONObject(responseStream);
+                                JSONObject jsonInfo = jsonResponse;
+                                String value = jsonInfo.getString("IsSuccess");
+
+                                if (value.trim().equalsIgnoreCase("true"))
+                                {
+                                    showCustomDialog();
+                                }
+                                else {
+                                    String des = jsonInfo.getString("Description");
+                                    showErrorDialog(des);
+
+                                }
+                            }
+                            catch (Exception e)
+                            {
+
+                            }
+                            /*AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
                             dialog.setCancelable(false);
                             dialog.setTitle("Purchase Initiated Successfully");
                             dialog.setMessage("Kindly make the payment via One Time Mandate or Cheque");
@@ -323,7 +382,7 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
                             });
 
                             final AlertDialog alert = dialog.create();
-                            alert.show();
+                            alert.show(); */
                         }
                         else {
                             String responseStream = String.valueOf(response);
@@ -347,12 +406,14 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
 
                     @Override
                     public void onError(ANError anError) {
-
+                        investnow.setEnabled(true);
+                        investnow.setAlpha(1.0f);
+                        investnow.setText("Invest Now");
+                        Toast.makeText(context, "Error has occured.Please try again.", Toast.LENGTH_LONG).show();
                     }
                 });
 
     }
-
 
     private void getFolio1() {
 
@@ -1037,6 +1098,73 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
 
 
     }
+    private void showCustomDialog() {
+        //before inflating the custom alert dialog layout, we will get the current activity viewgroup
+        //ViewGroup viewGroup = View.findViewById(android.R.id.content);
+
+        //then we will inflate the custom alert dialog xml that we created
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+
+
+        //Now we need an AlertDialog.Builder object
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+
+        //finally creating the alert dialog and displaying it
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), DashboardActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+                alertDialog.dismiss();
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+                /*FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                FragmentDashboard fragmentDashboard = new FragmentDashboard();
+                fragmentTransaction.replace(R.id.frag, fragmentDashboard, "fragmentDashboard");
+                fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                fragmentTransaction.commit();
+                alertDialog.dismiss();*/
+            }
+        });
+    }
+    private void showErrorDialog(String text)
+    {
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog_error, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1=dialogView.findViewById(R.id.tv1);
+        tv1.setText("Failed!!!");
+        TextView tv2 =  dialogView.findViewById(R.id.tv2);
+        tv2.setText(text);
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+                alertDialog.dismiss();
+            }
+
+        });
+    }
     private class ServerResultHandler implements ihttpResultHandler
     {
         private Context context;
@@ -1101,6 +1229,7 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
                     System.out.println("efgh");
                 }*/
                 generate_funds.setVisibility(View.GONE);
+               // showCustomDialog();
                 break;
             case R.id.generate_funds:
                 //type=riskanalyzer_type;
@@ -1115,6 +1244,7 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
                 else
                 {
                     et1.setError("Please Enter Amount Greater Than 10000");
+                    generate_funds.setEnabled(false);
                 }
                /* getData();
                 generate_funds.setVisibility(View.GONE);

@@ -22,6 +22,7 @@ import android.wealthclockadvisors.app.wealthclockadvisors.model.Top3Funds;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.User_DetailsForIMPS;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.xsipOrderEntryParamModel;
 import android.wealthclockadvisors.app.wealthclockadvisors.utils.Utility;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -38,11 +39,13 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.androidnetworking.interfaces.UploadProgressListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -1921,8 +1924,6 @@ public class httpController implements ihttpController {
             schemename.put("amount",top3Funds.getInvestedAmount());
             schemename.put("type","Personal");
 
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -1951,6 +1952,11 @@ public class httpController implements ihttpController {
                                 sipmodel.setPrice(loginObject.getString("Price"));
                                 sipmodel.setAmcSchemeCode(loginObject.getString("AMCCode"));
                                 sipmodel.setSchemeType(loginObject.getString("_goalSchemeSchemeCode"));
+                                sipmodel.setAmcImage(loginObject.getString("AmcImage"));
+                                sipmodel.setRisk(loginObject.getString("Risk"));
+                                sipmodel.setRating(loginObject.getString("Rating"));
+                                sipmodel.setFundType(loginObject.getString("FundType"));
+                                sipmodel.setReturnvalue(loginObject.getString("_goalSchemeReturn"));
                                 top3FundsArrayList.add(sipmodel);
                             }
 
@@ -2465,6 +2471,43 @@ public class httpController implements ihttpController {
         jsObjRequest.setRetryPolicy(policy);
 
         _requestQueue.add(jsObjRequest);
+
+    }
+
+    @Override
+    public void tickeregistration(String userId, File file, final Context context) {
+        System.out.println("tickeregistration:- "+userId+"file:- "+file);
+        /*AndroidNetworking.upload("https://www.wealthclockadvisors.com/API/api/Ticket")
+                .addMultipartFile("file",file)
+                .addMultipartParameter("Details",userId)
+                .setTag("uploadTe")
+                .setPriority(Priority.HIGH)
+                .build()
+                .setUploadProgressListener(new UploadProgressListener() {
+                    @Override
+                    public void onProgress(long bytesUploaded, long totalBytes) {
+                        // do anything with progress
+                    }
+                })
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        // do anything with response
+                        *//*if (_iHttpResultHandler != null)
+                                _iHttpResultHandler.onSuccess("","","", " ","","","tickeregistration");
+                        System.out.println();*//*
+                        //Toast.makeText(context, "Image Successfully Updated", Toast.LENGTH_LONG).show();
+                        //System.out.println("success in api from multimedia"+response);
+                    }
+                    @Override
+                    public void onError(ANError error) {
+                        // handle error
+                       *//* if (_iHttpResultHandler != null)
+                            _iHttpResultHandler.onError(error.getMessage());*//*
+                        Toast.makeText(context, "Some error has occurred.Please try again.", Toast.LENGTH_LONG).show();
+                        System.out.println("faliuer in api from multimedia"+error.getErrorDetail()+error);
+                    }
+                });*/
 
     }
 

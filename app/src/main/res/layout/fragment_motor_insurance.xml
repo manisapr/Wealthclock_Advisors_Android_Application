@@ -20,45 +20,71 @@
                 android:layout_marginBottom="@dimen/_14sdp"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_5sdp"
-                android:background="@drawable/icon_background_dashboard"
                 android:elevation="@dimen/_5sdp"
                 android:orientation="vertical">
-                <EditText
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter Motor Registration No."
-                    android:textColor="@color/White"
-                    android:textSize="@dimen/_13sdp"
-                    android:textColorHint="@color/White"
-                    android:backgroundTint="@color/White"
-                    android:id="@+id/motor_reg"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/_5sdp"
                     android:layout_margin="@dimen/_5sdp"
-                    android:singleLine="true"
-                    android:inputType="number"/>
-                <EditText
+                    android:background="@drawable/background_risk_analyzer">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Motor Registration No."
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/_13sdp"
+                        android:textColorHint="@color/White"
+                        android:backgroundTint="@color/White"
+                        android:id="@+id/motor_reg"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:inputType="number"/>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter Email Id"
-                    android:textColor="@color/White"
-                    android:textColorHint="@color/White"
-                    android:backgroundTint="@color/White"
-                    android:textSize="@dimen/_13sdp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/_5sdp"
                     android:layout_margin="@dimen/_5sdp"
-                    android:id="@+id/email"
-                    android:singleLine="true"
-                    android:inputType="textEmailAddress"/>
-                <EditText
+                    android:background="@drawable/background_risk_analyzer">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Email Id"
+                        android:textColor="@color/White"
+                        android:textColorHint="@color/White"
+                        android:backgroundTint="@color/White"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/email"
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress"/>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="+91  Mobile No.(Optional)"
-                    android:textColor="@color/White"
-                    android:textColorHint="@color/White"
-                    android:backgroundTint="@color/White"
-                    android:textSize="@dimen/_13sdp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/_5sdp"
                     android:layout_margin="@dimen/_5sdp"
-                    android:singleLine="true"
-                    android:id="@+id/mobile"
-                    android:inputType="phone"/>
+                    android:background="@drawable/background_risk_analyzer">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="+91  Mobile No.(Optional)"
+                        android:textColor="@color/White"
+                        android:textColorHint="@color/White"
+                        android:backgroundTint="@color/White"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:id="@+id/mobile"
+                        android:inputType="phone"/>
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

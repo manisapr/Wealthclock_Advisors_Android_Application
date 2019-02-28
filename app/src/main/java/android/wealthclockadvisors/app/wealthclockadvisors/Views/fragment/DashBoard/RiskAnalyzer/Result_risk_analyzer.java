@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.wealthclockadvisors.app.wealthclockadvisors.utils.Utility;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import wealthclockadvisors.app.wealthclockadvisors.R;
@@ -20,7 +21,8 @@ import wealthclockadvisors.app.wealthclockadvisors.R;
  */
 public class Result_risk_analyzer extends Fragment implements View.OnClickListener {
 
-    TextView tv1,tv2;
+    //TextView tv1,tv2;
+    ImageView img1;
 
     Button previous,next;
 
@@ -40,9 +42,10 @@ public class Result_risk_analyzer extends Fragment implements View.OnClickListen
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_result_risk_analyzer, container, false);
 
-        tv1=view.findViewById(R.id.tv1);
+        //tv1=view.findViewById(R.id.tv1);
 
-        tv2=view.findViewById(R.id.tv2);
+        //tv2=view.findViewById(R.id.tv2);
+        img1=view.findViewById(R.id.img1);
 
 
 
@@ -68,6 +71,7 @@ public class Result_risk_analyzer extends Fragment implements View.OnClickListen
 
         {
 
+            img1.setImageResource(R.drawable.high1);
             finalres = "Aggressive";
 
             riskanalyzer_type="Aggressive1";
@@ -79,7 +83,7 @@ public class Result_risk_analyzer extends Fragment implements View.OnClickListen
         else if (avg <= 8.9 && avg >= 7.5)
 
         {
-
+            img1.setImageResource(R.drawable.moderately_high1);
             finalres = "Aggressive";
 
             riskanalyzer_type="Aggressive2";
@@ -91,7 +95,8 @@ public class Result_risk_analyzer extends Fragment implements View.OnClickListen
         else if (avg <= 7.4 && avg >= 6.0)
 
         {
-
+            //img1.setImageResource(R.drawable.graph1);
+            img1.setImageResource(R.drawable.moderately_high1);
             finalres = "Moderate";
 
             riskanalyzer_type="Moderate1";
@@ -101,7 +106,7 @@ public class Result_risk_analyzer extends Fragment implements View.OnClickListen
         }
 
         else if (avg <= 5.9 && avg >= 4.0) {
-
+            img1.setImageResource(R.drawable.moderately);
             finalres = "Moderate";
 
             riskanalyzer_type="Moderate2";
@@ -113,7 +118,7 @@ public class Result_risk_analyzer extends Fragment implements View.OnClickListen
         else if (avg <= 3.9 && avg >= 2.0)
 
         {
-
+            img1.setImageResource(R.drawable.low1);
             finalres = "Conservative";
 
             riskanalyzer_type="Conservative1";
@@ -125,7 +130,7 @@ public class Result_risk_analyzer extends Fragment implements View.OnClickListen
         else if (avg <= 1.9 && avg >= 0.0)
 
         {
-
+            img1.setImageResource(R.drawable.moderately_low);
             finalres = "Conservative";
 
             riskanalyzer_type="Conservative2";
@@ -134,9 +139,9 @@ public class Result_risk_analyzer extends Fragment implements View.OnClickListen
 
         }
 
-        tv1.setText(finalres);
+        //tv1.setText(finalres);
 
-        tv2.setText(Sentence);
+        //tv2.setText(Sentence);
         return view;
     }
     @Override

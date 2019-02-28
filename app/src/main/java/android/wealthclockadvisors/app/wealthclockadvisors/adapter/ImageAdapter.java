@@ -33,7 +33,7 @@ public class ImageAdapter extends PagerAdapter {
 
     private int[] sliderImageId = new int[]{
 
-            R.drawable.lifeinsurance2,R.drawable.motorinsurancee,R.drawable.healthinsurancesmall,
+            R.drawable.lifeinsurance_small,R.drawable.motorinsurance_small,R.drawable.healthinsurancesmall,
 
     };
 

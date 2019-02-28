@@ -2,14 +2,22 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#363646" >
+    android:background="#363646">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#363646"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mode of Payment"
+            android:textColor="@color/White"
+            android:layout_gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,12 +51,23 @@
 
     </LinearLayout>
 
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#363646"
+            app:cardElevation="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+
         <LinearLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -72,7 +91,7 @@
                         android:layout_weight="1"
                         android:text="Aditya Birla SunLife MNC Fund(G)"
                         android:textSize="14dp"
-                        android:textColor="@color/White"/>
+                        android:textColor="#01fae6"/>
 
                 </LinearLayout>
 
@@ -130,18 +149,32 @@
                 </RelativeLayout>
         </LinearLayout>
 
+        </android.support.v7.widget.CardView>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#1e1c33"
+        android:visibility="gone"
         android:layout_marginBottom="10dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#363646"
+            app:cardElevation="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
 
     <LinearLayout
         android:id="@+id/layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -164,7 +197,7 @@
                 android:layout_weight="1"
                 android:text="Aditya Birla SunLife MNC Fund(G)"
                 android:textSize="14dp"
-                android:textColor="@color/White"/>
+                android:textColor="#01fae6"/>
 
         </LinearLayout>
 
@@ -219,18 +252,31 @@
         </RelativeLayout>
     </LinearLayout>
 
+        </android.support.v7.widget.CardView>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#1e1c33"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardBackgroundColor="#363646">
 
     <LinearLayout
         android:id="@+id/layout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -253,7 +299,7 @@
                 android:layout_weight="1"
                 android:text="Aditya Birla SunLife MNC Fund(G)"
                 android:textSize="14dp"
-                android:textColor="@color/White"/>
+                android:textColor="#01fae6"/>
 
         </LinearLayout>
 
@@ -313,11 +359,13 @@
 
 
     </LinearLayout>
+        </android.support.v7.widget.CardView>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#1e1c33"
+        android:visibility="gone"
         android:layout_marginBottom="20dp"/>
 
     <Button
@@ -326,6 +374,7 @@
         android:id="@+id/buy"
         android:background="@color/colorPrimary"
         android:text="Purchase"
+        android:layout_marginTop="20dp"
         android:textColor="@color/White"
         android:layout_gravity="center"/>
 

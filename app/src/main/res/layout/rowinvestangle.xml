@@ -1,165 +1,323 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
-
-    app:cardCornerRadius="10dp"
-
+    android:layout_margin="10dp"
     app:cardBackgroundColor="#f7363646"
-
-    android:padding="@dimen/_5sdp">
-    <LinearLayout
-
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_10sdp">
+    <RelativeLayout
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
-
-        android:orientation="horizontal"
-
-        android:background="@drawable/panel33">
-
-
-
+        android:id="@+id/relative1"
+        android:paddingLeft="@dimen/_5sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:elevation="10dp">
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/logoo"
+            android:id="@+id/image2"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_alignParentLeft="true"/>
         <LinearLayout
-
-
-
-            android:layout_width="0dp"
-
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:orientation="vertical"
-
-            android:layout_weight="0.5">
-
-
-
+            android:id="@+id/linear1"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:gravity="center">
             <TextView
-
                 android:layout_width="wrap_content"
-
                 android:layout_height="wrap_content"
-
-                android:text="Motilal Oswal Long Term Equity"
-
-                android:id="@+id/fundname1"
-
-                android:layout_marginLeft="10dp"
-
+                android:text="9.4 %"
                 android:textSize="13dp"
-
+                android:id="@+id/return_value"
                 android:textColor="@color/White"/>
-
-
-
             <TextView
-
-                android:layout_width="50dp"
-
-                android:layout_height="17dp"
-
-                android:layout_marginLeft="10dp"
-
-                android:layout_marginBottom="5dp"
-
-                android:background="@drawable/shapepanel"/>
-
-
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Past 5 Years CAGR Return"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/White"/>
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/price1"-->
+            <!--android:textSize="@dimen/_10sdp"-->
+            <!--android:textColor="@color/White"/>-->
         </LinearLayout>
-
-
-
         <LinearLayout
-
-            android:layout_width="0dp"
-
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:orientation="vertical"
-
-            android:layout_weight="0.25"
-
-            android:layout_gravity="center">
-
-
-
-            <TextView
-
-                android:layout_width="wrap_content"
-
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Franklin India Low Duration Fund - Direct Growth"
+                    android:textColor="@color/White"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:id="@+id/fundname1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="5000"
+                    android:background="@drawable/button_shape"
+                    android:textColor="@color/White"
+                    android:textAlignment="center"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:id="@+id/price1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:background="@drawable/panel_risk_analyzer"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Moderate Risk"
+                        android:id="@+id/risk"
+                        android:textSize="@dimen/_11sdp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/White"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/panel_risk_analyzer"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Low Duration"
+                        android:id="@+id/fund_type"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/White"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_11sdp"
+                        android:gravity="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/panel_risk_analyzer"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/White"
+                        android:id="@+id/rating"
+                        android:layout_marginLeft="10dp"/>
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:src="@drawable/starrr"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
 
-                android:id="@+id/price1"
-
-                android:text="₹"
-
-                android:textSize="13dp"
-
-                android:layout_gravity="center"
-
-                android:textColor="@color/White"/>
-
-
-
+            </LinearLayout>
         </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+    <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_margin="5dp"-->
+
+    <!--app:cardCornerRadius="10dp"-->
+
+    <!--app:cardBackgroundColor="#f7363646"-->
+
+    <!--android:padding="@dimen/_5sdp">-->
+    <!--<LinearLayout-->
+
+    <!--android:layout_width="match_parent"-->
+
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:orientation="horizontal"-->
+
+    <!--android:background="@drawable/panel33">-->
 
 
-
-    </LinearLayout>
 
     <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:background="@drawable/panel33"-->
-        <!--android:layout_margin="5dp">-->
 
-        <!--<LinearLayout-->
 
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="vertical"-->
-            <!--android:layout_weight="0.5">-->
 
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Motilal Oswal Long Term Equity"-->
-                <!--android:id="@+id/fundname1"-->
-                <!--android:layout_marginLeft="10dp"-->
-                <!--android:textSize="13dp"-->
-                <!--android:textColor="@color/White"/>-->
+    <!--android:layout_width="0dp"-->
 
-            <!--<TextView-->
-                <!--android:layout_width="50dp"-->
-                <!--android:layout_height="17dp"-->
-                <!--android:layout_marginLeft="10dp"-->
-                <!--android:layout_marginBottom="5dp"-->
-                <!--android:background="@drawable/shapepanel"/>-->
+    <!--android:layout_height="wrap_content"-->
 
-        <!--</LinearLayout>-->
+    <!--android:orientation="vertical"-->
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="vertical"-->
-            <!--android:layout_weight="0.25"-->
-            <!--android:layout_gravity="center">-->
+    <!--android:layout_weight="0.5">-->
 
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:id="@+id/price1"-->
-                <!--android:text="₹"-->
-                <!--android:textSize="13dp"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:textColor="@color/White"/>-->
 
-        <!--</LinearLayout>-->
+
+    <!--<TextView-->
+
+    <!--android:layout_width="wrap_content"-->
+
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:text="Motilal Oswal Long Term Equity"-->
+
+    <!--android:id="@+id/fundname1"-->
+
+    <!--android:layout_marginLeft="10dp"-->
+
+    <!--android:textSize="13dp"-->
+
+    <!--android:textColor="@color/White"/>-->
+
+
+
+    <!--<TextView-->
+
+    <!--android:layout_width="50dp"-->
+
+    <!--android:layout_height="17dp"-->
+
+    <!--android:layout_marginLeft="10dp"-->
+
+    <!--android:layout_marginBottom="5dp"-->
+
+    <!--android:background="@drawable/shapepanel"/>-->
+
+
 
     <!--</LinearLayout>-->
 
-</android.support.v7.widget.CardView>
+
+
+    <!--<LinearLayout-->
+
+    <!--android:layout_width="0dp"-->
+
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:orientation="vertical"-->
+
+    <!--android:layout_weight="0.25"-->
+
+    <!--android:layout_gravity="center">-->
+
+
+
+    <!--<TextView-->
+
+    <!--android:layout_width="wrap_content"-->
+
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:id="@+id/price1"-->
+
+    <!--android:text="₹"-->
+
+    <!--android:textSize="13dp"-->
+
+    <!--android:layout_gravity="center"-->
+
+    <!--android:textColor="@color/White"/>-->
+
+
+
+    <!--</LinearLayout>-->
+
+
+
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@drawable/panel33"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_margin="5dp">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+
+    <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_weight="0.5">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="Motilal Oswal Long Term Equity"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/fundname1"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textSize="13dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textColor="@color/White"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="17dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginBottom="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@drawable/shapepanel"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_weight="0.25"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/price1"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="₹"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textSize="13dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textColor="@color/White"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+    <!--</android.support.v7.widget.CardView>-->

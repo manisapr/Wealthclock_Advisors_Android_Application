@@ -3,264 +3,497 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
-    android:background="#525258"
+    android:background="#363646"
     tools:context="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Fragment_Our_Assessment_Save_Tax">
 
+
     <RelativeLayout
-
         android:layout_width="match_parent"
-
-        android:layout_height="match_parent">
-
-        <RelativeLayout
-
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+        <LinearLayout
             android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentBottom="true">
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"
-
-                android:orientation="vertical"
-
-                android:paddingBottom="20dp">
-
-                <TextView
-
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-
-                    android:text="You Can Invest"
-
-                    android:textSize="12dp"
-
-                    android:gravity="center"
-
-                    android:textColor="@color/White"/>
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-
-                    android:orientation="horizontal"
-
-                    android:gravity="center">
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-
-                        android:gravity="center"
-
-                        android:textColor="@color/White"
-
-                        android:textSize="25dp"
-
-                        android:text="₹"/>
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-
-                        android:gravity="center"
-
-                        android:id="@+id/tv2"
-
-                        android:textColor="@color/White"
-
-                        android:layout_marginLeft="5dp"
-
-                        android:textSize="25dp"
-
-                        android:text="50000"/>
-
-                </LinearLayout>
-
-                <Button
-
-                    android:layout_width="@dimen/_150sdp"
-
-                    android:layout_height="35dp"
-
-                    android:text="proceed"
-
-                    android:id="@+id/proceed"
-
-                    android:layout_gravity="center"
-
-                    android:layout_marginLeft="20dp"
-
-                    android:layout_marginRight="20dp"
-
-                    android:layout_marginTop="10dp"
-
-                    android:layout_marginBottom="10dp"
-
-                    android:textColor="@color/White"
-
-                    android:background="@drawable/button_shape"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-
-            android:id="@+id/relativelayout1"
-
-            android:layout_width="match_parent"
-
             android:layout_height="match_parent"
-
-            android:layout_marginBottom="150dp"
-
-            android:background="#363646">
-
-            <LinearLayout
-
+            android:orientation="vertical"
+            android:id="@+id/linear1"
+            android:layout_alignParentTop="true">
+            <TextView
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-
-                android:orientation="vertical">
-
-                <TextView
-
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-
-                    android:text="Our Assessment"
-
-                    android:textColor="@color/White"
-
-                    android:gravity="center"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-
-                android:layout_height="match_parent"
-
-                android:layout_margin="10dp"
-
-                android:gravity="center"
-
-                android:orientation="vertical">
-
-                <TextView
-
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-
-                    android:id="@+id/tv"
-
-                    android:gravity="center"
-
-                    android:layout_margin="10dp"
-
-                    android:textColor="@color/White"
-
-                    android:textSize="12dp"
-
-                    android:text="Your Current Investment" />
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-
-                    android:orientation="horizontal"
-
-                    android:gravity="center">
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-
-                        android:gravity="center"
-
-                        android:textColor="@color/White"
-
-                        android:textSize="25dp"
-
-                        android:text="₹"/>
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-
-                        android:gravity="center"
-
-                        android:id="@+id/tv1"
-
-                        android:textColor="@color/White"
-
-                        android:layout_marginLeft="5dp"
-
-                        android:textSize="25dp"
-
-                        android:text="50000"/>
-
-                </LinearLayout>
-
-                <TextView
-
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-
-                    android:gravity="center"
-
-                    android:layout_margin="10dp"
-
-                    android:textColor="@color/White"
-
-                    android:textSize="12dp"
-
-                    android:text="/ ₹ 150000"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-
+                android:text="Our Assessment"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/White"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
-
-            android:gravity="center"
-
-            android:background="#f2f2f5"
-
-            android:layout_alignBottom="@+id/relativelayout1">
-
-        </RelativeLayout>
-
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:background="@drawable/round_save_tax"
+                android:orientation="vertical"
+                android:elevation="@dimen/_10sdp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/White"
+                    android:textSize="12dp"
+                    android:text="Your Current Investment" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/White"
+                        android:textSize="25dp"
+                        android:text="₹"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/tv1"
+                        android:textColor="@color/White"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="25dp"
+                        android:text="50000"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/White"
+                    android:textSize="12dp"
+                    android:text="Out Of ₹ 150000"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You Can Invest"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:textColor="@color/White"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/White"
+                    android:textSize="25dp"
+                    android:text="₹"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/tv2"
+                    android:textColor="@color/White"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="25dp"
+                    android:text="50000"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="35dp"
+                android:text="proceed"
+                android:id="@+id/proceed"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/White"
+                android:background="@drawable/button_shape"/>
+        </LinearLayout>
     </RelativeLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true">-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingBottom="20dp">-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="You Can Invest"-->
+    <!--android:textSize="12dp"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/White"/>-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:gravity="center">-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/White"-->
+    <!--android:textSize="25dp"-->
+    <!--android:text="₹"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/tv2"-->
+    <!--android:textColor="@color/White"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:textSize="25dp"-->
+    <!--android:text="50000"/>-->
+    <!--</LinearLayout>-->
+    <!--<Button-->
+    <!--android:layout_width="@dimen/_150sdp"-->
+    <!--android:layout_height="35dp"-->
+    <!--android:text="proceed"-->
+    <!--android:id="@+id/proceed"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:textColor="@color/White"-->
+    <!--android:background="@drawable/button_shape"/>-->
+    <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/relativelayout1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginBottom="150dp">-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:orientation="vertical">-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Our Assessment"-->
+    <!--android:textColor="@color/White"-->
+    <!--android:gravity="center"/>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="@dimen/_200sdp"-->
+    <!--android:layout_height="@dimen/_200sdp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:gravity="center"-->
+    <!--android:background="@drawable/round"-->
+    <!--android:orientation="vertical"-->
+    <!--android:elevation="@dimen/_5sdp">-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/tv"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:textColor="@color/White"-->
+    <!--android:textSize="12dp"-->
+    <!--android:text="Your Current Investment" />-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:gravity="center">-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/White"-->
+    <!--android:textSize="25dp"-->
+    <!--android:text="₹"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/tv1"-->
+    <!--android:textColor="@color/White"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:textSize="25dp"-->
+    <!--android:text="50000"/>-->
+    <!--</LinearLayout>-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:textColor="@color/White"-->
+    <!--android:textSize="12dp"-->
+    <!--android:text="/ ₹ 150000"/>-->
+    <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:background="#f2f2f5"-->
+    <!--android:layout_alignBottom="@+id/relativelayout1">-->
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+    <!--<RelativeLayout-->
+
+        <!--android:layout_width="match_parent"-->
+
+        <!--android:layout_height="match_parent">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingBottom="20dp">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="You Can Invest"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textColor="@color/White"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:gravity="center">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="@color/White"-->
+
+                        <!--android:textSize="25dp"-->
+
+                        <!--android:text="₹"/>-->
+
+                    <!--<TextView-->
+
+                        <!--android:layout_width="wrap_content"-->
+
+                        <!--android:layout_height="wrap_content"-->
+
+                        <!--android:gravity="center"-->
+
+                        <!--android:id="@+id/tv2"-->
+
+                        <!--android:textColor="@color/White"-->
+
+                        <!--android:layout_marginLeft="5dp"-->
+
+                        <!--android:textSize="25dp"-->
+
+                        <!--android:text="50000"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<Button-->
+
+                    <!--android:layout_width="@dimen/_150sdp"-->
+
+                    <!--android:layout_height="35dp"-->
+
+                    <!--android:text="proceed"-->
+
+                    <!--android:id="@+id/proceed"-->
+
+                    <!--android:layout_gravity="center"-->
+
+                    <!--android:layout_marginLeft="20dp"-->
+
+                    <!--android:layout_marginRight="20dp"-->
+
+                    <!--android:layout_marginTop="10dp"-->
+
+                    <!--android:layout_marginBottom="10dp"-->
+
+                    <!--android:textColor="@color/White"-->
+
+                    <!--android:background="@drawable/button_shape"/>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+
+            <!--android:id="@+id/relativelayout1"-->
+
+            <!--android:layout_width="match_parent"-->
+
+            <!--android:layout_height="match_parent"-->
+
+            <!--android:layout_marginBottom="150dp"-->
+
+            <!--android:background="#363646">-->
+
+            <!--<LinearLayout-->
+
+                <!--android:layout_width="match_parent"-->
+
+                <!--android:layout_height="wrap_content"-->
+
+                <!--android:layout_marginTop="10dp"-->
+
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+
+                    <!--android:layout_width="match_parent"-->
+
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:text="Our Assessment"-->
+
+                    <!--android:textColor="@color/White"-->
+
+                    <!--android:gravity="center"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+
+                <!--android:layout_width="match_parent"-->
+
+                <!--android:layout_height="match_parent"-->
+
+                <!--android:layout_margin="10dp"-->
+
+                <!--android:gravity="center"-->
+
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+
+                    <!--android:layout_width="match_parent"-->
+
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:id="@+id/tv"-->
+
+                    <!--android:gravity="center"-->
+
+                    <!--android:layout_margin="10dp"-->
+
+                    <!--android:textColor="@color/White"-->
+
+                    <!--android:textSize="12dp"-->
+
+                    <!--android:text="Your Current Investment" />-->
+
+                <!--<LinearLayout-->
+
+                    <!--android:layout_width="match_parent"-->
+
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:orientation="horizontal"-->
+
+                    <!--android:gravity="center">-->
+
+                    <!--<TextView-->
+
+                        <!--android:layout_width="wrap_content"-->
+
+                        <!--android:layout_height="wrap_content"-->
+
+                        <!--android:gravity="center"-->
+
+                        <!--android:textColor="@color/White"-->
+
+                        <!--android:textSize="25dp"-->
+
+                        <!--android:text="₹"/>-->
+
+                    <!--<TextView-->
+
+                        <!--android:layout_width="wrap_content"-->
+
+                        <!--android:layout_height="wrap_content"-->
+
+                        <!--android:gravity="center"-->
+
+                        <!--android:id="@+id/tv1"-->
+
+                        <!--android:textColor="@color/White"-->
+
+                        <!--android:layout_marginLeft="5dp"-->
+
+                        <!--android:textSize="25dp"-->
+
+                        <!--android:text="50000"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+
+                    <!--android:layout_width="match_parent"-->
+
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:gravity="center"-->
+
+                    <!--android:layout_margin="10dp"-->
+
+                    <!--android:textColor="@color/White"-->
+
+                    <!--android:textSize="12dp"-->
+
+                    <!--android:text="/ ₹ 150000"/>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+
+            <!--android:layout_width="match_parent"-->
+
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:gravity="center"-->
+
+            <!--android:background="#f2f2f5"-->
+
+            <!--android:layout_alignBottom="@+id/relativelayout1">-->
+
+        <!--</RelativeLayout>-->
+
+    <!--</RelativeLayout>-->
 
 
 

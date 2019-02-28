@@ -9,13 +9,17 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
 import android.text.TextWatcher;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.LoginActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.NewsWebViewActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PaymentWebViewActivity;
@@ -32,6 +36,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -63,6 +68,8 @@ public class QuickPurchaseFragment extends Fragment {
     private EditText _amount,_folioEditText;
     private Button _purchase;
 
+
+
     private String amcCodeText = "";
     private String schemeCodeText = "";
     private String fundNameData = "";
@@ -76,6 +83,9 @@ public class QuickPurchaseFragment extends Fragment {
     private String amountcriteriaCheck=" ";
     private double minimumamount = 0.0;
     private double maximumamount = 0.0;
+
+    ViewGroup viewGroup;
+    private int mSelectedIndex = 0;
 
     public QuickPurchaseFragment() {
         // Required empty public constructor
@@ -102,6 +112,7 @@ public class QuickPurchaseFragment extends Fragment {
         _minimumPurchaseAmount = view.findViewById(R.id.minimumPurchaseAmount);
         _MaximumPurchaseAmount = view.findViewById(R.id.MaximumPurchaseAmount);
         _onOffSwitch = view.findViewById(R.id.onOffSwitch);
+        viewGroup = view.findViewById(android.R.id.content);
         _purchase.setEnabled(false);
        /* ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_item,travelreasons);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
@@ -142,6 +153,11 @@ public class QuickPurchaseFragment extends Fragment {
         _plan.setEnabled(false);
         _folio_no.setEnabled(false);
         _amount.setEnabled(false);
+
+
+        CustomAdapter amc = new CustomAdapter(getContext(),amcList);
+        _plan.setPopupBackgroundResource(R.color.backgroundcolor);
+        _plan.setAdapter(amc);
 
         CustomAdapter plan = new CustomAdapter(getContext(),plan1);
         _plan.setPopupBackgroundResource(R.color.backgroundcolor);
@@ -198,12 +214,14 @@ public class QuickPurchaseFragment extends Fragment {
                 }
                 else
                     {
-
-                    String countryid = amcListModels.get(position-1).getAmcSchemeCode();
+                        mSelectedIndex = position;
+                        String countryid = amcListModels.get(position-1).getAmcSchemeCode();
                         amcCodeText = countryid;
+                        System.out.println("spinner amc :- "+amcListModels.get(position-1).getAmcSchemeName());
                         orderEntryModel.setAmcCode(countryid);
                         mutualFundDetailsforModel.setAmcCode(countryid);
-                        System.out.println("spinner select item:- "+countryid);
+
+
                         ServerResultHandler  serverResultHandler = new ServerResultHandler();
                         serverResultHandler.setContext(getContext());
                         UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
@@ -227,6 +245,7 @@ public class QuickPurchaseFragment extends Fragment {
                 }
                 else
                 {
+                    mSelectedIndex = position;
                         schemeCodeText = fundtype[position];
                         mutualFundDetailsforModel.setSchemeType(schemeCodeText);
                     System.out.println("_fund_name 111:- "+amcCodeText + "bbbb:- "+schemeCodeText);
@@ -258,6 +277,7 @@ public class QuickPurchaseFragment extends Fragment {
 
                 }
                 else {
+                    mSelectedIndex = position;
                     fundNameData = fundname2[position];
                     mutualFundDetailsforModel.setSchemeName(fundNameData);
                     //hud.show();
@@ -274,6 +294,7 @@ public class QuickPurchaseFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 1)
                 {
+                    mSelectedIndex = position;
                     ServerResultHandler  serverResultHandler = new ServerResultHandler();
                     serverResultHandler.setContext(getContext());
                     UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
@@ -291,6 +312,7 @@ public class QuickPurchaseFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (folio1.length>0) {
+                    mSelectedIndex = position;
                     _postion = String.valueOf(position);
                     if ((folio1[position]).equalsIgnoreCase("Add folio"))
                     {
@@ -545,6 +567,28 @@ public class QuickPurchaseFragment extends Fragment {
             textView.setText(countryNames[i]);
             return view;
         }
+
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            convertView = inflter.inflate(R.layout.spinner_item, null);
+            TextView tv = (TextView)convertView.findViewById(R.id.spText);
+            ImageView  imageView = convertView.findViewById(R.id.imagev);
+           //tv.setTextColor(Color.parseColor("#dedede"));
+           /*tv.setPadding(10,10,10,10);
+           tv.setTextSize(20);*/
+            System.out.println("position:- "+position +mSelectedIndex);
+            if(position == mSelectedIndex){
+                // Set spinner selected popup item's text color
+                tv.setTextColor(Color.parseColor("#008577"));
+
+            }
+            else {
+                tv.setTextColor(Color.parseColor("#dedede"));
+
+            }
+            tv.setText(countryNames[position]);
+            return convertView;
+        }
     }
 
     private class ServerResultHandler implements ihttpResultHandler {
@@ -700,7 +744,7 @@ public class QuickPurchaseFragment extends Fragment {
                     CustomAdapter fundname = new CustomAdapter(getContext(), fundname2);
                     _fund_name.setPopupBackgroundResource(R.color.backgroundcolor);
 
-                    System.out.println("ffffffffffffffff");
+                    //System.out.println("ffffffffffffffff");
                     _fund_name.setAdapter(fundname);
                     hud.dismiss();
                 }
@@ -723,7 +767,7 @@ public class QuickPurchaseFragment extends Fragment {
                  minimumamount = Double.parseDouble(amount);
                  maximumamount = Double.parseDouble(addtionalAmount);
 
-                System.out.println("amountcriteriaCheck | boolean:- "+checkamount);
+                //System.out.println("amountcriteriaCheck | boolean:- "+checkamount);
                 _minimumPurchaseAmount.setVisibility(View.VISIBLE);
                 _MaximumPurchaseAmount.setVisibility(View.VISIBLE);
                 _minimumPurchaseAmount.setText("Minimum Fresh - ₹"+amount);
@@ -736,7 +780,7 @@ public class QuickPurchaseFragment extends Fragment {
                 //_purchase.setEnabled(true);
                 if (amountcriteriaCheck.equalsIgnoreCase("true"))
                 {
-                    System.out.println("minimum amount"+minimumamount);
+                    //System.out.println("minimum amount"+minimumamount);
                     //double selectvalue = s;
                     String a = _amount.getText().toString().trim();
                     double selectvalue = 0.0;
@@ -809,7 +853,7 @@ public class QuickPurchaseFragment extends Fragment {
                 {
                     if (orderEntryModel.getPaymentMode().equalsIgnoreCase("no")) {
 
-                        AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                       /* AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
                         dialog.setCancelable(false);
                         dialog.setTitle("Purchase Initiated Successfully");
                         dialog.setMessage("Kindly make the payment via One Time Mandate or Cheque");
@@ -822,7 +866,11 @@ public class QuickPurchaseFragment extends Fragment {
                         });
 
                         final AlertDialog alert = dialog.create();
-                        alert.show();
+                        alert.show();*/
+                            showCustomDialog();
+
+
+
                     }
                     else {
                         String infohtml = (String) message2;
@@ -835,7 +883,7 @@ public class QuickPurchaseFragment extends Fragment {
                 }
                 else {
                     String desc = (String) messsage1;
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+                    /*AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
                     dialog.setCancelable(false);
                     dialog.setTitle("Error!!!");
                     dialog.setMessage(desc);
@@ -849,7 +897,9 @@ public class QuickPurchaseFragment extends Fragment {
 
                     final AlertDialog alert = dialog.create();
                     alert.show();
-                    Toast.makeText(context, desc, Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, desc, Toast.LENGTH_LONG).show();*/
+
+                    showErrorDialog(desc);
                 }
             }
 
@@ -863,5 +913,71 @@ public class QuickPurchaseFragment extends Fragment {
             Toast.makeText(context, "Error has occured.Please try again.", Toast.LENGTH_LONG).show();
         }
     }
+
+    private void showCustomDialog() {
+
+        //before inflating the custom alert dialog layout, we will get the current activity viewgroup
+
+        //ViewGroup viewGroup = View.findViewById(android.R.id.content);
+
+
+
+        //then we will inflate the custom alert dialog xml that we created
+
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+            }
+
+        });
+
+    }
+
+    private void showErrorDialog(String text)
+    {
+        View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.my_dialog_error, viewGroup, false);
+        Button buttonOk=dialogView.findViewById(R.id.buttonOk);
+        TextView tv1=dialogView.findViewById(R.id.tv1);
+        tv1.setText("Failed!!!");
+        TextView tv2 =  dialogView.findViewById(R.id.tv2);
+        tv2.setText(text);
+        //Now we need an AlertDialog.Builder objec
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        //setting the view of the builder to our custom view that we already inflated
+        builder.setView(dialogView);
+        //finally creating the alert dialog and displaying it
+        final android.support.v7.app.AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+        buttonOk.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getSupportFragmentManager().popBackStackImmediate();
+
+
+            }
+
+        });
+    }
+
 
 }
