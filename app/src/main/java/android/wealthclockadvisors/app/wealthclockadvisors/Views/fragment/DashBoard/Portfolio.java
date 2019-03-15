@@ -83,7 +83,6 @@ public class Portfolio extends Fragment implements OnChartValueSelectedListener 
 
         chartValue = new ArrayList<>();
 
-
         ServerResultHandler serverResultHandler = new ServerResultHandler();
         serverResultHandler.setContext(getContext());
         UserHandler.getInstance().set_ihttpResultHandler(serverResultHandler);
@@ -93,7 +92,6 @@ public class Portfolio extends Fragment implements OnChartValueSelectedListener 
         _netInvestAmount = view.findViewById(R.id.netInvestAmount);
         _currentMarketValue = view.findViewById(R.id.currentMarketValue);
         _netXirr = view.findViewById(R.id.netXirr);
-
 
         return view;
     }
@@ -216,7 +214,12 @@ public class Portfolio extends Fragment implements OnChartValueSelectedListener 
         for (int i=0;i<color.length;i++){
 
             int colorCode= Color.parseColor(color[i]);
-            colorEntry.add(colorCode);
+            //colorEntry.add(colorCode);
+
+            colorEntry.add(0,Color.parseColor("#FFFF00"));
+            colorEntry.add(1,Color.parseColor("#FFA500"));
+            colorEntry.add(2,Color.parseColor("#13a097"));
+            colorEntry.add(3,Color.parseColor("#FFFF00"));
 
         }
 

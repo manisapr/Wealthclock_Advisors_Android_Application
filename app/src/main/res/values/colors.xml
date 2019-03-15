@@ -17,9 +17,9 @@
     <color name="back">#32323e</color>
     <string-array name="color">
         <item>#363646</item>
-        <item>#8b7eff</item>
+        <item>#8de9fd</item>
         <item>#13a097</item>
-        <item>#ff1111</item>
+        <item>#00ffff</item>
         <!--<item>#6363d4</item>
         <item>#fc1505</item>
         <item>#ff91d4</item>

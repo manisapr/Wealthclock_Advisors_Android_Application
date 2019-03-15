@@ -98,7 +98,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
     String foliono = " ";
     private String _amount = " ";
     //String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode;
-    String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode,Risk,AmcImage,FundType,Rating;
+    String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode,Risk,AmcImage,FundType,Rating,FiveYearReturn;
     private String info="";
     public Fragment_Invest_Angle_Save_Tax() {
         // Required empty public constructor
@@ -798,6 +798,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                         FundType=jobj.getString("FundType");
                         AmcImage=jobj.getString("AmcImage");
                         Rating=jobj.getString("Rating");
+                        FiveYearReturn=jobj.getString("fiveyearreturn");
                         System.out.println("Scheeeme:"+SchemeCode);
 
 
@@ -807,6 +808,7 @@ public class Fragment_Invest_Angle_Save_Tax extends Fragment {
                         top3Funds.setFundType(FundType);
                         top3Funds.setAmcImage(AmcImage);
                         top3Funds.setReturnvalue(Returnvalue+" %");
+                        top3Funds.setFiveyearreturn(FiveYearReturn);
                         top3Funds.setRating(Rating);
                         top3Funds.setRisk(Risk);
                         arrayList1.add(top3Funds);

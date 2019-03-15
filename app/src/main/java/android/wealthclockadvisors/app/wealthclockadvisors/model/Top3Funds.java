@@ -1,6 +1,6 @@
 package android.wealthclockadvisors.app.wealthclockadvisors.model;
 public class Top3Funds {
-    private String Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,Price,fundname,SchemeType,AmcImage,Rating,Risk,FundType;
+    private String Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,Price,fundname,SchemeType,AmcImage,Rating,Risk,FundType,fiveyearreturn;
     public String getBuild_ID() {
         return Build_ID;
     }    public void setBuild_ID(String build_ID) {
@@ -101,6 +101,14 @@ public class Top3Funds {
 
     public void setFundType(String fundType) {
         FundType = fundType;
+    }
+
+    public String getFiveyearreturn() {
+        return fiveyearreturn;
+    }
+
+    public void setFiveyearreturn(String fiveyearreturn) {
+        this.fiveyearreturn = fiveyearreturn;
     }
 }
 

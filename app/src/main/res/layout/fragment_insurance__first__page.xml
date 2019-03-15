@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363646"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context="android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Insurance.Insurance_First_Page">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/_50sdp"
+    android:paddingBottom="@dimen/_50sdp"
+    android:orientation="vertical">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/lifeinsurance"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:src="@drawable/lifeinsurance"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_40sdp"
+        android:id="@+id/healthinsurance"
+        android:layout_weight="1"
+        android:src="@drawable/healthinsurance"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/general_insurance"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:src="@drawable/general_insurance"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/others"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:src="@drawable/others_insurance"/>
+    </LinearLayout>
+</LinearLayout>
+</FrameLayout>

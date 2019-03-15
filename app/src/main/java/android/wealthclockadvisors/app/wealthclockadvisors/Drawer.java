@@ -3,9 +3,7 @@ package android.wealthclockadvisors.app.wealthclockadvisors;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -32,6 +30,8 @@ import android.view.WindowManager;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.LoginActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.FragmentAccount;
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.FragmentDashboard;
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.DashBoard.Refer_and_earn;
 import android.wealthclockadvisors.app.wealthclockadvisors.adapter.DashBoardPagerAdapter;
 import android.wealthclockadvisors.app.wealthclockadvisors.handler.UserHandler;
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.ihttpResultHandler;
@@ -311,7 +311,34 @@ public class Drawer extends AppCompatActivity
             fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
             fragmentTransaction.commit();
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        }
+        else if (id==R.id.nav_dashboard)
+        {
+//            Intent intent = new Intent(this, DashboardActivity.class);
+//            startActivity(intent);
+//            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//            drawer.isDrawerOpen(GravityCompat.START);
+//            FragmentManager fragmentManager = getSupportFragmentManager();
+//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//            FragmentDashboard fragmentDashboard = new FragmentDashboard();
+//            fragmentTransaction.add(R.id.frag, fragmentDashboard, "fragmentDashboard");
+//            //fragmentTransaction.addToBackStack("fragmentDashboard");
+//            fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+//            fragmentTransaction.commit();
+
+
+            Intent intent = new Intent(this, Drawer.class);
+            startActivity(intent);
+            finish();
+        }
+            else if (id == R.id.nav_gallery) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            Refer_and_earn refer_and_earn = new Refer_and_earn();
+            fragmentTransaction.add(R.id.frag, refer_and_earn, "refer_and_earn");
+            fragmentTransaction.addToBackStack("refer_and_earn");
+            fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_slideshow) {
 

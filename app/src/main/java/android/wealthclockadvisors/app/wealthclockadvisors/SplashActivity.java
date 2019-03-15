@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.TutorialActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.DashboardActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.LoginActivity;
+import android.wealthclockadvisors.app.wealthclockadvisors.Views.activity.PreLoginActivity;
 import android.wealthclockadvisors.app.wealthclockadvisors.handler.UserHandler;
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.ihttpResultHandler;
 import android.wealthclockadvisors.app.wealthclockadvisors.manager.SharedPreferenceManager;
@@ -47,29 +48,29 @@ public class SplashActivity extends AppCompatActivity {
        /* @Override
         public void onSuccess(Object message, String operation_flag) {
 
-
         }*/
 
         @Override
         public void onSuccess(Object message, Object messsage1, Object message2, Object message3, Object message4, Object message5, String operation_flag) {
             System.out.println("splash success");
-            if (message.toString().equalsIgnoreCase("200")) {
+            if (message.toString().equalsIgnoreCase("200"))
+            {
                 //Intent intent = new Intent(SplashActivity.this,DashboardActivity.class);
                 Intent intent = new Intent(SplashActivity.this,Drawer.class);
                 startActivity(intent);
                 finish();
             }
-            else {
+            else
+                {
                 Intent intent = new Intent(SplashActivity.this,TutorialActivity.class);
                 startActivity(intent);
                 finish();
             }
         }
-
         @Override
         public void onError(Object message) {
 
-            Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+            Intent intent = new Intent(SplashActivity.this,PreLoginActivity.class);
             startActivity(intent);
             finish();
             //System.out.println("splash error: "+message.toString());

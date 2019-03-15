@@ -35,17 +35,17 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int ball_five = 0x7f09003d;
-        public static final int ball_four = 0x7f09003e;
-        public static final int ball_one = 0x7f09003f;
-        public static final int ball_three = 0x7f090040;
-        public static final int ball_two = 0x7f090041;
+        public static final int ball_five = 0x7f090040;
+        public static final int ball_four = 0x7f090041;
+        public static final int ball_one = 0x7f090042;
+        public static final int ball_three = 0x7f090043;
+        public static final int ball_two = 0x7f090044;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int book_loading = 0x7f0c0028;
-        public static final int newton_cradle_loading = 0x7f0c007d;
+        public static final int book_loading = 0x7f0c0029;
+        public static final int newton_cradle_loading = 0x7f0c0082;
     }
     public static final class string {
         private string() {}

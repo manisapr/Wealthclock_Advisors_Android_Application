@@ -2,6 +2,7 @@ package android.wealthclockadvisors.app.wealthclockadvisors.iinterface;
 
 import android.content.Context;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.MutualFundDetailsforModel;
+import android.wealthclockadvisors.app.wealthclockadvisors.model.OnboardDatainfo;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.OrderEntryModel;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.Top3Funds;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.User_DetailsForIMPS;
@@ -39,4 +40,6 @@ public interface ihandler {
     void  dateformultifund1(String schemecd,Context context);
     void  dateformultifund2(String schemecd,Context context);
     void  tickeregistration(String userId, File file, Context context);
+    void kycdetails(String panno,Context context);
+    void sendIdentityToDbOnBoard(OnboardDatainfo datainfo, Context context);
 }

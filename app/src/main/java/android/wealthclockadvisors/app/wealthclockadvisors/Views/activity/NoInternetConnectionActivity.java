@@ -1,7 +1,7 @@
 package android.wealthclockadvisors.app.wealthclockadvisors.Views.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import wealthclockadvisors.app.wealthclockadvisors.R;

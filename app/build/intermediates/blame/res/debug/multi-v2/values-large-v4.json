@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "/Users/manishsethia/Desktop/New App/Wealthclock_Advisors/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/su/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/68c17ff6cf58832d2cc5b97c089ef668/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/manishsethia/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/cfaf9abfbc21dae9008cb96b8c72a31e/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/su/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/6f0db9994a4d3aa364eb05c10122d30e/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/manishsethia/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/3b00d85e93ba3e8639e7fef38d70dad3/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

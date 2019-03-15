@@ -36,7 +36,6 @@ public class TutorialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial);
 
 
-
         skip_tv=(TextView)findViewById(R.id.skip_tv);
         explore_tv=(TextView)findViewById(R.id.explore_tv);
 
@@ -75,9 +74,7 @@ public class TutorialActivity extends AppCompatActivity {
 
 
         TutorialViewPagerAdapter tutorialViewPagerAdapter =new TutorialViewPagerAdapter(getSupportFragmentManager());
-
         final ViewPager view_pager=(ViewPager)findViewById(R.id.view_pager);
-
         view_pager.setAdapter(tutorialViewPagerAdapter);
 
         numOfPages=5;

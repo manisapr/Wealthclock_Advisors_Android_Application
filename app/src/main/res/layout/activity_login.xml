@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.activity.LoginActivity"
-    android:background="@color/backgroundcolor">
+    android:id="@+id/rootLayout"
+    android:background="#363646">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:progressTint="@color/White" />
+            android:progressTint="@color/White"
+            android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/login_background"
@@ -25,6 +29,7 @@
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
+        android:visibility="gone"
         android:src="@drawable/background" />
 
     <View
@@ -125,7 +130,30 @@
             android:textCursorDrawable="@null"
             android:textSize="@dimen/_13sdp" />
 
+
+
     </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/showpasswordlayout"
+            android:layout_below="@+id/lay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
+
+            <CheckBox
+                android:id="@+id/checkboxPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Passwoprd"
+                android:textColor="@color/White"
+                android:buttonTint="@color/White"/>
+
+        </LinearLayout>
 
 
     <ProgressBar
@@ -142,7 +170,7 @@
         android:id="@+id/relative_login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/lay2"
+        android:layout_below="@+id/showpasswordlayout"
         android:animateLayoutChanges="true">
 
 
@@ -167,7 +195,7 @@
             android:background="@drawable/shape"
             android:backgroundTint="#048f84"
             android:hint="I don't have an account"
-            android:visibility="gone"
+            android:visibility="visible"
             android:textColorHint="#ffffff" />
 
         <TextView
@@ -190,4 +218,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"></FrameLayout>
     </RelativeLayout>
+
+
+    </ScrollView>
+
 </RelativeLayout>

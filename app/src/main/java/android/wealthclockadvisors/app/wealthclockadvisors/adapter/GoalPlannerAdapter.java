@@ -45,7 +45,7 @@ public class GoalPlannerAdapter extends RecyclerView.Adapter<GoalPlannerAdapter.
     myViewHolder._price1.setText("₹"+cc);
         myViewHolder.fund_type.setText(funds.getFundType());
         myViewHolder.risk.setText(funds.getRisk());
-        myViewHolder.return_value.setText(funds.getReturnvalue()+"%");
+        myViewHolder.return_value.setText(funds.getReturnvalue()+"");
         myViewHolder.rating.setText(funds.getRating());
         //if (top3Funds.getAmcImage()!=null || top3Funds.getAmcImage().isEmpty())
         //{

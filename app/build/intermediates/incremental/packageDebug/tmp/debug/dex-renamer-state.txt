@@ -1,7 +1,7 @@
-#Thu Feb 28 17:08:15 IST 2019
-base.0=/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/transforms/dexMerger/debug/1
+#Fri Mar 15 11:49:31 IST 2019
+base.0=/Users/manishsethia/Desktop/New App/Wealthclock_Advisors/app/build/intermediates/transforms/dexMerger/debug/0
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/su/Desktop/Sujoy/Wealthclock_Advisors/app/build/intermediates/transforms/dexMerger/debug/0
+base.1=/Users/manishsethia/Desktop/New App/Wealthclock_Advisors/app/build/intermediates/transforms/dexMerger/debug/1

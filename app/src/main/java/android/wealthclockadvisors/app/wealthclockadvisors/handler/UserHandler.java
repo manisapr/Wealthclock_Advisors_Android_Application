@@ -5,6 +5,7 @@ import android.wealthclockadvisors.app.wealthclockadvisors.controller.httpContro
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.ihandler;
 import android.wealthclockadvisors.app.wealthclockadvisors.iinterface.ihttpResultHandler;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.MutualFundDetailsforModel;
+import android.wealthclockadvisors.app.wealthclockadvisors.model.OnboardDatainfo;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.OrderEntryModel;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.Top3Funds;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.User_DetailsForIMPS;
@@ -229,5 +230,19 @@ public class UserHandler implements ihandler {
         _HttpController = httpController.getInstance();
         _HttpController.set_iHttpResultHandler(_ihttpResultHandler);
         _HttpController.tickeregistration(userId,file,context);
+    }
+
+    @Override
+    public void kycdetails(String panno, Context context) {
+        _HttpController = httpController.getInstance();
+        _HttpController.set_iHttpResultHandler(_ihttpResultHandler);
+        _HttpController.kycdetails(panno,context);
+    }
+
+    @Override
+    public void sendIdentityToDbOnBoard(OnboardDatainfo datainfo, Context context) {
+        _HttpController = httpController.getInstance();
+        _HttpController.set_iHttpResultHandler(_ihttpResultHandler);
+        _HttpController.sendIdentityToDbOnBoard(datainfo,context);
     }
 }

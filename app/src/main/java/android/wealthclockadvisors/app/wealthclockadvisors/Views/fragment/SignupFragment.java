@@ -64,7 +64,6 @@ public class SignupFragment extends Fragment {
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (Utility.isInternetOn(getContext())) {
                     if (validate()) {
                         ServerResultHandler serverResultHandler = new ServerResultHandler();
@@ -151,5 +150,4 @@ public class SignupFragment extends Fragment {
 
         return true;
     }
-
 }

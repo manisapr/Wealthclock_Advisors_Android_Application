@@ -94,7 +94,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
         insurance_dashboard = view.findViewById(R.id.insurance_dashboard);
         _lay_risk_analyzer = view.findViewById(R.id.lay_risk_analyzer);
         newsModelArrayList = new ArrayList<>();
-    insurance_dashboard.setOnClickListener(this);
+        insurance_dashboard.setOnClickListener(this);
 
         hud = KProgressHUD.create(getContext())
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
@@ -216,12 +216,8 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
             }
 
         }, new Response.ErrorListener() {
-
             @Override
-
             public void onErrorResponse(VolleyError error) {
-
-
 
             }
 

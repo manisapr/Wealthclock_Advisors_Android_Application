@@ -15,6 +15,7 @@ import android.wealthclockadvisors.app.wealthclockadvisors.model.FundDetailsMode
 import android.wealthclockadvisors.app.wealthclockadvisors.model.FundTypeModel;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.InvestMentDetailsModel;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.MutualFundDetailsforModel;
+import android.wealthclockadvisors.app.wealthclockadvisors.model.OnboardDatainfo;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.OrderEntryModel;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.PortfolioDetailsModel;
 import android.wealthclockadvisors.app.wealthclockadvisors.model.RedeemDetailsModel;
@@ -157,6 +158,8 @@ public class httpController implements ihttpController {
                     @Override
                     public void onResponse(JSONObject response) {
                         String successCode ="";
+                        String clientCode ="no";
+                        JSONObject bankObj = null;
                         System.out.println("sendLoginData response | sendLoginData: " + response);
                         try {
                             String responseStream= String.valueOf(response);
@@ -164,11 +167,12 @@ public class httpController implements ihttpController {
                             JSONObject jsonInfo=jsonResponse;
                             JSONArray loginDetailsArray = jsonInfo.getJSONArray("LoginDetails");
                             JSONArray bankDetailsArray = jsonInfo.getJSONArray("OnboardDetails");
-                            JSONObject bankObj = bankDetailsArray.getJSONObject(0);
+                            if (bankDetailsArray.length()>0 ) {
+                                 bankObj = bankDetailsArray.getJSONObject(0);
+                            }
                             JSONObject loginObject = loginDetailsArray.getJSONObject(0);
                              successCode = loginObject.getString("Code");
-
-                             String clientCode = loginObject.getString("CLIENT_CODE");
+                             clientCode = loginObject.getString("CLIENT_CODE");
                              String name = loginObject.getString("User_Name");
                              String path = loginObject.getString("Image");
                              String isXSIPActive = loginObject.getString("IsXSIPActive");
@@ -177,13 +181,15 @@ public class httpController implements ihttpController {
                             SharedPreferenceManager.setClientCode(context,clientCode);
                             SharedPreferenceManager.setUserName(context,name);
                             SharedPreferenceManager.setImagePath(context,path);
-                            SharedPreferenceManager.setPanNo(context,bankObj.getString("PanNo"));
-                            SharedPreferenceManager.setBankAccountNumber(context,bankObj.getString("BankAcntNumber"));
-                            SharedPreferenceManager.setBankName(context,bankObj.getString("BankName"));
-                            SharedPreferenceManager.setBankIfsceCode(context,bankObj.getString("IfscCode"));
-                            SharedPreferenceManager.setIsXSIPActive(context,isXSIPActive);
-                            SharedPreferenceManager.setIsISIPActive(context,loginObject.getString("IsISIPActive"));
-                            SharedPreferenceManager.setManadateRegId(context,loginObject.getString("Mandate_Reg_ID"));
+                            if (bankDetailsArray.length()>0 ) {
+                                SharedPreferenceManager.setPanNo(context, bankObj.getString("PanNo"));
+                                SharedPreferenceManager.setBankAccountNumber(context, bankObj.getString("BankAcntNumber"));
+                                SharedPreferenceManager.setBankName(context, bankObj.getString("BankName"));
+                                SharedPreferenceManager.setBankIfsceCode(context, bankObj.getString("IfscCode"));
+                                SharedPreferenceManager.setIsXSIPActive(context, isXSIPActive);
+                                SharedPreferenceManager.setIsISIPActive(context, loginObject.getString("IsISIPActive"));
+                                SharedPreferenceManager.setManadateRegId(context, loginObject.getString("Mandate_Reg_ID"));
+                            }
 
                             Utility.set_imagePath(path);
 
@@ -195,7 +201,7 @@ public class httpController implements ihttpController {
                         }
 
                         if (_iHttpResultHandler != null)
-                            _iHttpResultHandler.onSuccess(successCode,"","","","","","success");
+                            _iHttpResultHandler.onSuccess(successCode,clientCode,"","","","","success");
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -1956,7 +1962,7 @@ public class httpController implements ihttpController {
                                 sipmodel.setRisk(loginObject.getString("Risk"));
                                 sipmodel.setRating(loginObject.getString("Rating"));
                                 sipmodel.setFundType(loginObject.getString("FundType"));
-                                sipmodel.setReturnvalue(loginObject.getString("_goalSchemeReturn"));
+                                sipmodel.setReturnvalue(loginObject.getString("fiveyearreturn"));
                                 top3FundsArrayList.add(sipmodel);
                             }
 
@@ -2508,6 +2514,230 @@ public class httpController implements ihttpController {
                         System.out.println("faliuer in api from multimedia"+error.getErrorDetail()+error);
                     }
                 });*/
+
+    }
+
+    @Override
+    public void kycdetails(String panno, Context context) {
+        String url = "https://relmf.com/rmf/mowblyserver/ssapi/rmf/prod/SimplySave/getpankyccheck" ;
+        if (_requestQueue == null) {
+            _requestQueue = Volley.newRequestQueue(context.getApplicationContext());
+        }
+
+        final JSONObject schemeObj = new JSONObject();
+        try {
+            schemeObj.put("pan",panno);
+            schemeObj.put("fund","RMF");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("kycdetails response | JSONOBJECT: "+schemeObj);
+
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,url,schemeObj,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        String dates = "";
+                        try {
+
+
+
+                            System.out.println("kycdetails response | kycdetails: " + dates);
+                        }
+                        catch (Exception e)
+                        {
+                            e.printStackTrace();
+                        }
+
+                        System.out.println("kycdetails response | kycdetails: " + response);
+                        if (_iHttpResultHandler != null)
+                            if (!dates.isEmpty())
+                                _iHttpResultHandler.onSuccess(dates,"","", " ","","","kycdetails");
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                if (_iHttpResultHandler != null)
+                    _iHttpResultHandler.onError(error.getMessage());
+                System.out.println("kycdetails onErrorResponse:| kycdetails " + error.getMessage() + error);
+
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json");
+                return headers;
+            }
+
+        };
+        //30 seconds timeout
+        int socketTimeout = 30000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        jsObjRequest.setRetryPolicy(policy);
+
+        _requestQueue.add(jsObjRequest);
+
+    }
+
+    @Override
+    public void sendIdentityToDbOnBoard(OnboardDatainfo datainfo, Context context) {
+        String url = "http://demo.wealthclockadvisors.com/API/MobileAppApi/SaveOnboardTempData" ;
+        if (_requestQueue == null) {
+            _requestQueue = Volley.newRequestQueue(context.getApplicationContext());
+        }
+
+        final JSONObject schemeObj = new JSONObject();
+        try {
+            schemeObj.put("modeOfHolding","SI");
+            schemeObj.put("PanNo","RMF");
+            schemeObj.put("Taxstatus","");
+            schemeObj.put("FirstName","");
+            schemeObj.put("MiddleName","");
+            schemeObj.put("LastName","");
+            schemeObj.put("FathersFirstName","");
+            schemeObj.put("FathersMiddleName","");
+            schemeObj.put("FathersLastName","");
+            schemeObj.put("MothersFirstName","");
+            schemeObj.put("MothersMiddleName","");
+            schemeObj.put("MothersLastName","");
+            schemeObj.put("DateofBirth","");
+            schemeObj.put("Gender","");
+            schemeObj.put("MaritalStatus","");
+            schemeObj.put("Citizen","");
+            schemeObj.put("ResidentialStatus","");
+            schemeObj.put("OccupationType","");
+            schemeObj.put("PassportNo","");
+            schemeObj.put("passportExpData","");
+            schemeObj.put("VoterID","");
+            schemeObj.put("DrivingLicense","");
+            schemeObj.put("DrivingLicenseExpData","");
+            schemeObj.put("AadharCard","");
+            schemeObj.put("Address1","");
+            schemeObj.put("Address2","");
+            schemeObj.put("Address3","");
+            schemeObj.put("District","");
+            schemeObj.put("State","");
+            schemeObj.put("Country","");
+            schemeObj.put("City","");
+            schemeObj.put("AddressType","");
+            schemeObj.put("localAddress1","");
+            schemeObj.put("localAddress2","");
+            schemeObj.put("localAddress3","");
+            schemeObj.put("LocalDistrict","");
+            schemeObj.put("localPostalCode","");
+            schemeObj.put("localState","");
+            schemeObj.put("localCountry","");
+            schemeObj.put("Email","");
+            schemeObj.put("Mobile","");
+            schemeObj.put("Telephone","");
+            schemeObj.put("ResPhone","");
+            schemeObj.put("CommuMode","");
+            schemeObj.put("BankAcntType","");
+            schemeObj.put("BankAcntNumber","");
+            schemeObj.put("BankName","");
+            schemeObj.put("BranchName","");
+            schemeObj.put("IfscCode","");
+            schemeObj.put("MicrNo","");
+            schemeObj.put("NomineeName","");
+            schemeObj.put("NomineeRelation","");
+            schemeObj.put("NomineeDateofBirth","");
+            schemeObj.put("NomineeAddress1","");
+            schemeObj.put("NomineeAddress2","");
+            schemeObj.put("NomineeAddress3","");
+            schemeObj.put("NomineePostal","");
+            schemeObj.put("NomineeCity","");
+            schemeObj.put("NomineeState","");
+            schemeObj.put("mandateAmount","");
+            schemeObj.put("statename","");
+            schemeObj.put("statecode","");
+            schemeObj.put("JointFullName","");
+            schemeObj.put("JointPan","");
+            schemeObj.put("JointDob","");
+            schemeObj.put("JointOccupation","");
+            schemeObj.put("POB","");
+            schemeObj.put("JointPOB","");
+            schemeObj.put("IncomeSlab","");
+            schemeObj.put("JointIncomeSlab","");
+            schemeObj.put("CO_BIR_INC","");
+            schemeObj.put("TAX_RES1","");
+            schemeObj.put("ID1_TYPE","");
+            schemeObj.put("EXCHName","");
+            schemeObj.put("UBO_APPL","");
+            schemeObj.put("SRCE_WEALT","");
+            schemeObj.put("JointSRCE_WEALT","");
+            schemeObj.put("PEP_FLAG","");
+            schemeObj.put("NEW_CHNAGE","");
+            schemeObj.put("isComplete","");
+            schemeObj.put("JointmodeOfHolding","");
+            schemeObj.put("JointPanNo","");
+            schemeObj.put("JointTaxstatus","");
+            schemeObj.put("JointFirstName","");
+            schemeObj.put("JointMiddleName","");
+            schemeObj.put("JointLastName","");
+            schemeObj.put("JointFathersFirstName","");
+            schemeObj.put("JointFathersMiddleName","");
+            schemeObj.put("JointFathersLastName","");
+            schemeObj.put("JointMothersFirstName android" +
+                    "","");
+            schemeObj.put("NomineeCity","");
+            schemeObj.put("NomineeCity","");
+            schemeObj.put("NomineeCity","");
+            schemeObj.put("NomineeCity","");
+            schemeObj.put("NomineeCity","");
+            schemeObj.put("NomineeCity","");
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("sendIdentityToDbOnBoard response | JSONOBJECT: "+schemeObj);
+
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,url,schemeObj,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                        String dates = "";
+                        try {
+
+                            System.out.println("sendIdentityToDbOnBoard response | sendIdentityToDbOnBoard: " + dates);
+                        }
+                        catch (Exception e)
+                        {
+                            e.printStackTrace();
+                        }
+
+                        System.out.println("sendIdentityToDbOnBoard response | sendIdentityToDbOnBoard: " + response);
+                        if (_iHttpResultHandler != null)
+                            if (!dates.isEmpty())
+                                _iHttpResultHandler.onSuccess(dates,"","", " ","","","sendIdentityToDbOnBoard");
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                if (_iHttpResultHandler != null)
+                    _iHttpResultHandler.onError(error.getMessage());
+                System.out.println("sendIdentityToDbOnBoard onErrorResponse:| sendIdentityToDbOnBoard " + error.getMessage() + error);
+
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json");
+                return headers;
+            }
+
+        };
+        //30 seconds timeout
+        int socketTimeout = 30000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        jsObjRequest.setRetryPolicy(policy);
+
+        _requestQueue.add(jsObjRequest);
 
     }
 

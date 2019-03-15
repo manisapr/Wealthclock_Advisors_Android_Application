@@ -8,15 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 
 import android.wealthclockadvisors.app.wealthclockadvisors.Views.ProgressCircle;
-import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.SignupFragment;
-import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.onBoard.IdentityDetails;
-import android.wealthclockadvisors.app.wealthclockadvisors.Views.fragment.onBoard.ModeOfHolding;
+
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import java.util.List;
 
 import wealthclockadvisors.app.wealthclockadvisors.R;
 
@@ -183,17 +179,17 @@ public class AccountRegistration extends AppCompatActivity implements View.OnCli
         switch (v.getId())
         {
             case R.id.complete1:
-                FragmentManager fragmentManager = getSupportFragmentManager();
+               /* FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 ModeOfHolding signupFragment = new ModeOfHolding();
                 fragmentTransaction.replace(R.id.fragment_container, signupFragment, "modeOfHolding");
                 fragmentTransaction.addToBackStack("modeOfHolding");
                 fragmentTransaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                fragmentTransaction.commit();
+                fragmentTransaction.commit();*/
                 break;
             case R.id.complete2:
-                IdentityDetails identityDetails = new IdentityDetails();
-                showFragment(identityDetails);
+                /*IdentityDetails identityDetails = new IdentityDetails();
+                showFragment(identityDetails);*/
         }
     }
 

@@ -93,7 +93,7 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
 
     private SaveTaxAdapter mAdapter;
     //String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode;
-    String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode,Risk,AmcImage,FundType,Rating;
+    String fundname,Price,Build_ID,AmcSchemeCode,UniqueNo,SipID,proportion,position,Returnvalue,Year,isDeleted,InvestedAmount,PotentialValue,SaveTax_ID,RegularIncome_ID,Park_ID,SchemeType,SchemeCode,Risk,AmcImage,FundType,Rating,FiveYearReturn;
     TextView tv1;
     Switch onOffSwitch;
     Context context;
@@ -221,6 +221,7 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
                         FundType=jobj.getString("FundType");
                         AmcImage=jobj.getString("AmcImage");
                         Rating=jobj.getString("Rating");
+                        FiveYearReturn=jobj.getString("fiveyearreturn");
                         System.out.println("Scheeeme:"+SchemeCode);
 
                         Top3Funds top3Funds=new Top3Funds();
@@ -230,6 +231,7 @@ public class Buy_Fund_Risk_Analyzer extends Fragment implements View.OnClickList
                         top3Funds.setAmcImage(AmcImage);
                         top3Funds.setReturnvalue(Returnvalue+" %");
                         top3Funds.setRating(Rating);
+                        top3Funds.setFiveyearreturn(FiveYearReturn);
                         top3Funds.setRisk(Risk);
                         arrayList1.add(top3Funds);
 
